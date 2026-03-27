@@ -2,55 +2,30 @@
   <div>
     <!-- Mobile: icon rail + tap-to-open drawer -->
     <div class="md:hidden">
-    <!-- Icon rail (always visible on mobile) -->
-    <div class="fixed top-1/2 -translate-y-1/2 left-3 z-50 flex flex-col gap-2">
-      <button
-        type="button"
-        class="w-[65px] h-[65px] rounded-lg bg-[rgba(11,11,13,0.8)] backdrop-blur-md border border-[rgba(201,162,77,0.15)] text-[#F4F2ED] flex items-center justify-center"
-        aria-label="Open menu"
-        @click="isMobileNavOpen = true"
-      >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+      <div class="fixed top-0 left-0 right-0 z-50 bg-[rgba(11,11,13,0.95)] backdrop-blur-md border-b border-[rgba(201,162,77,0.12)]">
+        <div class="h-14 px-4 flex items-center justify-between">
+          <NuxtLink to="/lounge" class="text-sm font-medium tracking-widest text-[#C9A24D]">
+            OB33Z
+          </NuxtLink>
+          <button
+            type="button"
+            class="p-2 rounded-md text-[#F4F2ED] hover:bg-[rgba(201,162,77,0.1)]"
+            aria-label="Open menu"
+            @click="isMobileNavOpen = true"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
 
-      <button
-        v-for="level in activeLevels"
-        :key="level.path"
-        type="button"
-        :class="[
-          'w-[65px] h-[65px] rounded-lg backdrop-blur-md border flex items-center justify-center transition-colors',
-          isActive(level.path)
-            ? 'bg-[#C9A24D] text-[#0B0B0D] border-[#C9A24D]'
-            : 'bg-[rgba(11,11,13,0.8)] text-[#F4F2ED] border-[rgba(201,162,77,0.15)] hover:bg-[rgba(201,162,77,0.1)]'
-        ]"
-        :aria-label="level.name"
-        @click="isMobileNavOpen = true"
-      >
-        <svg v-if="level.path === '/lounge'" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.9 20A9 9 0 104 16.1L2 22z" />
-        </svg>
-        <svg v-else-if="level.path === '/vibe-room'" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-        </svg>
-        <svg v-else-if="level.path === '/sports-complex'" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" />
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" />
-          <circle cx="12" cy="12" r="2" />
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5" />
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.1 4.9C23 8.8 23 15.1 19.1 19" />
-        </svg>
-        <svg v-else-if="level.path === '/fireside'" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z" />
-        </svg>
-      </button>
-    </div>
+      <div class="h-14" />
 
-    <!-- Drawer -->
-    <div v-if="isMobileNavOpen" class="fixed inset-0 z-[70]">
-      <div class="absolute inset-0 bg-black/60" @click="isMobileNavOpen = false" />
-      <div class="absolute top-0 left-0 h-full w-[320px] bg-[rgba(11,11,13,0.95)] backdrop-blur-md border-r border-[rgba(201,162,77,0.15)] p-4">
+      <!-- Drawer -->
+      <div v-if="isMobileNavOpen" class="fixed inset-0 z-[70]">
+        <div class="absolute inset-0 bg-black/60" @click="isMobileNavOpen = false" />
+        <div class="absolute top-0 right-0 h-full w-[86%] max-w-[340px] bg-[rgba(11,11,13,0.98)] backdrop-blur-md border-l border-[rgba(201,162,77,0.15)] p-4 overflow-y-auto">
         <div class="flex items-center justify-between mb-4">
           <div class="text-sm font-medium tracking-widest text-[#C9A24D]">OB33Z</div>
           <button
@@ -188,8 +163,8 @@
             </span>
           </button>
         </div>
+        </div>
       </div>
-    </div>
     </div>
 
     <!-- Desktop: collapsed icons, expands on hover -->

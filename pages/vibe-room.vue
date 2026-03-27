@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-screen p-6">
+  <div class="relative min-h-screen p-4 md:p-6">
     <LevelNavigation />
     <LiveCounter />
     <MusicToggle />
@@ -14,13 +14,13 @@
       />
     </div>
 
-    <div class="relative max-w-7xl mx-auto pt-20">
+    <div class="relative max-w-7xl mx-auto pt-4 md:pt-20">
       <!-- Header -->
       <div class="text-center mb-8 opacity-0 -translate-y-4 animate-delay-sm">
-        <h1 class="text-4xl text-[#C9A24D] mb-2">{{ t("vibeRoomTitle") }}</h1>
-        <div class="flex items-center justify-center gap-2 text-[#F4F2ED] opacity-70">
+        <h1 class="text-2xl md:text-4xl text-[#C9A24D] mb-2">{{ t("vibeRoomTitle") }}</h1>
+        <div class="flex items-center justify-center gap-1 md:gap-2 text-[#F4F2ED] opacity-70">
           <svg
-            class="w-4 h-4"
+            class="w-3 h-3 md:w-4 md:h-4"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -32,7 +32,7 @@
               d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
             />
           </svg>
-          <p>{{ t("verifiedOnly") }}</p>
+          <p class="text-sm md:text-[16px]">{{ t("verifiedOnly") }}</p>
         </div>
       </div>
       <!-- Flash success message (e.g., after login redirect) -->
@@ -53,17 +53,17 @@
         <OB33ZCard
           class="bg-[rgba(91,63,214,0.1)] border-[rgba(91,63,214,0.3)]"
         >
-          <div class="flex items-center justify-between">
+          <div class="flex flex-col md:flex-row items-start gap-4 md:items-center justify-between">
             <div>
-              <h3 class="text-[#C9A24D] mb-1">{{ t("viewOnly") }}</h3>
-              <p class="text-sm text-[#F4F2ED] opacity-80">
+              <h3 class="text-[#C9A24D] mb-2 text-sm md:text-xl">{{ t("viewOnly") }}</h3>
+              <p class="text-[12px] md:text-sm text-[#F4F2ED] opacity-80">
                 {{ t("viewOnlyMessage") }}
               </p>
             </div>
             <OB33ZButton
               v-if="!isProfileCompleted"
               variant="secondary"
-              class="whitespace-nowrap"
+              class="whitespace-nowrap w-full md:w-auto text-2xl py-3.5"
               @click="handleCompleteProfileClick"
             >
               {{ t("completeProfile") }}
@@ -72,7 +72,7 @@
             <OB33ZButton
               v-else-if="!isFullyVerified"
               variant="secondary"
-              class="whitespace-nowrap"
+              class="whitespace-nowrap w-full md:w-auto text-2xl py-3.5"
               @click="showVerificationModal = true"
             >
               Verify Yourself
@@ -149,7 +149,7 @@
                   </svg>
                   <span
                     :class="[
-                      'font-medium',
+                      'font-medium text-[16px]',
                       selectedLane === lane.id
                         ? 'text-[#C9A24D]'
                         : 'text-[#F4F2ED]',
@@ -158,7 +158,7 @@
                     {{ lane.name }}
                   </span>
                 </div>
-                <p class="text-xs text-[#F4F2ED] opacity-60 text-left">
+                <p class="text-xs leading-4 text-[#F4F2ED] opacity-60 text-left">
                   {{ lane.description }}
                 </p>
               </div>
@@ -183,7 +183,7 @@
           </div>
 
           <!-- Messages -->
-          <div class="space-y-4 mb-6 max-h-[400px] overflow-y-auto">
+          <div class="space-y-4 mb-6 max-h-100 overflow-y-auto">
             <div
               v-for="msg in messages[selectedLane]"
               :key="msg.id"
@@ -198,7 +198,7 @@
               :class="['flex gap-3', !isVerified && 'opacity-50']"
             >
               <div
-                class="w-10 h-10 rounded-full bg-gradient-to-br from-[#C9A24D] to-[#5B3FD6] flex items-center justify-center text-[#0B0B0D] font-medium flex-shrink-0"
+                class="w-10 h-10 rounded-full bg-linear-to-br from-[#C9A24D] to-[#5B3FD6] flex items-center justify-center text-[#0B0B0D] font-medium flex-shrink-0"
               >
                 {{ msg.user[0] }}
               </div>
@@ -301,16 +301,16 @@
       <div class="mt-6 opacity-0 -translate-y-4 animate-delay-xl shadow-[0_0_24px_rgba(91,63,214,0.2)]">
         <OB33ZCard
           :glow="true"
-          class="bg-gradient-to-r from-[rgba(91,63,214,0.1)] to-[rgba(201,162,77,0.1)]"
+          class="bg-linear-to-r from-[rgba(91,63,214,0.1)] to-[rgba(201,162,77,0.1)]"
         >
-          <div class="flex items-center justify-between">
+          <div class="flex flex-col gap-4 md:flex-row items-start md:items-center md:justify-between">
             <div>
-              <h3 class="text-[#C9A24D] mb-1">Speed Round Starting Soon</h3>
-              <p class="text-sm text-[#F4F2ED] opacity-80">
+              <h3 class="text-[#C9A24D] mb-1 text-sm md:text-xl">Speed Round Starting Soon</h3>
+              <p class="text-xs md:text-sm text-[#F4F2ED] opacity-80">
                 Quick conversations, instant connections. Join in 15 minutes!
               </p>
             </div>
-            <OB33ZButton variant="primary"> Set Reminder </OB33ZButton>
+            <OB33ZButton variant="primary" class="w-full md:w-auto text-[16px]"> Set Reminder </OB33ZButton>
           </div>
         </OB33ZCard>
       </div>

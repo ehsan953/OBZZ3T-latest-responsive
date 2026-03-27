@@ -1,7 +1,7 @@
 <template>
   <div
     v-motion="counterMotion"
-    class="fixed top-6 right-6 z-50 bg-[rgba(11,11,13,0.8)] backdrop-blur-md border border-[rgba(201,162,77,0.15)] rounded-lg p-4 w-[200px]"
+    class="hidden md:block fixed top-6 right-6 z-50 bg-[rgba(11,11,13,0.8)] backdrop-blur-md border border-[rgba(201,162,77,0.15)] rounded-lg p-4 w-[200px]"
   >
     <div class="flex gap-2">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

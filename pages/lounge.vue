@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-screen p-6">
+  <div class="relative min-h-screen px-3 pb-24 pt-3 sm:px-6 sm:pt-6 md:pb-6">
     <LevelNavigation />
     <LiveCounter />
     <MusicToggle />
@@ -14,23 +14,21 @@
       />
     </div>
 
-    <div class="relative max-w-7xl mx-auto pt-20">
+    <div class="relative max-w-7xl mx-auto pt-4 md:pt-20">
       <!-- Header -->
-      <div
-        class="opacity-0 -translate-y-4 animate-delay-sm text-center mb-12"
-      >
-        <h1 class="text-4xl text-[#C9A24D] mb-2">{{ t("theLounge") }}</h1>
-        <p class="text-[#F4F2ED] opacity-70">{{ t("loungeDescription") }}</p>
+      <div class="opacity-0 -translate-y-4 animate-delay-sm text-center mb-6 md:mb-12">
+        <h1 class="text-2xl md:text-4xl text-[#C9A24D] mb-2">{{ t("theLounge") }}</h1>
+        <p class="text-[#F4F2ED] text-sm md:text-[16px] opacity-70">{{ t("loungeDescription") }}</p>
       </div>
 
       <!-- Announcement Banner -->
-      <div class="mb-8 shadow-[0_0_24px_rgba(91,63,214,0.2)] opacity-0 -translate-y-4 animate-delay-md">
+      <div class="mb-5 md:mb-8 shadow-[0_0_24px_rgba(91,63,214,0.2)] opacity-0 -translate-y-4 animate-delay-md">
         <OB33ZCard :glow="true">
           <div class="flex items-center gap-3">
             <div class="w-2 h-2 bg-[#C9A24D] rounded-full animate-pulse" />
             <div>
-              <h3 class="text-[#C9A24D] mb-1">{{ t("announcements") }}</h3>
-              <p class="text-sm text-[#F4F2ED] opacity-80">
+              <h3 class="text-[#C9A24D] text-sm md:tex-lg mb-1">{{ t("announcements") }}</h3>
+              <p class="text-xs md:text-sm text-[#F4F2ED] opacity-80">
                 New Speed Round starting in The Vibe Room at 9 PM EST. Grand
                 prize: 1000 points!
               </p>
@@ -47,28 +45,29 @@
       />
 
       <!-- Guest/User Banner (always shown, content changes based on auth state) -->
-      <div class="mb-8">
+      <div class="mb-5 md:mb-8">
         <OB33ZCard
-          class="opacity-0 -translate-y-4 animate-delay-lg bg-gradient-to-r from-[rgba(91,63,214,0.15)] to-[rgba(201,162,77,0.15)] border-[rgba(201,162,77,0.3)]"
+          class="opacity-0 -translate-y-4 animate-delay-lg bg-linear-to-r from-[rgba(91,63,214,0.15)] to-[rgba(201,162,77,0.15)] border-[rgba(201,162,77,0.3)]"
         >
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-3">
+          <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div class="flex items-start gap-3 md:items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in w-6 h-6 text-[#C9A24D]"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" x2="3" y1="12" y2="12"></line></svg>
               <div>
-                <h3 class="text-[#F4F2ED] font-medium mb-1">
+                <h3 class="text-[#F4F2ED] font-medium mb-1 text-sm md:text-2xl">
                   <span v-if="!authStore.isAuthenticated">Join OB33Z to unlock full access</span>
                   <span v-else>Welcome back, {{ authStore.user?.name || authStore.user?.display_name || 'Member' }}!</span>
                 </h3>
-                <p class="text-sm text-[#F4F2ED] opacity-80">
+                <p class="text-xs md:text-sm text-[#F4F2ED] opacity-80">
                   <span v-if="!authStore.isAuthenticated">{{ t("nav.freeAccess") }}</span>
                   <span v-else>You're logged in and ready to connect</span>
                 </p>
               </div>
             </div>
-            <div class="flex gap-3">
+            <div class="flex gap-2 md:gap-3 w-full md:w-auto">
               <OB33ZButton 
                 v-if="!authStore.isAuthenticated"
                 variant="ghost" 
+                class="flex-1 md:flex-initial text-2xl py-3.5"
                 @click="openJoinModal"
               >
                 {{ t("nav.signIn") }}
@@ -76,6 +75,7 @@
               <OB33ZButton 
                 v-if="!authStore.isAuthenticated"
                 variant="primary" 
+                class="flex-1 md:flex-initial text-2xl py-3.5"
                 @click="openJoinModal"
               >
                 {{ t("nav.join") }}
@@ -85,7 +85,7 @@
                 variant="ghost" 
                 @click="handleLogout"
                 :disabled="authStore.isLoading"
-                class="text-red-400 hover:text-red-300 hover:bg-red-500/20"
+                class="text-red-400 hover:text-red-300 hover:bg-red-500/20 text-2xl py-3.5"
               >
                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
@@ -97,14 +97,14 @@
         </OB33ZCard>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
         <!-- Main Chat Area -->
         <div class="lg:col-span-2">
           <OB33ZCard class="opacity-0 translate-y-4 animate-fade-left-delay-lg">
-            <h3 class="text-[#C9A24D] mb-4">{{ t("activeNow") }}</h3>
+            <h3 class="text-[#C9A24D] mb-4 text-[16px] md:text-xl">{{ t("activeNow") }}</h3>
 
             <!-- Messages -->
-            <div class="space-y-4 mb-6 max-h-[400px] overflow-y-auto">
+            <div class="space-y-4 mb-6 max-h-80 md:max-h-100 overflow-y-auto">
               <div
                 v-for="msg in messages"
                 :key="msg.id"
@@ -119,7 +119,7 @@
                 class="flex gap-3"
               >
                 <div
-                  class="w-10 h-10 rounded-full bg-gradient-to-br from-[#C9A24D] to-[#5B3FD6] flex items-center justify-center text-[#0B0B0D] font-medium"
+                  class="w-10 h-10 rounded-full bg-linear-to-br from-[#C9A24D] to-[#5B3FD6] flex items-center justify-center text-[#0B0B0D] font-medium"
                 >
                   {{ msg.user[0] }}
                 </div>
@@ -207,14 +207,14 @@
             </div>
 
             <!-- Message Input -->
-            <div class="flex gap-3">
+            <div class="flex gap-2 md:gap-3">
               <OB33ZInput
                 v-model="message"
                 :placeholder="t('sendMessage')"
                 class="flex-1"
                 @keypress="handleKeyPress"
               />
-              <OB33ZButton @click="handleSendMessage" class="px-4">
+              <OB33ZButton @click="handleSendMessage" class="px-3 md:px-4">
                 <svg
                   class="w-4 h-4"
                   fill="none"
@@ -233,7 +233,7 @@
 
             <!-- Actions Bar -->
             <div
-              class="flex items-center gap-4 mt-4 pt-4 border-t border-[rgba(201,162,77,0.15)]"
+              class="flex items-center gap-3 md:gap-4 mt-4 pt-4 border-t border-[rgba(201,162,77,0.15)] flex-wrap"
             >
               <button
                 class="flex items-center gap-2 text-[#F4F2ED] hover:text-[#C9A24D] transition-colors"
@@ -280,7 +280,7 @@
         <!-- Leaderboard -->
         <div>
           <OB33ZCard class="opacity-0 translate-y-4 animate-fade-right-delay-lg">
-            <h3 class="text-[#C9A24D] mb-4">{{ t("leaderboard") }}</h3>
+            <h3 class="text-[#C9A24D] mb-4 text-[16px] md:text-xl">{{ t("leaderboard") }}</h3>
             <p class="text-xs text-[#F4F2ED] opacity-60 mb-4">
               {{ t("topMembers") }}
             </p>
