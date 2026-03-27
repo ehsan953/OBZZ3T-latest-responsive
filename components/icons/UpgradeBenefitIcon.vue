@@ -1,0 +1,31 @@
+<template>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="64"
+    height="64"
+    viewBox="0 0 64 64"
+    fill="none"
+    class="shrink-0"
+  >
+    <!-- Shield -->
+    <template v-if="type === 'shield'">
+      <path d="M0 32C0 14.3269 14.3269 0 32 0C49.6731 0 64 14.3269 64 32C64 49.6731 49.6731 64 32 64C14.3269 64 0 49.6731 0 32Z" fill="#5B3FD6" fill-opacity="0.2" />
+      <path d="M42.6666 33.3333C42.6666 39.9999 37.9999 43.3333 32.4533 45.2666C32.1628 45.365 31.8473 45.3603 31.5599 45.2533C25.9999 43.3333 21.3333 39.9999 21.3333 33.3333V23.9999C21.3333 23.6463 21.4737 23.3072 21.7238 23.0571C21.9738 22.8071 22.313 22.6666 22.6666 22.6666C25.3333 22.6666 28.6666 21.0666 30.9866 19.0399C31.2691 18.7986 31.6284 18.666 31.9999 18.666C32.3714 18.666 32.7308 18.7986 33.0133 19.0399C35.3466 21.0799 38.6666 22.6666 41.3333 22.6666C41.6869 22.6666 42.026 22.8071 42.2761 23.0571C42.5261 23.3072 42.6666 23.6463 42.6666 23.9999V33.3333Z" stroke="#5B3FD6" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+    </template>
+    <!-- Chart (trending up) -->
+    <template v-else-if="type === 'chart'">
+      <path d="M0 32C0 14.3269 14.3269 0 32 0C49.6731 0 64 14.3269 64 32C64 49.6731 49.6731 64 32 64C14.3269 64 0 49.6731 0 32Z" fill="#C9A24D" fill-opacity="0.2" />
+      <path d="M37.3333 25.3333H45.3333V33.3333" stroke="#C9A24D" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M45.3334 25.3333L34.0001 36.6666L27.3334 29.9999L18.6667 38.6666" stroke="#C9A24D" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+    </template>
+    <!-- Star -->
+    <template v-else>
+      <path d="M0 32C0 14.3269 14.3269 0 32 0C49.6731 0 64 14.3269 64 32C64 49.6731 49.6731 64 32 64C14.3269 64 0 49.6731 0 32Z" fill="#C9A24D" fill-opacity="0.2" />
+      <path d="M32 21.3333L34.9467 28.5866L42.6667 29.3333L36.8 34.5866L38.4 42.1333L32 38.6666L25.6 42.1333L27.2 34.5866L21.3333 29.3333L29.0533 28.5866L32 21.3333Z" stroke="#C9A24D" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+    </template>
+  </svg>
+</template>
+
+<script setup lang="ts">
+defineProps<{ type: 'shield' | 'chart' | 'star' }>();
+</script>
