@@ -25,11 +25,11 @@
 
     <!-- Center content -->
     <div class="relative z-10 flex min-h-screen items-center justify-center px-6">
-      <div class="w-full flex flex-col gap-[48px] max-w-md text-center">
+      <div class="w-full flex flex-col gap-8 md:gap-12 max-w-md text-center">
         <!-- Logo + underline (scale / fade like React EntryPage) -->
         <div class="space-y-4 logo-animate">
           <h1
-            class="text-7xl tracking-wider text-[#C9A24D] font-light"
+            class="text-5xl md:text-7xl tracking-wider text-[#C9A24D] font-light"
             style="font-family: 'Tinos', serif"
           >
             OB33Z
@@ -46,7 +46,7 @@
           <button
             type="button"
             @click="isJoinOpen = true"
-            class="w-[260px] rounded-lg bg-[#C9A24D] px-6 py-3 text-sm font-roboto font-medium tracking-widest text-black shadow-[0_0_0_1px_rgba(201,162,77,0.25),0_18px_40px_rgba(0,0,0,0.55)] transition hover:brightness-110 active:scale-[0.99]"
+            class="w-65 rounded-lg bg-[#C9A24D] px-6 py-[13.5px] text-sm font-roboto font-medium tracking-widest text-black shadow-[0_0_0_1px_rgba(201,162,77,0.25),0_18px_40px_rgba(0,0,0,0.55)] transition hover:brightness-110 active:scale-[0.99]"
           >
             {{ t("nav.join") }}
           </button>
@@ -54,7 +54,7 @@
           <button
             type="button"
             @click="isAuthModalOpen = true"
-            class="w-[260px] rounded-lg bg-transparent px-6 py-3 text-sm font-roboto font-medium tracking-widest text-[#F4F2ED] shadow-[0_0_0_1px_rgba(201,162,77,0.10)] transition hover:bg-[#C9A24D]/10 active:scale-[0.99] mb-[48px]"
+            class="w-65 border border-[#C9A24D] rounded-lg bg-transparent px-6 py-[13.5px] text-sm font-roboto font-medium tracking-widest text-[#C9A24D] shadow-[0_0_0_1px_rgba(201,162,77,0.10)] transition hover:bg-[#C9A24D]/10 active:scale-[0.99] mb-4 md:mb-12"
           >
             {{ t("nav.signIn") }}
           </button>
@@ -62,7 +62,7 @@
 
         <!-- Subtitle (last, subtle fade-in) -->
         <div
-          class="text-sm text-[#d1d0cd] opacity-60 italic font-light font-roboto max-w-md mx-auto subtitle-animate"
+          class="text-[12px] sm:text-sm text-[#d1d0cd] opacity-60 italic font-light font-roboto max-w-md mx-auto subtitle-animate"
         >
           {{ t("nav.freeAccess") }}
         </div>
@@ -71,12 +71,12 @@
 
     <!-- Bottom gold glow -->
     <div
-      class="pointer-events-none absolute bottom-0 left-0 right-0 h-[128px] z-[2] bottom-glow-animate"
+      class="pointer-events-none absolute bottom-0 left-0 right-0 h-32 z-2 bottom-glow-animate"
     >
       <div
-        class="absolute inset-0 bg-gradient-to-t from-[#C9A24D]/35 via-[#C9A24D]/15 to-transparent blur-[2px]"
+        class="absolute inset-0 bg-linear-to-t from-[#C9A24D]/35 via-[#C9A24D]/15 to-transparent blur-[2px] bottom-glow-gold"
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+      <div class="absolute inset-0 bg-linear-to-t from-black/40 to-transparent bottom-glow-vignette" />
     </div>
 
     <Join v-model="isJoinOpen" />
@@ -208,5 +208,31 @@ const handleAuthSuccess = () => {
   100% {
     opacity: 0.3;
   }
+}
+
+.bottom-glow-animate {
+  height: 150px;
+  opacity: 0.85;
+  animation: none;
+}
+
+.bottom-glow-gold {
+  background: linear-gradient(
+    to top,
+    rgba(201, 162, 77, 0.52) 0%,
+    rgba(201, 162, 77, 0.22) 38%,
+    rgba(201, 162, 77, 0.08) 64%,
+    transparent 100%
+  );
+  filter: blur(6px);
+}
+
+.bottom-glow-vignette {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.08) 36%,
+    transparent 100%
+  );
 }
 </style>
