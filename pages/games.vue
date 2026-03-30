@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-screen p-4 md:p-6">
+  <div class="relative min-h-screen p-4 md:p-6 lg:pb-20">
     <LevelNavigation />
 
     <div class="relative max-w-7xl mx-auto">
