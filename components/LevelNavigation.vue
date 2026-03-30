@@ -23,9 +23,9 @@
       <div class="h-14" />
 
       <!-- Drawer -->
-      <div v-if="isMobileNavOpen" class="fixed inset-0 z-[70]">
+      <div v-if="isMobileNavOpen" class="fixed inset-0 z-70">
         <div class="absolute inset-0 bg-black/60" @click="isMobileNavOpen = false" />
-        <div class="absolute top-0 right-0 h-full w-[86%] max-w-[340px] bg-[rgba(11,11,13,0.98)] backdrop-blur-md border-l border-[rgba(201,162,77,0.15)] p-4 overflow-y-auto">
+        <div class="absolute top-0 right-0 h-full w-[86%] max-w-85 bg-[rgba(11,11,13,0.98)] backdrop-blur-md border-l border-[rgba(201,162,77,0.15)] p-4 overflow-y-auto">
         <div class="flex items-center justify-between mb-4">
           <div class="text-sm font-medium tracking-widest text-[#C9A24D]">OB33Z</div>
           <button
@@ -41,7 +41,7 @@
         </div>
 
         <div class="flex flex-col gap-1">
-          <div class="text-xs font-semibold text-[#F4F2ED]/60 tracking-widest px-3 mb-1">ROOMS</div>
+          <div class="text-xs font-medium text-[#F4F2ED66]/40 tracking-widest px-3 mb-1">ROOMS</div>
           <NuxtLink
             v-for="level in activeLevels"
             :key="level.path"
@@ -58,32 +58,32 @@
               ]"
             >
               <div class="w-6 h-6 flex items-center justify-center">
-                <svg v-if="level.path === '/lounge'" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg v-if="level.path === '/lounge'" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.9 20A9 9 0 104 16.1L2 22z" />
                 </svg>
-                <svg v-else-if="level.path === '/vibe-room'" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg v-else-if="level.path === '/vibe-room'" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
-                <svg v-else-if="level.path === '/sports-complex'" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg v-else-if="level.path === '/sports-complex'" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" />
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" />
                   <circle cx="12" cy="12" r="2" />
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5" />
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.1 4.9C23 8.8 23 15.1 19.1 19" />
                 </svg>
-                <svg v-else-if="level.path === '/fireside'" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg v-else-if="level.path === '/fireside'" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z" />
                 </svg>
               </div>
               <div class="flex flex-col">
                 <span class="text-sm font-medium">{{ level.name }}</span>
-                <span class="text-[11px] opacity-60">Level {{ level.level }}</span>
+                <span class="text-xs opacity-60">Level {{ level.level }}</span>
               </div>
             </div>
           </NuxtLink>
 
           <div v-if="authStore.isInitialized && authStore.isAuthenticated" class="border-t border-[rgba(201,162,77,0.15)] my-3" />
-          <div v-if="authStore.isInitialized && authStore.isAuthenticated" class="text-xs font-semibold text-[#F4F2ED]/60 tracking-widest px-3 mb-1">ACCOUNT & MORE</div>
+          <div v-if="authStore.isInitialized && authStore.isAuthenticated" class="text-xs font-medium text-[#F4F2ED66]/40 tracking-widest px-3 mb-1">ACCOUNT & MORE</div>
 
           <NuxtLink
             v-if="authStore.isInitialized && authStore.isAuthenticated"
@@ -129,14 +129,14 @@
 
           <NuxtLink
             v-if="authStore.isInitialized && authStore.isAuthenticated"
-            to="/ambassador-program"
+            to="/ambassador"
             class="relative"
-            @click.prevent="isMobileNavOpen = false; startTransition('/ambassador-program')"
+            @click.prevent="isMobileNavOpen = false; startTransition('/ambassador')"
           >
             <div
               :class="[
                 'px-4 py-3 rounded-lg transition-colors flex items-center gap-3',
-                isActive('/ambassador-program')
+                isActive('/ambassador')
                   ? 'bg-[#5B3FD6] text-white'
                   : 'text-[#F4F2ED] hover:bg-[rgba(91,63,214,0.1)]'
               ]"
@@ -171,7 +171,7 @@
     <nav class="hidden md:block fixed top-6 left-6 z-50 group">
     <div
       v-motion="navMotion"
-      class="bg-[rgba(11,11,13,0.8)] backdrop-blur-md border border-[rgba(201,162,77,0.15)] rounded-lg p-2 transition-all duration-200 w-[65px] group-hover:w-max group-hover:min-w-[260px]"
+      class="bg-[rgba(11,11,13,0.8)] backdrop-blur-md border border-[rgba(201,162,77,0.15)] rounded-lg p-2 transition-all duration-200 w-16.25 group-hover:w-max group-hover:min-w-65"
     >
       <div class="flex flex-col gap-1">
         <NuxtLink

@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-screen p-6">
+  <div class="relative min-h-screen p-4 md:p-6">
     <LevelNavigation />
     <LiveCounter />
     <!-- <MusicToggle /> -->
@@ -7,25 +7,25 @@
     <!-- Ambient background glow -->
     <div class="fixed inset-0 pointer-events-none">
       <div
-        class="absolute top-1/3 left-1/3 w-[420px] h-[420px] bg-[#5B3FD6] opacity-[0.08] blur-[140px] rounded-full"
+        class="absolute top-1/3 left-1/3 w-105 h-105 bg-[#5B3FD6] opacity-[0.08] blur-[140px] rounded-full"
       />
       <div
-        class="absolute bottom-1/4 right-1/4 w-[420px] h-[420px] bg-[#C9A24D] opacity-[0.06] blur-[140px] rounded-full"
+        class="absolute bottom-1/4 right-1/4 w-105 h-105 bg-[#C9A24D] opacity-[0.06] blur-[140px] rounded-full"
       />
     </div>
 
-    <div class="relative max-w-7xl mx-auto py-8 px-4">
+    <div class="relative max-w-7xl mx-auto pt-2 pb-4 md:py-8 md:px-4">
       <!-- Header -->
       <div
         class="opacity-0 translate-y-6 animate-delay-md text-center mb-8 flex flex-col items-center gap-3"
       >
         <div class="flex items-center gap-3">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame w-10 h-10 text-[#C9A24D]"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
-          <h1 class="text-3xl md:text-4xl text-[#C9A24D] font-light">
+          <h1 class="text-4xl text-[#C9A24D] font-light">
             {{ t("firesides.fireside") }}
           </h1>
         </div>
-        <p class="text-sm text-[#F4F2ED] opacity-70 max-w-3xl">
+        <p class="text-[16px] text-[#F4F2ED99]/60 max-w-78.25 md:max-w-3xl">
           {{ t("firesides.desc") }}
         </p>
       </div>
@@ -41,7 +41,7 @@
             :class="[
               'flex-1 flex flex-col items-center justify-center p-4 rounded-lg border transition-all',
               selectedTopic === topic.id
-                ? 'bg-[rgba(201,162,77,0.16)] border-[#C9A24D] shadow-[0_0_24px_rgba(201,162,77,0.35)]'
+                ? 'bg-[rgba(201,162,77,0.16)] border-[#C9A24D] shadow-[0_0_12px_rgba(201,162,77,0.35)]'
                 : 'bg-[rgba(11,11,13,0.9)] border-[rgba(201,162,77,0.2)] hover:border-[rgba(201,162,77,0.35)]',
             ]"
           >
@@ -53,7 +53,7 @@
               <svg v-if="topic.id == 'lifeStories'" class="mx-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: rgb(201, 162, 77);"><path d="M10 2v2"></path><path d="M14 2v2"></path><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"></path><path d="M6 2v2"></path></svg>
               <svg v-if="topic.id == 'wellness'" class="mx-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: rgb(91, 63, 214);"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
             </div>
-            <div class="text-[#F4F2ED] text-sm text-center">{{ topic.label }}</div>
+            <div class="text-[#F4F2ED] text-sm font-medium text-center">{{ topic.label }}</div>
           </button>
           
           </div>
@@ -82,7 +82,7 @@
                   <div class="grid grid-cols-3 gap-4 py-8">
                     <div class="text-center opacity-0 translate-y-4 animate-delay-sm">
                       <div class="relative inline-block mb-2 ring-2 ring-[#C9A24D] ring-offset-2 ring-offset-[#0A0A0A] rounded-full">
-                        <div class="w-16 h-16 rounded-full bg-gradient-to-br flex items-center justify-center text-[#F4F2ED] from-[#C9A24D] to-[#5B3FD6]">
+                        <div class="w-16 h-16 rounded-full bg-linear-to-br flex items-center justify-center text-[#F4F2ED] from-[#C9A24D] to-[#5B3FD6]">
                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                         </div>
                         <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center" style="transform: scale(1.01483);">
@@ -98,7 +98,7 @@
                     </div>
                     <div class="text-center opacity-0 translate-y-4 animate-delay-md">
                       <div class="relative inline-block mb-2 ">
-                        <div class="w-16 h-16 rounded-full bg-gradient-to-br flex items-center justify-center text-[#F4F2ED] from-[#5B3FD6] to-[#C9A24D]">
+                        <div class="w-16 h-16 rounded-full bg-linear-to-br flex items-center justify-center text-[#F4F2ED] from-[#5B3FD6] to-[#C9A24D]">
                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                         </div>
                       </div>
@@ -111,7 +111,7 @@
                     </div>
                     <div class="text-center opacity-0 translate-y-4 animate-delay-lg">
                       <div class="relative inline-block mb-2">
-                        <div class="w-16 h-16 rounded-full bg-gradient-to-br flex items-center justify-center text-[#F4F2ED] from-[#5B3FD6] to-[#C9A24D]">
+                        <div class="w-16 h-16 rounded-full bg-linear-to-br flex items-center justify-center text-[#F4F2ED] from-[#5B3FD6] to-[#C9A24D]">
                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                         </div>
                     </div>
@@ -124,7 +124,7 @@
                   </div>
                   <div class="text-center opacity-0 translate-y-4 animate-delay-xl">
                     <div class="relative inline-block mb-2">
-                      <div class="w-16 h-16 rounded-full bg-gradient-to-br flex items-center justify-center text-[#F4F2ED] from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20">
+                      <div class="w-16 h-16 rounded-full bg-linear-to-br flex items-center justify-center text-[#F4F2ED] from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                       </div>
                     </div>
@@ -137,7 +137,7 @@
                   </div>
                   <div class="text-center opacity-0 translate-y-4 animate-delay-2xl">
                     <div class="relative inline-block mb-2">
-                      <div class="w-16 h-16 rounded-full bg-gradient-to-br flex items-center justify-center text-[#F4F2ED] from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20">
+                      <div class="w-16 h-16 rounded-full bg-linear-to-br flex items-center justify-center text-[#F4F2ED] from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                       </div>
                     </div>
@@ -150,7 +150,7 @@
                   </div>
                   <div class="text-center opacity-0 translate-y-4 animate-delay-3xl">
                     <div class="relative inline-block mb-2">
-                      <div class="w-16 h-16 rounded-full bg-gradient-to-br flex items-center justify-center text-[#F4F2ED] from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20">
+                      <div class="w-16 h-16 rounded-full bg-linear-to-br flex items-center justify-center text-[#F4F2ED] from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20">
                         <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                       </div>
                     </div>
@@ -162,7 +162,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="flex items-center justify-center gap-4 pt-6 border-t border-[#C9A24D]/10">
+                <div class="flex items-center justify-center gap-2 md:gap-4 pt-6 border-t border-[#C9A24D]/10">
                   <button class="p-4 rounded-full transition-all bg-[#C9A24D]/20 text-[#C9A24D] hover:bg-[#C9A24D]/30" >
                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mic w-5 h-5" ><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" x2="12" y1="19" y2="22"></line></svg>
                   </button>
@@ -172,7 +172,7 @@
                   <button class="p-4 rounded-full transition-all bg-[#C9A24D]/20 text-[#C9A24D] hover:bg-[#C9A24D]/30">
                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand w-5 h-5"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"></path><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"></path><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"></path><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path></svg>
                   </button>
-                  <button class="px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent border border-[#C9A24D] text-[#C9A24D] hover:bg-[rgba(201,162,77,0.1)]" tabindex="0">Leave Quietly</button>
+                  <button class="px-5 md:px-8 py-2 md:py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent border border-[#C9A24D] text-[#C9A24D] hover:bg-[rgba(201,162,77,0.1)]" tabindex="0">Leave Quietly</button>
                 </div>
               </div>
             </div>
@@ -182,19 +182,19 @@
               <h3 class="text-lg font-light text-[#C9A24D] mb-4">{{ t("firesides.Guidelines") }}</h3>
               <div class="space-y-3 text-sm text-[#F4F2ED]/80">
                 <div class="flex items-start gap-3">
-                  <div class="w-1.5 h-1.5 rounded-full bg-[#C9A24D] mt-1.5 flex-shrink-0"></div>
+                  <div class="w-1.5 h-1.5 rounded-full bg-[#C9A24D] mt-1.5 shrink-0"></div>
                   <p>{{ t("firesides.guide1") }}</p>
                 </div>
                 <div class="flex items-start gap-3">
-                  <div class="w-1.5 h-1.5 rounded-full bg-[#C9A24D] mt-1.5 flex-shrink-0"></div>
+                  <div class="w-1.5 h-1.5 rounded-full bg-[#C9A24D] mt-1.5 shrink-0"></div>
                   <p>{{ t("firesides.guide2") }}</p>
                 </div>
                 <div class="flex items-start gap-3">
-                  <div class="w-1.5 h-1.5 rounded-full bg-[#C9A24D] mt-1.5 flex-shrink-0"></div>
+                  <div class="w-1.5 h-1.5 rounded-full bg-[#C9A24D] mt-1.5 shrink-0"></div>
                   <p>{{ t("firesides.guide3") }}</p>
                 </div>
                 <div class="flex items-start gap-3">
-                  <div class="w-1.5 h-1.5 rounded-full bg-[#C9A24D] mt-1.5 flex-shrink-0"></div>
+                  <div class="w-1.5 h-1.5 rounded-full bg-[#C9A24D] mt-1.5 shrink-0"></div>
                   <p>{{ t("firesides.guide4") }}</p>
                 </div>
               </div>
@@ -211,13 +211,13 @@
               </div>
               <div class="space-y-2">
                 <div class="flex items-center gap-3 p-2 bg-[#0A0A0A]/30 rounded-lg">
-                  <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20 flex items-center justify-center">
+                  <div class="w-8 h-8 rounded-full bg-linear-to-br from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20 flex items-center justify-center">
                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-4 h-4 text-[#F4F2ED]"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div><div class="flex-1"  >
                       <div class="text-[#F4F2ED] text-sm">Alex K.</div>
                     </div>
                   </div>
                   <div class="flex items-center gap-3 p-2 bg-[#0A0A0A]/30 rounded-lg">
-                    <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20 flex items-center justify-center">
+                    <div class="w-8 h-8 rounded-full bg-linear-to-br from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20 flex items-center justify-center">
                       <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-4 h-4 text-[#F4F2ED]"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                     </div>
                     <div class="flex-1"  ><div class="text-[#F4F2ED] text-sm"  >Chris D.</div>
@@ -225,7 +225,7 @@
                   <div class="px-2 py-1 rounded bg-[rgba(201,162,77,0.1)] text-[#C9A24D] border border-[rgba(201,162,77,0.3)] text-xs"></div>
                 </div>
                 <div class="flex items-center gap-3 p-2 bg-[#0A0A0A]/30 rounded-lg" >
-                  <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20 flex items-center justify-center">
+                  <div class="w-8 h-8 rounded-full bg-linear-to-br from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20 flex items-center justify-center">
                     <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-4 h-4 text-[#F4F2ED]" ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                   </div>
                   <div class="flex-1">
@@ -249,7 +249,7 @@
                     <span class="text-[#5B3FD6] text-xs">Today, 8:00 PM</span>
                     <div class="px-2 py-1 rounded bg-[rgba(201,162,77,0.1)] text-[#C9A24D] border border-[rgba(201,162,77,0.3)] text-xs"></div>
                   </div>
-                  <button class="px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent text-[#F4F2ED] hover:bg-[rgba(244,242,237,0.1)] w-full" tabindex="0" style="transform: none;">{{ t("firesides.join") }}</button>
+                  <button class="text-[16px] font-medium px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent text-[#F4F2ED] hover:bg-[rgba(244,242,237,0.1)] w-full" tabindex="0" style="transform: none;">{{ t("firesides.join") }}</button>
                 </div>
                 <div class="p-4 bg-[#0A0A0A]/30 rounded-lg space-y-2">
                   <h4 class="text-[#F4F2ED] font-light"  >{{ t("firesides.con2") }}</h4>
@@ -261,7 +261,7 @@
                     <span class="text-[#5B3FD6] text-xs">Tomorrow, 6:00 PM</span>
                     <div class="px-2 py-1 rounded bg-[rgba(201,162,77,0.1)] text-[#C9A24D] border border-[rgba(201,162,77,0.3)] text-xs"></div>
                   </div>
-                  <button class="px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent text-[#F4F2ED] hover:bg-[rgba(244,242,237,0.1)] w-full" tabindex="0" style="transform: none;">{{ t("firesides.join") }}</button>
+                  <button class="text-[16px] font-medium px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent text-[#F4F2ED] hover:bg-[rgba(244,242,237,0.1)] w-full" tabindex="0" style="transform: none;">{{ t("firesides.join") }}</button>
                 </div>
                 <div class="p-4 bg-[#0A0A0A]/30 rounded-lg space-y-2">
                   <h4 class="text-[#F4F2ED] font-light">{{ t("firesides.con3") }}</h4>
@@ -273,7 +273,7 @@
                     <span class="text-[#5B3FD6] text-xs">Feb 20, 7:00 PM</span>
                     <div class="px-2 py-1 rounded bg-[rgba(201,162,77,0.1)] text-[#C9A24D] border border-[rgba(201,162,77,0.3)] text-xs"></div>
                   </div>
-                  <button class="px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent text-[#F4F2ED] hover:bg-[rgba(244,242,237,0.1)] w-full" tabindex="0">{{ t("firesides.join") }}</button>
+                  <button class="text-[16px] font-medium px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent text-[#F4F2ED] hover:bg-[rgba(244,242,237,0.1)] w-full" tabindex="0">{{ t("firesides.join") }}</button>
                 </div>
               </div>
             </div>

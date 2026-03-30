@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-screen pb-20">
+  <div class="relative min-h-screen md:pb-10 lg:pb-20">
     <LevelNavigation />
 
     <div class="relative max-w-7xl mx-auto py-8 px-4">
@@ -106,11 +106,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mb-8 opacity-0 translate-y-4 animate-fade-right">
+            <div class="mb-4 md:mb-8 opacity-0 translate-y-4 animate-fade-right">
                 <div class="bg-[rgba(11,11,13,0.6)] backdrop-blur-sm border border-[rgba(201,162,77,0.15)] rounded-lg p-6" style="opacity: 1; transform: none;">
                     <h3 class="text-lg font-light text-[#F4F2ED] mb-4">Your QR Code</h3>
                     <div class="bg-white p-4 rounded-lg mb-4">
-                        <div class="aspect-square bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A] rounded flex items-center justify-center">
+                        <div class="aspect-square bg-linear-to-br from-[#0A0A0A] to-[#1A1A1A] rounded flex items-center justify-center">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-qr-code w-32 h-32 text-[#C9A24D]"><rect width="5" height="5" x="3" y="3" rx="1"></rect><rect width="5" height="5" x="16" y="3" rx="1"></rect><rect width="5" height="5" x="3" y="16" rx="1"></rect><path d="M21 16h-3a2 2 0 0 0-2 2v3"></path><path d="M21 21v.01"></path><path d="M12 7v3a2 2 0 0 1-2 2H7"></path><path d="M3 12h.01"></path><path d="M12 3h.01"></path><path d="M12 16v.01"></path><path d="M16 12h1"></path><path d="M21 12v.01"></path><path d="M12 21v-1"></path></svg>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
         </div>
 
         <!-- Referral Link -->
-        <div class="mb-8 opacity-0 -translate-y-4 animate-delay-lg">
+        <div class="md:mb-8 opacity-0 -translate-y-4 animate-delay-lg">
             <div class="bg-[rgba(11,11,13,0.6)] backdrop-blur-sm border border-[rgba(201,162,77,0.15)] rounded-lg p-6" style="opacity: 1; transform: none;">
                 <div class="flex items-center gap-3 mb-4">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link w-5 h-5 text-[#C9A24D]"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
@@ -149,8 +149,8 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-            <div class="opacity-0 translate-y-4 animate-fade-left mb-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mb-8">
+            <div class="opacity-0 translate-y-4 animate-fade-left mb-4 md:mb-8">
                 <div class="bg-[rgba(11,11,13,0.6)] backdrop-blur-sm border border-[rgba(201,162,77,0.15)] rounded-lg p-6" style="opacity: 1; transform: none;">
                     <div class="flex items-center gap-3 mb-6">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-5 h-5 text-[#C9A24D]"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
@@ -200,7 +200,7 @@
                     </div>
                 </div>
             </div>
-            <div class="opacity-0 translate-y-4 animate-fade-right">
+            <div class="opacity-0 translate-y-4 animate-fade-right mb-4 md:mb-8">
                 <div class="bg-[rgba(11,11,13,0.6)] backdrop-blur-sm border border-[rgba(201,162,77,0.15)] rounded-lg p-6" style="opacity: 1; transform: none;">
                     <div class="flex items-center gap-3 mb-6">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up w-5 h-5 text-[#C9A24D]"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
@@ -209,7 +209,7 @@
                     <div class="space-y-4">
                         <div class="flex items-center justify-between p-3 bg-[#0A0A0A]/30 rounded-lg">
                             <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#C9A24D] to-[#5B3FD6] flex items-center justify-center text-[#F4F2ED] text-sm font-light">1</div>
+                                <div class="w-8 h-8 rounded-full bg-linear-to-br from-[#C9A24D] to-[#5B3FD6] flex items-center justify-center text-[#F4F2ED] text-sm font-light">1</div>
                                 <div>
                                     <div class="text-[#F4F2ED] text-sm">Sarah K.</div>
                                     <div class="text-[#F4F2ED]/60 text-xs">Jan 15, 2024</div>
@@ -219,7 +219,7 @@
                         </div>
                         <div class="flex items-center justify-between p-3 bg-[#0A0A0A]/30 rounded-lg">
                             <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#C9A24D] to-[#5B3FD6] flex items-center justify-center text-[#F4F2ED] text-sm font-light">2</div>
+                                <div class="w-8 h-8 rounded-full bg-linear-to-br from-[#C9A24D] to-[#5B3FD6] flex items-center justify-center text-[#F4F2ED] text-sm font-light">2</div>
                                 <div>
                                     <div class="text-[#F4F2ED] text-sm">Mike D.</div>
                                     <div class="text-[#F4F2ED]/60 text-xs">Jan 20, 2024</div>
@@ -229,7 +229,7 @@
                         </div>
                         <div class="flex items-center justify-between p-3 bg-[#0A0A0A]/30 rounded-lg">
                             <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#C9A24D] to-[#5B3FD6] flex items-center justify-center text-[#F4F2ED] text-sm font-light">3</div>
+                                <div class="w-8 h-8 rounded-full bg-linear-to-br from-[#C9A24D] to-[#5B3FD6] flex items-center justify-center text-[#F4F2ED] text-sm font-light">3</div>
                                 <div>
                                     <div class="text-[#F4F2ED] text-sm">Emma R.</div>
                                     <div class="text-[#F4F2ED]/60 text-xs">Feb 1, 2024</div>

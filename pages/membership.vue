@@ -1,13 +1,13 @@
 <template>
-  <div class="relative min-h-screen pb-20">
+  <div class="relative min-h-screen md:pb-10 lg:pb-20">
     <LevelNavigation />
 
     <!-- Main Content -->
     <div class="relative max-w-7xl mx-auto py-8 px-4">
       <!-- Header -->
-      <div class="mb-8 text-center opacity-0 -translate-y-4 animate-delay-sm">
+      <div class="mb-8 text-center opacity-0 -translate-y-4 animate-delay-sm flex flex-col items-center">
         <div class="text-4xl text-[#C9A24D] mb-4 font-light">{{ t('membership.title') }}</div>
-        <p class="text-[#F4F2ED] opacity-60">
+        <p class="text-[#F4F2ED] opacity-60 max-w-76 md:w-auto text-[16px] font-regular text-center">
           {{ t('membership.subtitle') }}
         </p>
       </div>
@@ -30,7 +30,7 @@
                   <span class="text-sm text-[#C9A24D] font-medium">{{ currentPlan.toUpperCase() }}</span>
                 </div>
               </div>
-              <div class="flex flex-wrap gap-6 text-sm">
+              <div class="flex flex-col md:flex-row flex-wrap gap-4 md:gap-6 text-sm">
                 <div class="flex items-center gap-2 text-[#F4F2ED]/60" v-if="hasActiveSubscription">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-4 h-4"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
                   <span>{{ t('membership.renewsOn', { date: renewalDate }) }}</span>
@@ -41,7 +41,7 @@
                 </div>
               </div>
             </div>
-            <div class="flex flex-col sm:flex-row gap-3" v-if="hasActiveSubscription">
+            <div class="flex flex-col md:flex-row gap-3" v-if="hasActiveSubscription">
               <button class="rounded-lg px-4 py-3 flex items-center gap-2 text-sm transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent border border-[#C9A24D] text-[#C9A24D] hover:bg-[rgba(201,162,77,0.1)]" tabindex="0" style="transform: none;">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-credit-card w-4 h-4"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
                 {{ t('membership.updatePayment') }}
@@ -138,19 +138,19 @@
             </div>
             <div class="flex-1 space-y-3 mb-6">
               <div class="flex items-start gap-2">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                 <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.free.previewAccess') }}</span>
               </div>
               <div class="flex items-start gap-2">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                 <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.free.viewOnlyMode') }}</span>
               </div>
               <div class="flex items-start gap-2">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                 <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.free.basicProfile') }}</span>
               </div>
               <div class="flex items-start gap-2">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                 <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.free.oneRoom') }}</span>
               </div>
             </div>
@@ -158,7 +158,7 @@
               @click="currentPlan === 'free' ? null : handleChangeTier('free')"
               :disabled="currentPlan === 'free' || isLoading"
               class="px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed  w-full" 
-              :class="currentPlan === 'free' ? 'bg-transparent border border-[#C9A24D] text-[#C9A24D] hover:bg-[rgba(201,162,77,0.1)]' : 'bg-[#C9A24D] text-[#0B0B0D] hover:bg-[#D4AD59]'"
+              :class="currentPlan === 'free' ? 'bg-transparent border border-[#C9A24D] text-[#C9A24D] hover:bg-[rgba(201,162,77,0.1)]' : 'bg-[#C9A24D] text-[#0B0B0D] hover:bg-[#D4AD59] shadow-[0_0_20px_0_rgba(201,162,77,0.3)]'"
               tabindex="0" 
               style="transform: none;"
             >
@@ -185,23 +185,23 @@
               </div>
               <div class="flex-1 space-y-3 mb-6">
                 <div class="flex items-start gap-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                   <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.vip.allRooms') }}</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                   <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.vip.unlimitedMessaging') }}</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                   <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.vip.digitalGifts') }}</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                   <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.vip.boostMessages') }}</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                   <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.vip.prioritySupport') }}</span>
                 </div>
               </div>
@@ -209,7 +209,7 @@
                 @click="currentPlan === 'vip' ? null : (hasActiveSubscription ? handleChangeTier('vip') : handleSubscribe('vip'))"
                 :disabled="currentPlan === 'vip' || isLoading"
                 class="px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed  w-full" 
-                :class="currentPlan === 'vip' ? 'bg-transparent border border-[#C9A24D] text-[#C9A24D] hover:bg-[rgba(201,162,77,0.1)]' : 'bg-[#C9A24D] text-[#0B0B0D] hover:bg-[#D4AD59]'"
+                :class="currentPlan === 'vip' ? 'bg-transparent border border-[#C9A24D] text-[#C9A24D] hover:bg-[rgba(201,162,77,0.1)]' : 'bg-[#C9A24D] text-[#0B0B0D] hover:bg-[#D4AD59] shadow-[0_0_20px_0_rgba(201,162,77,0.3)]'"
                 tabindex="0" 
                 style="transform: none;"
               >
@@ -235,27 +235,27 @@
             </div>
             <div class="flex-1 space-y-3 mb-6">
               <div class="flex items-start gap-2">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                 <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.elite.everythingVip') }}</span>
               </div>
               <div class="flex items-start gap-2">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                 <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.elite.exclusiveRooms') }}</span>
               </div>
               <div class="flex items-start gap-2">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                 <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.elite.monthlyGiftPack') }}</span>
               </div>
               <div class="flex items-start gap-2">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                 <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.elite.customBadge') }}</span>
               </div>
               <div class="flex items-start gap-2">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                 <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.elite.priorityPlacement') }}</span>
               </div>
               <div class="flex items-start gap-2">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                 <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.elite.advancedAnalytics') }}</span>
               </div>
             </div>
@@ -263,7 +263,7 @@
               @click="currentPlan === 'elite' ? null : (hasActiveSubscription ? handleChangeTier('elite') : handleSubscribe('elite'))"
               :disabled="currentPlan === 'elite' || isLoading"
               class="px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed  w-full" 
-              :class="currentPlan === 'elite' ? 'bg-transparent border border-[#C9A24D] text-[#C9A24D] hover:bg-[rgba(201,162,77,0.1)]' : 'bg-[#C9A24D] text-[#0B0B0D] hover:bg-[#D4AD59]'"
+              :class="currentPlan === 'elite' ? 'bg-transparent border border-[#C9A24D] text-[#C9A24D] hover:bg-[rgba(201,162,77,0.1)]' : 'bg-[#C9A24D] text-[#0B0B0D] hover:bg-[#D4AD59] shadow-[0_0_20px_0_rgba(201,162,77,0.3)]'"
               tabindex="0" 
               style="transform: none;"
             >
@@ -290,27 +290,27 @@
               </div>
               <div class="flex-1 space-y-3 mb-6">
                 <div class="flex items-start gap-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                   <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.obsidian.everythingElite') }}</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                   <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.obsidian.personalConcierge') }}</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                   <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.obsidian.unlimitedGifts') }}</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                   <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.obsidian.vipEvents') }}</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                   <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.obsidian.directLine') }}</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] flex-shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#5B3FD6] shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"></path></svg>
                   <span class="text-[#F4F2ED]/80 text-sm">{{ t('membership.planFeatures.obsidian.customFeatures') }}</span>
                 </div>
               </div>
@@ -318,7 +318,7 @@
                 @click="currentPlan === 'obsidian' ? null : (hasActiveSubscription ? handleChangeTier('obsidian') : handleSubscribe('obsidian'))"
                 :disabled="currentPlan === 'obsidian' || isLoading"
                 class="px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed  w-full" 
-                :class="currentPlan === 'obsidian' ? 'bg-transparent border border-[#C9A24D] text-[#C9A24D] hover:bg-[rgba(201,162,77,0.1)]' : 'bg-[#C9A24D] text-[#0B0B0D] hover:bg-[#D4AD59]'"
+                :class="currentPlan === 'obsidian' ? 'bg-transparent border border-[#C9A24D] text-[#C9A24D] hover:bg-[rgba(201,162,77,0.1)]' : 'bg-[#C9A24D] text-[#0B0B0D] hover:bg-[#D4AD59] shadow-[0_0_20px_0_rgba(201,162,77,0.3)]'"
                 tabindex="0" 
                 style="transform: none;"
               >
@@ -338,26 +338,26 @@
         <div class="bg-[rgba(11,11,13,0.6)] backdrop-blur-sm border border-[rgba(201,162,77,0.15)] rounded-lg p-8" style="opacity: 1; transform: none;">
           <h3 class="text-2xl font-light text-[#C9A24D] mb-6 text-center">{{ t('membership.whyUpgrade') }}</h3>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="text-center space-y-3">
+            <div class="flex flex-col items-center text-center space-y-3">
               <div class="w-16 h-16 rounded-full bg-[#5B3FD6]/20 flex items-center justify-center mx-auto">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-8 h-8 text-[#5B3FD6]"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
               </div>
               <h4 class="text-lg text-[#F4F2ED]">{{ t('membership.exclusiveAccess') }}</h4>
-              <p class="text-[#F4F2ED]/60 text-sm">{{ t('membership.exclusiveAccessDesc') }}</p>
+              <p class="text-[#F4F2ED]/60 text-sm max-w-58 md:w-auto">{{ t('membership.exclusiveAccessDesc') }}</p>
             </div>
-            <div class="text-center space-y-3">
+            <div class="flex flex-col items-center text-center space-y-3">
               <div class="w-16 h-16 rounded-full bg-[#C9A24D]/20 flex items-center justify-center mx-auto">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up w-8 h-8 text-[#C9A24D]"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
               </div>
               <h4 class="text-lg text-[#F4F2ED]">{{ t('membership.priorityStatus') }}</h4>
-              <p class="text-[#F4F2ED]/60 text-sm">{{ t('membership.priorityStatusDesc') }}</p>
+              <p class="text-[#F4F2ED]/60 text-sm max-w-58 md:w-auto">{{ t('membership.priorityStatusDesc') }}</p>
             </div>
-            <div class="text-center space-y-3">
+            <div class="flex flex-col items-center text-center space-y-3">
               <div class="w-16 h-16 rounded-full bg-[#C9A24D]/20 flex items-center justify-center mx-auto">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles w-8 h-8 text-[#C9A24D]"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>
               </div>
               <h4 class="text-lg text-[#F4F2ED]">{{ t('membership.premiumPerks') }}</h4>
-              <p class="text-[#F4F2ED]/60 text-sm">{{ t('membership.premiumPerksDesc') }}</p>
+              <p class="text-[#F4F2ED]/60 text-sm max-w-58 md:w-auto">{{ t('membership.premiumPerksDesc') }}</p>
             </div>
           </div>
         </div>

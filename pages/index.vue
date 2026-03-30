@@ -1,25 +1,25 @@
 <template>
   <div class="relative min-h-screen overflow-hidden bg-[#050608]">
     <!-- Language selector only on the entry page -->
-    <div class="fixed right-6 top-6 z-[9999]">
+    <div class="fixed right-6 top-6 z-9999">
       <LanguageSelector />
     </div>
     <!-- Cursor-follow small radial glow -->
     <div
       ref="cursorGlow"
-      class="pointer-events-none absolute inset-0 z-[1]"
+      class="pointer-events-none absolute inset-0 z-1"
       style="transition: background 40ms linear"
     />
 
     <!-- Dark overlay -->
     <div
-      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 z-[2]"
+      class="pointer-events-none absolute inset-0 bg-linear-to-b from-black/60 via-transparent to-black/70 z-2"
     />
 
     <!-- Purple ambient glow -->
-    <div class="pointer-events-none absolute inset-0 z-[2]">
+    <div class="pointer-events-none absolute inset-0 z-2">
       <div
-        class="absolute left-1/2 top-1/3 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#5B3FD6]/10 blur-[140px]"
+        class="absolute left-1/2 top-1/3 h-130 w-130 -translate-x-1/2 rounded-full bg-[#5B3FD6]/10 blur-[140px]"
       />
     </div>
 
@@ -36,7 +36,7 @@
           </h1>
 
           <div
-            class="h-[1px] w-32 mx-auto bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent"
+            class="h-[1px] w-32 mx-auto bg-linear-to-r from-transparent via-[#C9A24D] to-transparent"
           />
         </div>
 

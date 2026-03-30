@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-screen p-6">
+  <div class="relative min-h-screen p-4 md:p-6">
     <!-- Global navigation / chrome -->
     <LevelNavigation />
     <LiveCounter />
@@ -7,14 +7,14 @@
     <!-- Ambient background effects -->
     <div class="fixed inset-0 pointer-events-none">
       <div
-        class="absolute top-1/3 right-1/4 w-[420px] h-[420px] bg-[#5B3FD6] opacity-[0.08] blur-[140px] rounded-full"
+        class="absolute top-1/3 right-1/4 w-105 h-105 bg-[#5B3FD6] opacity-[0.08] blur-[140px] rounded-full"
       />
       <div
-        class="absolute bottom-1/4 left-1/3 w-[420px] h-[420px] bg-[#C9A24D] opacity-[0.06] blur-[140px] rounded-full"
+        class="absolute bottom-1/4 left-1/3 w-105 h-[105] bg-[#C9A24D] opacity-[0.06] blur-[140px] rounded-full"
       />
     </div>
 
-    <div class="relative max-w-7xl mx-auto py-8 px-4">
+    <div class="relative max-w-7xl mx-auto py-4 md:py-8 md:px-4">
       <!-- Page header -->
       <div class="text-center space-y-4 mb-8" style="opacity: 1; transform: none;">
         <div class="opacity-0 translate-y-4 animate-delay-md flex items-center justify-center gap-3">
@@ -40,7 +40,7 @@
           ]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target w-4 h-4"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          <span>{{ sport.label }}</span>
+          <span class="text-sm font-medium">{{ sport.label }}</span>
         </button>
       </div>
 
@@ -75,7 +75,7 @@
                           <span>{{ t("sports.live") }}</span>
                         </div>
                       </div>
-                      <h3 class="text-xl font-light text-[#F4F2ED]">{{ game.matchup }}</h3>
+                      <h3 class="text-xl font-regular text-[#F4F2ED]">{{ game.matchup }}</h3>
                     </div>
                     <button class="px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent border border-[#C9A24D] text-[#C9A24D] hover:bg-[rgba(201,162,77,0.1)]" tabindex="0">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tv w-4 h-4"><rect width="20" height="15" x="2" y="7" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg>
@@ -134,7 +134,7 @@
                   </div>
                   <div class="text-right space-y-1">
                     <div class="text-[#5B3FD6] text-sm">{{ event.timeLabel }}</div>
-                    <button class="px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent text-[#F4F2ED] hover:bg-[rgba(244,242,237,0.1)]" tabindex="0" style="transform: none;">{{ t("sports.reminder") }}</button>
+                    <button class="px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent text-[#F4F2ED] text-[16px] hover:bg-[rgba(244,242,237,0.1)]" tabindex="0" style="transform: none;">{{ t("sports.reminder") }}</button>
                   </div>
                 </div>
               </div>
@@ -145,7 +145,7 @@
         <!-- Right: Live chat + top fans -->
         <div class="space-y-6">
           <!-- Live chat -->
-          <div class="opacity-0 translate-y-4 animate-fade-right-delay-md bg-[rgba(11,11,13,0.6)] backdrop-blur-sm border border-[rgba(201,162,77,0.15)] rounded-lg p-6 h-[800px] flex flex-col" style="opacity: 1; transform: none;">
+          <div class="opacity-0 translate-y-4 animate-fade-right-delay-md bg-[rgba(11,11,13,0.6)] backdrop-blur-sm border border-[rgba(201,162,77,0.15)] rounded-lg p-6 h-200 flex flex-col" style="opacity: 1; transform: none;">
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-lg font-light text-[#F4F2ED] flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle w-5 h-5 text-[#5B3FD6]"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
@@ -169,7 +169,7 @@
             </div>
             <div class="flex gap-2">
               <input type="text" placeholder="Send a message..." class="flex-1 bg-[#0A0A0A]/50 border border-[#C9A24D]/20 rounded-lg px-4 py-2 text-[#F4F2ED] placeholder:text-[#F4F2ED]/40 focus:outline-none focus:border-[#C9A24D]/60" value="">
-              <button class="px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-[#C9A24D] text-[#0B0B0D] hover:bg-[#D4AD59] shadow-[0_0_20px_rgba(201,162,77,0.3)]" tabindex="0" style="transform: none;">{{ t("sports.send") }}</button>
+              <button class="px-5 md:px-8 py-2 md:py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-[#C9A24D] text-[#0B0B0D] hover:bg-[#D4AD59] shadow-[0_0_20px_rgba(201,162,77,0.3)]" tabindex="0" style="transform: none;">{{ t("sports.send") }}</button>
             </div>
           </div>
 

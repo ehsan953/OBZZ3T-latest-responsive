@@ -1,15 +1,15 @@
 <template>
-  <div class="relative min-h-screen pb-20">
+  <div class="relative min-h-screen md:pb-10 lg:pb-20">
     <LevelNavigation />
 
     <div class="relative max-w-7xl mx-auto py-8 px-4">
       <OB33ZCard class="mb-8 opacity-0 -translate-y-4 animate-delay-sm">
         <div class="flex items-start justify-between gap-6">
-          <div class="flex items-start gap-6 flex-1">
+          <div class="flex flex-col md:flex-row items-start gap-6 flex-1">
             <div class="relative">
               <label
                 v-if="isEditMode"
-                class="block w-32 h-32 rounded-full bg-gradient-to-br from-[#5B3FD6] to-[#C9A24D] flex items-center justify-center overflow-hidden cursor-pointer relative"
+                class="w-32 h-32 rounded-full bg-linear-to-br from-[#5B3FD6] to-[#C9A24D] flex items-center justify-center overflow-hidden cursor-pointer relative"
               >
                 <svg v-if="!displayProfileImage" class="w-16 h-16 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -33,7 +33,7 @@
               </span>
               <div
                 v-else
-                class="w-32 h-32 rounded-full bg-gradient-to-br from-[#5B3FD6] to-[#C9A24D] flex items-center justify-center overflow-hidden"
+                class="w-32 h-32 rounded-full bg-linear-to-br from-[#5B3FD6] to-[#C9A24D] flex items-center justify-center overflow-hidden"
               >
                 <svg v-if="!displayProfileImage" class="w-16 h-16 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -66,7 +66,7 @@
                           <div class="flex items-center gap-2" v-if="displayPhone">
                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-4 h-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.1 3.18 2 2 0 0 1 5.11 1h3a2 2 0 0 1 2 1.72c.12.86.31 1.7.57 2.5a2 2 0 0 1-.45 2.11L9 8a16 16 0 0 0 7 7l.67-.23a2 2 0 0 1 2.11.45c.8.26 1.64.45 2.5.57A2 2 0 0 1 22 16.92z"></path></svg>
                               <span>{{ displayPhone }}</span>
-                              <OB33ZButton v-if="!isEditMode" variant="ghost" class="!px-2 !py-1 text-xs" @click="isEditMode = true">Edit</OB33ZButton>
+                              <OB33ZButton v-if="!isEditMode" variant="ghost" class="px-2! py-1! text-xs" @click="isEditMode = true">Edit</OB33ZButton>
                           </div>
                           <div class="flex items-center gap-2">
                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-4 h-4"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
@@ -79,22 +79,21 @@
                         </div>
                     </div>
                     <div>
-                        <OB33ZButton
+                        <button
                             v-if="!isEditMode"
-                            variant="secondary"
                             @click="isEditMode = true"
-                            class="flex items-center gap-2"
+                            class="border border-[#C9A24D] rounded-xl flex items-start md:items-center text-left text-[#C9A24D] gap-2 px-4 py-2 md:px-6 md:py-3"
                         >
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 20 20">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                             </svg>
                             {{ t('editProfile') }}
-                        </OB33ZButton>
+                          </button>
                     </div>
                 </div>
               
               <!-- User Stats -->
-               <div class="grid grid-cols-3 md:grid-cols-6 gap-4 pt-4 border-t border-[#C9A24D]/10">
+               <div class="grid grid-cols-3 md:grid-cols-6 gap-2 md:gap-4 pt-4 border-t border-[#C9A24D]/10">
                 <div class="text-center">
                     <div class="text-2xl font-light text-[#C9A24D]">{{ userStats.level }}</div>
                     <div class="text-[#F4F2ED]/60 text-xs">{{ t('level') }}</div>
@@ -205,7 +204,7 @@
                       :disabled="!isEditMode"
                     />
                     <p v-if="errors.displayName" class="text-xs text-red-400 mt-1 flex items-center gap-1">
-                      <svg class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <svg class="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                       {{ errors.displayName }}
                     </p>
                   </div>
@@ -221,7 +220,7 @@
                       :disabled="!isEditMode"
                     />
                     <p v-if="errors.username" class="text-xs text-red-400 mt-1 flex items-center gap-1">
-                      <svg class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <svg class="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                       {{ errors.username }}
                     </p>
                   </div>
@@ -235,7 +234,7 @@
                       <select
                         v-model="phoneCountryCode"
                         :disabled="!isEditMode"
-                        class="profile-country-select w-[140px] shrink-0 px-3 py-3 rounded-lg bg-[rgba(244,242,237,0.05)] border border-[rgba(201,162,77,0.15)] text-[#F4F2ED] text-sm outline-none focus:border-[#C9A24D]/50 focus:bg-[rgba(244,242,237,0.08)] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                        class="profile-country-select w-35 shrink-0 px-2 sm:px-3 py-3 rounded-lg bg-[rgba(244,242,237,0.05)] border border-[rgba(201,162,77,0.15)] text-[#F4F2ED] text-sm outline-none focus:border-[#C9A24D]/50 focus:bg-[rgba(244,242,237,0.08)] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                       >
                         <option
                           v-for="c in phoneCountries"
@@ -255,7 +254,7 @@
                       />
                     </div>
                     <p v-if="errors.phoneNational" class="text-xs text-red-400 mt-1 flex items-center gap-1">
-                      <svg class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <svg class="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                       {{ errors.phoneNational }}
                     </p>
                   </div>
@@ -271,7 +270,7 @@
                       :disabled="!isEditMode"
                     />
                     <p v-if="errors.city" class="text-xs text-red-400 mt-1 flex items-center gap-1">
-                      <svg class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <svg class="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                       {{ errors.city }}
                     </p>
                   </div>
@@ -286,7 +285,7 @@
                       :disabled="!isEditMode"
                     />
                     <p v-if="errors.state" class="text-xs text-red-400 mt-1 flex items-center gap-1">
-                      <svg class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <svg class="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                       {{ errors.state }}
                     </p>
                   </div>
@@ -312,7 +311,7 @@
                       </div>
                     </template>
                     <p v-if="errors.birthday" class="text-xs text-red-400 mt-1 flex items-center gap-1">
-                      <svg class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <svg class="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                       {{ errors.birthday }}
                     </p>
                   </div>
@@ -357,7 +356,7 @@
                     :placeholder="t('tellUsAboutYourself')"
                   ></textarea>
                   <p v-if="errors.bio" class="text-xs text-red-400 mt-1 flex items-center gap-1">
-                    <svg class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <svg class="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     {{ errors.bio }}
                   </p>
                 </div>
@@ -386,7 +385,7 @@
               <h2 class="text-2xl font-light text-[#F4F2ED] mb-6">{{ t('profile.accountSettings') }}</h2>
               
               <!-- Change Password -->
-              <div class="p-4 bg-[#0A0A0A]/30 rounded-lg flex items-center justify-between">
+              <div class="py-4 sm:p-4 bg-[#0A0A0A]/30 rounded-lg flex items-center justify-between">
                 <div class="space-y-1">
                   <div class="text-[#F4F2ED]">{{ t('profile.changePassword') }}</div>
                   <div class="text-[#F4F2ED]/60 text-sm">{{ t('profile.changePasswordDesc') }}</div>
@@ -401,7 +400,7 @@
               </div>
     
               <!-- Two-Factor Authentication -->
-              <div class="p-4 bg-[#0A0A0A]/30 rounded-lg flex items-center justify-between">
+              <div class="py-4 sm:p-4 bg-[#0A0A0A]/30 rounded-lg flex items-center justify-between">
                 <div class="space-y-1">
                   <div class="text-[#F4F2ED]">{{ t('profile.twoFactorAuth') }}</div>
                   <div class="text-[#F4F2ED]/60 text-sm">{{ t('profile.twoFactorAuthDesc') }}</div>
@@ -410,7 +409,7 @@
               </div>
     
               <!-- Linked Accounts -->
-              <div class="p-4 bg-[#0A0A0A]/30 rounded-lg flex items-center justify-between">
+              <div class="py-4 sm:p-4 bg-[#0A0A0A]/30 rounded-lg flex items-center justify-between">
                 <div class="space-y-1">
                   <div class="text-[#F4F2ED]">{{ t('profile.linkedAccounts') }}</div>
                   <div class="text-[#F4F2ED]/60 text-sm">{{ t('profile.linkedAccountsDesc') }}</div>
@@ -421,7 +420,7 @@
               </div>
     
               <!-- Delete Account -->
-              <div class="p-4 flex items-center justify-between bg-red-500/10 border border-red-500/30 rounded-lg mt-4">
+              <div class="p-4 flex flex-col md:flex-row gap-4 items-center justify-between bg-red-500/10 border border-red-500/30 rounded-lg mt-4">
                 <div class="space-y-1">
                   <div class="text-red-400">{{ t('profile.deactivateAccount') }}</div>
                   <div class="text-[#F4F2ED]/60 text-sm">{{ t('profile.deactivateAccountDesc') }}</div>
@@ -535,7 +534,7 @@
               <h2 class="text-2xl font-light text-[#F4F2ED] mb-6">{{ t('profile.billingSettings') }}</h2>
               
               <!-- Current Plan -->
-              <div class="p-4 bg-[#0A0A0A]/30 rounded-lg flex items-center justify-between">
+              <div class="py-4 sm:p-4 bg-[#0A0A0A]/30 rounded-lg flex items-center justify-between">
                 <div class="space-y-1">
                   <div class="text-[#F4F2ED]">{{ t('profile.currentPlan') }}</div>
                   <div class="flex flex-col gap-2 mt-1">
@@ -543,13 +542,13 @@
                     <span class="text-sm text-[#F4F2ED] opacity-60">{{ t('profile.nextBilling', { date: 'March 18, 2026' }) }}</span>
                   </div>
                 </div>
-                <OB33ZButton variant="secondary" @click="handleChangePlan">
+                <button class="border border-[#C9A24D] rounded-lg text-[#C9A24D] px-3 py-2 md:px-6 md:py-3" @click="handleChangePlan">
                   {{ t('profile.changePlan') }}
-                </OB33ZButton>
+                </button>
               </div>
     
               <!-- Payment Method -->
-              <div class="p-4 bg-[#0A0A0A]/30 rounded-lg flex items-center justify-between">
+              <div class="py-4 sm:p-4 bg-[#0A0A0A]/30 rounded-lg flex items-center justify-between">
                 <div class="space-y-1">
                   <div class="text-[#F4F2ED]">{{ t('profile.paymentMethod') }}</div>
                   <p class="text-sm text-[#F4F2ED] opacity-60">**** **** **** 4242</p>
@@ -560,7 +559,7 @@
               </div>
     
               <!-- Billing History -->
-              <div class="p-4 bg-[#0A0A0A]/30 rounded-lg flex items-center justify-between">
+              <div class="py-4 sm:p-4 bg-[#0A0A0A]/30 rounded-lg flex items-center justify-between">
                 <div class="space-y-1">
                   <div class="text-[#F4F2ED]">{{ t('profile.billingHistory') }}</div>
                   <p class="text-sm text-[#F4F2ED] opacity-60">{{ t('profile.billingHistoryDesc') }}</p>
@@ -691,11 +690,12 @@ const [formCity, formCityAttrs] = defineField("city");
 const [formState, formStateAttrs] = defineField("state");
 const [formLocation, formLocationAttrs] = defineField("location");
 const [formBirthday, formBirthdayAttrs] = defineField("birthday");
+const [formBio, formBioAttrs] = defineField("bio");
 
 const authStore = useAuthStore();
 const router = useRouter();
 const { countries: phoneCountries, defaultCountry } = usePhoneCountries();
-const phoneCountryCode = ref(defaultCountry.code);
+const phoneCountryCode = ref(defaultCountry?.code ?? phoneCountries[0]?.code ?? "US");
 
 // Profile data
 const profilePicture = ref<string | null>(null);
