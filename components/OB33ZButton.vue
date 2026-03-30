@@ -8,6 +8,8 @@
         ? 'bg-[#C9A24D] text-[#0B0B0D] hover:brightness-110 active:scale-[0.99] shadow-[0_0_0_1px_rgba(201,162,77,0.25),0_18px_40px_rgba(0,0,0,0.55)]'
         : variant === 'secondary'
         ? 'border border-[#C9A24D]/80 bg-transparent text-[#C9A24D] hover:bg-[#C9A24D]/10 active:scale-[0.99] shadow-[0_0_0_1px_rgba(201,162,77,0.10)]'
+        : variant === 'ghost' 
+        ? 'border border-[#C9A24D] bg-[#C9A24D33]/60 text-[#C9A24D] hover:bg-[#C9A24D]/10 active:scale-[0.99] shadow-[0_0_0_1px_rgba(201,162,77,0.10)]' 
         : 'bg-transparent text-[#F4F2ED] hover:bg-[rgba(244,242,237,0.05)] active:scale-[0.99]',
       $attrs.class
     ]"
