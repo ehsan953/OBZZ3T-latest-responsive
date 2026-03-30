@@ -184,13 +184,17 @@
             </div>
             
             <div class="border border-[rgba(201,162,77,0.2)] rounded-xl p-4 md:p-8">
-                <div class="flex items-center justify-center rounded-lg border border-[rgba(201,162,77,0.14)] bg-[rgba(10,10,10,0.35)]" style="min-height:548px">
+                <div class="games-table-bg-glow flex items-center justify-center rounded-lg border border-[rgba(201,162,77,0.14)]" style="min-height:548px">
                     <div class="flex items-center justify-center flex-col">
-                        <svg class="w-10 h-10 text-[#C9A24D] mb-3 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 12h.01M10 12h.01M14 12h.01M18 12h.01M7 16h10a2 2 0 002-2V8a2 2 0 00-2-2H7a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                            <path d="M20 36.6665H33.3333" stroke="#C9A24D" stroke-opacity="0.4" stroke-width="6.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M26.6666 30V43.3333" stroke="#C9A24D" stroke-opacity="0.4" stroke-width="6.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M50 40H50.0333" stroke="#C9A24D" stroke-opacity="0.4" stroke-width="6.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M60 33.3335H60.0333" stroke="#C9A24D" stroke-opacity="0.4" stroke-width="6.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M57.7333 16.6665H22.2666C18.9676 16.6673 15.7859 17.8911 13.3367 20.1014C10.8876 22.3117 9.34478 25.3515 9.00663 28.6332C8.98663 28.8065 8.97329 28.9698 8.94996 29.1398C8.67996 31.3865 6.66663 48.1865 6.66663 53.3332C6.66663 55.9853 7.72019 58.5289 9.59556 60.4042C11.4709 62.2796 14.0145 63.3332 16.6666 63.3332C20 63.3332 21.6666 61.6665 23.3333 59.9998L28.0466 55.2865C29.2966 54.0362 30.992 53.3335 32.76 53.3332H47.24C49.0079 53.3335 50.7033 54.0362 51.9533 55.2865L56.6666 59.9998C58.3333 61.6665 60 63.3332 63.3333 63.3332C65.9855 63.3332 68.529 62.2796 70.4044 60.4042C72.2797 58.5289 73.3333 55.9853 73.3333 53.3332C73.3333 48.1832 71.32 31.3865 71.05 29.1398C71.0266 28.9732 71.0133 28.8065 70.9933 28.6365C70.6559 25.3542 69.1135 22.3136 66.6642 20.1026C64.215 17.8916 61.0329 16.6674 57.7333 16.6665Z" stroke="#C9A24D" stroke-opacity="0.4" stroke-width="6.66667" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <p class="text-[#F4F2ED]/60 mb-2">Waiting for all players to be ready...</p>
-                        <p class="text-[#F4F2ED] text-lg">2 / 4 Ready</p>
+                        <p class="text-[#F4F2ED99]/80 mb-2 text-[16px]">Waiting for all players to be ready...</p>
+                        <p class="text-[#F4F2ED] text-[16px]">2 / 4 Ready</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-3 gap-2 mt-3">
@@ -309,6 +313,24 @@ const leaveTable = () => {
 </script>
 
 <style scoped>
+.games-table-bg-glow {
+  isolation: isolate;
+  overflow: hidden;
+  background-color: rgba(12, 11, 10, 0.92);
+  background-image:
+    
+    radial-gradient(
+      ellipse 92% 78% at 50% 48%,
+      rgba(201, 162, 77, 0.045) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 110% 90% at 50% 115%,
+      rgba(0, 0, 0, 0.22) 0%,
+      transparent 55%
+    );
+}
+
 @media (min-width: 768px) {
   .game-table-layout {
     grid-template-columns: 1fr 2fr 1fr;
