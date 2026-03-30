@@ -148,6 +148,75 @@
             </div>
           </NuxtLink>
 
+          <NuxtLink
+            v-if="authStore.isInitialized && authStore.isAuthenticated"
+            to="/games"
+            class="relative"
+            @click.prevent="isMobileNavOpen = false; startTransition('/games')"
+          >
+            <div
+              :class="[
+                'px-4 py-3 rounded-lg transition-colors flex items-center gap-3',
+                isActive('/games')
+                  ? 'bg-[#5B3FD6] text-white'
+                  : 'text-[#F4F2ED] hover:bg-[rgba(91,63,214,0.1)]'
+              ]"
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 7.3335H6.66667" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5.33337 6V8.66667" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 8H10.0067" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 6.6665H12.0067" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11.5467 3.3335H4.45337C3.79356 3.33365 3.15723 3.57841 2.6674 4.02047C2.17756 4.46253 1.869 5.07049 1.80137 5.72683C1.79737 5.7615 1.79471 5.79416 1.79004 5.82816C1.73604 6.2775 1.33337 9.6375 1.33337 10.6668C1.33337 11.1973 1.54409 11.706 1.91916 12.081C2.29423 12.4561 2.80294 12.6668 3.33337 12.6668C4.00004 12.6668 4.33337 12.3335 4.66671 12.0002L5.60937 11.0575C5.85936 10.8074 6.19845 10.6669 6.55204 10.6668H9.44804C9.80163 10.6669 10.1407 10.8074 10.3907 11.0575L11.3334 12.0002C11.6667 12.3335 12 12.6668 12.6667 12.6668C13.1971 12.6668 13.7058 12.4561 14.0809 12.081C14.456 11.706 14.6667 11.1973 14.6667 10.6668C14.6667 9.63683 14.264 6.2775 14.21 5.82816C14.2054 5.79483 14.2027 5.7615 14.1987 5.7275C14.1312 5.07104 13.8227 4.46292 13.3329 4.02072C12.843 3.57852 12.2066 3.33367 11.5467 3.3335Z" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="text-sm font-medium">Games</span>
+            </div>
+          </NuxtLink>
+
+          <NuxtLink
+            v-if="authStore.isInitialized && authStore.isAuthenticated"
+            to="/watch-parties"
+            class="relative"
+            @click.prevent="isMobileNavOpen = false; startTransition('/watch-parties')"
+          >
+            <div
+              :class="[
+                'px-4 py-3 rounded-lg transition-colors flex items-center gap-3',
+                isActive('/watch-parties')
+                  ? 'bg-[#5B3FD6] text-white'
+                  : 'text-[#F4F2ED] hover:bg-[rgba(91,63,214,0.1)]'
+              ]"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M10.6666 8.66652L14.1486 10.9879C14.1988 11.0213 14.2571 11.0404 14.3174 11.0433C14.3776 11.0462 14.4375 11.0327 14.4906 11.0042C14.5438 10.9758 14.5882 10.9334 14.6192 10.8817C14.6502 10.83 14.6666 10.7708 14.6666 10.7105V5.24652C14.6666 5.18787 14.6512 5.13025 14.6218 5.07948C14.5924 5.02872 14.5502 4.9866 14.4993 4.95738C14.4485 4.92817 14.3908 4.91289 14.3322 4.91309C14.2735 4.91329 14.2159 4.92896 14.1653 4.95852L10.6666 6.99985" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.33337 4H2.66671C1.93033 4 1.33337 4.59695 1.33337 5.33333V10.6667C1.33337 11.403 1.93033 12 2.66671 12H9.33337C10.0698 12 10.6667 11.403 10.6667 10.6667V5.33333C10.6667 4.59695 10.0698 4 9.33337 4Z" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="text-sm font-medium">Watch Parties</span>
+            </div>
+          </NuxtLink>
+
+          <NuxtLink
+            v-if="authStore.isInitialized && authStore.isAuthenticated"
+            to="/payouts"
+            class="relative"
+            @click.prevent="isMobileNavOpen = false; startTransition('/payouts')"
+          >
+            <div
+              :class="[
+                'px-4 py-3 rounded-lg transition-colors flex items-center gap-3',
+                isActive('/payouts')
+                  ? 'bg-[#5B3FD6] text-white'
+                  : 'text-[#F4F2ED] hover:bg-[rgba(91,63,214,0.1)]'
+              ]"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M8 1.3335V14.6668" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11.3333 3.3335H6.33333C5.71449 3.3335 5.121 3.57933 4.68342 4.01691C4.24583 4.4545 4 5.04799 4 5.66683C4 6.28567 4.24583 6.87916 4.68342 7.31675C5.121 7.75433 5.71449 8.00016 6.33333 8.00016H9.66667C10.2855 8.00016 10.879 8.246 11.3166 8.68358C11.7542 9.12117 12 9.71466 12 10.3335C12 10.9523 11.7542 11.5458 11.3166 11.9834C10.879 12.421 10.2855 12.6668 9.66667 12.6668H4" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="text-sm font-medium">Payouts</span>
+            </div>
+          </NuxtLink>
+
           <button
             v-if="authStore.isInitialized && authStore.isAuthenticated"
             type="button"
@@ -276,6 +345,75 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M5.697 6.237l2.14-.285m6.326 0l2.14.285M15.697 9.237l-1.14 1.855m-4.114 0L8.303 9.237m7.394 5.526l-1.14-1.855m-4.114 0L8.303 14.763M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <span class="hidden group-hover:inline text-sm font-medium whitespace-nowrap">Ambassador Program</span>
+          </div>
+        </NuxtLink>
+
+        <NuxtLink
+          v-if="authStore.isInitialized && authStore.isAuthenticated"
+          to="/games"
+          class="relative"
+          @click.prevent="startTransition('/games')"
+        >
+          <div
+            :class="[
+              'px-3 py-2 rounded-md transition-colors flex items-center gap-3',
+              isActive('/games')
+                ? 'bg-[#5B3FD6] text-white'
+                : 'text-[#F4F2ED] hover:bg-[rgba(91,63,214,0.1)]'
+            ]"
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 7.3335H6.66667" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5.33337 6V8.66667" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 8H10.0067" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 6.6665H12.0067" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11.5467 3.3335H4.45337C3.79356 3.33365 3.15723 3.57841 2.6674 4.02047C2.17756 4.46253 1.869 5.07049 1.80137 5.72683C1.79737 5.7615 1.79471 5.79416 1.79004 5.82816C1.73604 6.2775 1.33337 9.6375 1.33337 10.6668C1.33337 11.1973 1.54409 11.706 1.91916 12.081C2.29423 12.4561 2.80294 12.6668 3.33337 12.6668C4.00004 12.6668 4.33337 12.3335 4.66671 12.0002L5.60937 11.0575C5.85936 10.8074 6.19845 10.6669 6.55204 10.6668H9.44804C9.80163 10.6669 10.1407 10.8074 10.3907 11.0575L11.3334 12.0002C11.6667 12.3335 12 12.6668 12.6667 12.6668C13.1971 12.6668 13.7058 12.4561 14.0809 12.081C14.456 11.706 14.6667 11.1973 14.6667 10.6668C14.6667 9.63683 14.264 6.2775 14.21 5.82816C14.2054 5.79483 14.2027 5.7615 14.1987 5.7275C14.1312 5.07104 13.8227 4.46292 13.3329 4.02072C12.843 3.57852 12.2066 3.33367 11.5467 3.3335Z" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="hidden group-hover:inline text-sm font-medium whitespace-nowrap">Games</span>
+          </div>
+        </NuxtLink>
+        
+        <NuxtLink
+          v-if="authStore.isInitialized && authStore.isAuthenticated"
+          to="/watch-parties"
+          class="relative"
+          @click.prevent="startTransition('/watch-parties')"
+        >
+          <div
+            :class="[
+              'px-3 py-2 rounded-md transition-colors flex items-center gap-3',
+              isActive('/watch-parties')
+                ? 'bg-[#5B3FD6] text-white'
+                : 'text-[#F4F2ED] hover:bg-[rgba(91,63,214,0.1)]'
+            ]"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M10.6666 8.66652L14.1486 10.9879C14.1988 11.0213 14.2571 11.0404 14.3174 11.0433C14.3776 11.0462 14.4375 11.0327 14.4906 11.0042C14.5438 10.9758 14.5882 10.9334 14.6192 10.8817C14.6502 10.83 14.6666 10.7708 14.6666 10.7105V5.24652C14.6666 5.18787 14.6512 5.13025 14.6218 5.07948C14.5924 5.02872 14.5502 4.9866 14.4993 4.95738C14.4485 4.92817 14.3908 4.91289 14.3322 4.91309C14.2735 4.91329 14.2159 4.92896 14.1653 4.95852L10.6666 6.99985" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.33337 4H2.66671C1.93033 4 1.33337 4.59695 1.33337 5.33333V10.6667C1.33337 11.403 1.93033 12 2.66671 12H9.33337C10.0698 12 10.6667 11.403 10.6667 10.6667V5.33333C10.6667 4.59695 10.0698 4 9.33337 4Z" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="hidden group-hover:inline text-sm font-medium whitespace-nowrap">Watch Parties</span>
+          </div>
+        </NuxtLink>
+
+        <NuxtLink
+          v-if="authStore.isInitialized && authStore.isAuthenticated"
+          to="/payouts"
+          class="relative"
+          @click.prevent="startTransition('/payouts')"
+        >
+          <div
+            :class="[
+              'px-3 py-2 rounded-md transition-colors flex items-center gap-3',
+              isActive('/payouts')
+                ? 'bg-[#5B3FD6] text-white'
+                : 'text-[#F4F2ED] hover:bg-[rgba(91,63,214,0.1)]'
+            ]"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 1.3335V14.6668" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11.3333 3.3335H6.33333C5.71449 3.3335 5.121 3.57933 4.68342 4.01691C4.24583 4.4545 4 5.04799 4 5.66683C4 6.28567 4.24583 6.87916 4.68342 7.31675C5.121 7.75433 5.71449 8.00016 6.33333 8.00016H9.66667C10.2855 8.00016 10.879 8.246 11.3166 8.68358C11.7542 9.12117 12 9.71466 12 10.3335C12 10.9523 11.7542 11.5458 11.3166 11.9834C10.879 12.421 10.2855 12.6668 9.66667 12.6668H4" stroke="#F4F2ED" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="hidden group-hover:inline text-sm font-medium whitespace-nowrap">Payouts</span>
           </div>
         </NuxtLink>
 
