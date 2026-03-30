@@ -222,19 +222,19 @@
                             <span>
                                 <span class="text-[#C9A24D]">Sarah M:</span><span class="text-xs text-[#F4F2ED66]/40 ml-1">2:45 PM</span>
                             </span>
-                            <span>Ready to play!</span>
+                            <span class="text-[#F4F2EDCC]/80">Ready to play!</span>
                         </p>
                         <p class="flex flex-col gap-1 text-sm">
                             <span>
                                 <span class="text-[#C9A24D]">Mike R:</span><span class="text-xs text-[#F4F2ED66]/40 ml-1">2:45 PM</span>
                             </span>
-                            <span>Let's go!</span>
+                            <span class="text-[#F4F2EDCC]/80">Let's go!</span>
                         </p>
                         <p class="flex flex-col gap-1 text-sm">
                             <span>
                                 <span class="text-[#C9A24D]">Alex K:</span><span class="text-xs text-[#F4F2ED66]/40 ml-1">2:45 PM</span>
                             </span>
-                            <span>Give me a sec</span>
+                            <span class="text-[#F4F2EDCC]/80">Give me a sec</span>
                         </p>
                     </div>
                 </div>
