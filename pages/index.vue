@@ -36,7 +36,7 @@
           </h1>
 
           <div
-            class="h-[1px] w-32 mx-auto bg-linear-to-r from-transparent via-[#C9A24D] to-transparent"
+            class="h-px w-32 mx-auto bg-linear-to-r from-transparent via-[#C9A24D] to-transparent"
           />
         </div>
 

@@ -198,7 +198,7 @@
               :class="['flex gap-3', !isVerified && 'opacity-50']"
             >
               <div
-                class="w-10 h-10 rounded-full bg-linear-to-br from-[#C9A24D] to-[#5B3FD6] flex items-center justify-center text-[#0B0B0D] font-medium flex-shrink-0"
+                class="w-10 h-10 rounded-full bg-linear-to-br from-[#C9A24D] to-[#5B3FD6] flex items-center justify-center text-[#0B0B0D] font-medium shrink-0"
               >
                 {{ msg.user[0] }}
               </div>

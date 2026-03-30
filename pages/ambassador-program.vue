@@ -225,7 +225,7 @@
               <img
                 :src="qrCodeUrl"
                 alt="Referral QR Code"
-                class="block w-[200px] h-[200px] object-contain"
+                class="block w-50 h-50 object-contain"
                 width="200"
                 height="200"
               />
@@ -401,7 +401,7 @@
               <div class="flex items-center gap-3 min-w-0">
 
                 <span
-                  class="w-7 h-7 rounded-full bg-gradient-to-br from-[#C9A24D] to-[#5B3FD6] flex items-center justify-center text-white text-xs font-normal shrink-0"
+                  class="w-7 h-7 rounded-full bg-linear-to-br from-[#C9A24D] to-[#5B3FD6] flex items-center justify-center text-white text-xs font-normal shrink-0"
                 >
                   {{ item.rank }}
                 </span>
