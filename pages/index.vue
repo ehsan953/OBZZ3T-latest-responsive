@@ -45,8 +45,15 @@
           <!-- JOIN opens Join modal on the entry page -->
           <button
             type="button"
-            @click="isJoinOpen = true"
             class="w-65 rounded-lg bg-[#C9A24D] px-6 py-[13.5px] text-sm font-roboto font-medium tracking-widest text-black shadow-[0_0_0_1px_rgba(201,162,77,0.25),0_18px_40px_rgba(0,0,0,0.55)] transition hover:brightness-110 active:scale-[0.99]"
+          >
+            {{ t("nav.enter") }}
+          </button>
+          
+          <button
+            type="button"
+            @click="isJoinOpen = true"
+            class="w-65 border border-[#C9A24D] rounded-lg px-6 py-[13.5px] text-sm font-roboto font-medium tracking-widest text-[#C9A24D] shadow-[0_0_0_1px_rgba(201,162,77,0.10)] transition hover:bg-[#C9A24D]/10 active:scale-[0.99]"
           >
             {{ t("nav.join") }}
           </button>
@@ -54,7 +61,7 @@
           <button
             type="button"
             @click="isAuthModalOpen = true"
-            class="w-65 border border-[#C9A24D] rounded-lg bg-transparent px-6 py-[13.5px] text-sm font-roboto font-medium tracking-widest text-[#C9A24D] shadow-[0_0_0_1px_rgba(201,162,77,0.10)] transition hover:bg-[#C9A24D]/10 active:scale-[0.99] mb-4 md:mb-12"
+            class="w-65 rounded-lg bg-transparent px-6 py-[13.5px] text-sm font-roboto font-medium tracking-widest transition hover:bg-[#C9A24D]/10 active:scale-[0.99] mb-4 md:mb-12"
           >
             {{ t("nav.signIn") }}
           </button>
