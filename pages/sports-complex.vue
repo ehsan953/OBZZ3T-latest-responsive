@@ -31,6 +31,7 @@
         <button
           v-for="sport in sports"
           :key="sport.id"
+          data-observer-allow="true"
           @click="selectedSport = sport.id"
           :class="[
             'flex items-center gap-2 px-4 py-2 rounded-full transition-all',

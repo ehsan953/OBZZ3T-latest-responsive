@@ -100,6 +100,7 @@
       <div class="mb-8 flex justify-center opacity-0 -translate-y-4 animate-delay-lg">
         <div class="inline-flex rounded-full bg-[rgba(11,11,13,0.8)] border border-[rgba(201,162,77,0.15)] p-1">
           <button
+            data-observer-allow="true"
             @click="billingPeriod = 'monthly'"
             :class="[
               'px-6 py-2 rounded-full font-medium transition-all',
@@ -111,6 +112,7 @@
             {{ t('membership.monthly') }}
           </button>
           <button
+            data-observer-allow="true"
             @click="billingPeriod = 'yearly'"
             :class="[
               'px-6 py-2 rounded-full font-medium transition-all',

@@ -167,6 +167,7 @@
         <button
           v-for="tab in tabs"
           :key="tab.id"
+          data-observer-allow="true"
           @click="activeTab = tab.id"
           :class="[
               'px-4 py-2 rounded-lg font-medium transition-all border-b-2 flex items-center gap-2',

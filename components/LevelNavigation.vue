@@ -82,11 +82,11 @@
             </div>
           </NuxtLink>
 
-          <div v-if="authStore.isInitialized && authStore.isAuthenticated" class="border-t border-[rgba(201,162,77,0.15)] my-3" />
-          <div v-if="authStore.isInitialized && authStore.isAuthenticated" class="text-xs font-medium text-[#F4F2ED66]/40 tracking-widest px-3 mb-1">ACCOUNT & MORE</div>
+          <div v-if="canBrowseExtras" class="border-t border-[rgba(201,162,77,0.15)] my-3" />
+          <div v-if="canBrowseExtras" class="text-xs font-medium text-[#F4F2ED66]/40 tracking-widest px-3 mb-1">ACCOUNT & MORE</div>
 
           <NuxtLink
-            v-if="authStore.isInitialized && authStore.isAuthenticated"
+            v-if="canBrowseExtras"
             to="/profile"
             class="relative"
             @click.prevent="isMobileNavOpen = false; startTransition('/profile')"
@@ -107,7 +107,7 @@
           </NuxtLink>
 
           <NuxtLink
-            v-if="authStore.isInitialized && authStore.isAuthenticated"
+            v-if="canBrowseExtras"
             to="/membership"
             class="relative"
             @click.prevent="isMobileNavOpen = false; startTransition('/membership')"
@@ -128,7 +128,7 @@
           </NuxtLink>
 
           <NuxtLink
-            v-if="authStore.isInitialized && authStore.isAuthenticated"
+            v-if="canBrowseExtras"
             to="/ambassador"
             class="relative"
             @click.prevent="isMobileNavOpen = false; startTransition('/ambassador')"
@@ -149,7 +149,7 @@
           </NuxtLink>
 
           <NuxtLink
-            v-if="authStore.isInitialized && authStore.isAuthenticated"
+            v-if="canBrowseExtras"
             to="/games"
             class="relative"
             @click.prevent="isMobileNavOpen = false; startTransition('/games')"
@@ -174,7 +174,7 @@
           </NuxtLink>
 
           <NuxtLink
-            v-if="authStore.isInitialized && authStore.isAuthenticated"
+            v-if="canBrowseExtras"
             to="/watch-parties"
             class="relative"
             @click.prevent="isMobileNavOpen = false; startTransition('/watch-parties')"
@@ -196,7 +196,7 @@
           </NuxtLink>
 
           <NuxtLink
-            v-if="authStore.isInitialized && authStore.isAuthenticated"
+            v-if="canBrowseExtras"
             to="/payouts"
             class="relative"
             @click.prevent="isMobileNavOpen = false; startTransition('/payouts')"
@@ -283,10 +283,10 @@
           </div>
         </NuxtLink>
 
-        <div v-if="authStore.isInitialized && authStore.isAuthenticated" class="border-t border-[rgba(201,162,77,0.15)] mt-1"></div>
+        <div v-if="canBrowseExtras" class="border-t border-[rgba(201,162,77,0.15)] mt-1"></div>
 
         <NuxtLink
-          v-if="authStore.isInitialized && authStore.isAuthenticated"
+          v-if="canBrowseExtras"
           to="/profile"
           class="relative"
           @click.prevent="startTransition('/profile')"
@@ -307,7 +307,7 @@
         </NuxtLink>
 
         <NuxtLink
-          v-if="authStore.isInitialized && authStore.isAuthenticated"
+          v-if="canBrowseExtras"
           to="/membership"
           class="relative"
           @click.prevent="startTransition('/membership')"
@@ -328,7 +328,7 @@
         </NuxtLink>
 
         <NuxtLink
-          v-if="authStore.isInitialized && authStore.isAuthenticated"
+          v-if="canBrowseExtras"
           to="/ambassador"
           class="relative"
           @click.prevent="startTransition('/ambassador')"
@@ -349,7 +349,7 @@
         </NuxtLink>
 
         <NuxtLink
-          v-if="authStore.isInitialized && authStore.isAuthenticated"
+          v-if="canBrowseExtras"
           to="/games"
           class="relative"
           @click.prevent="startTransition('/games')"
@@ -374,7 +374,7 @@
         </NuxtLink>
         
         <NuxtLink
-          v-if="authStore.isInitialized && authStore.isAuthenticated"
+          v-if="canBrowseExtras"
           to="/watch-parties"
           class="relative"
           @click.prevent="startTransition('/watch-parties')"
@@ -396,7 +396,7 @@
         </NuxtLink>
 
         <NuxtLink
-          v-if="authStore.isInitialized && authStore.isAuthenticated"
+          v-if="canBrowseExtras"
           to="/payouts"
           class="relative"
           @click.prevent="startTransition('/payouts')"
@@ -437,16 +437,18 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { useI18n } from "#imports";
 import { useRoute, useRouter } from "vue-router";
 import { useAuthStore } from "~/stores/auth";
 import { useTransitionScreen } from "~/composables/useTransitionScreen";
+import { useObserverStore } from "~/stores/observer";
 
 const { t } = useI18n();
 const route = useRoute();
 const router = useRouter();
 const authStore = useAuthStore();
+const observerStore = useObserverStore();
 const { startTransition } = useTransitionScreen();
 const isMobileNavOpen = ref(false);
 
@@ -475,6 +477,11 @@ const levels = [
 const activeLevels = levels.filter((level) => level.isLive);
 
 const isActive = (path: string) => route.path === path;
+
+const canBrowseExtras = computed(() => {
+  // Show extra pages during observer mode or when authenticated.
+  return observerStore.isActive || (authStore.isInitialized && authStore.isAuthenticated);
+});
 
 const handleLogout = async () => {
   try {

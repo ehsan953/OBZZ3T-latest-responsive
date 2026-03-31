@@ -37,6 +37,7 @@
           <button 
             v-for="topic in topics"
             :key="topic.id"
+            data-observer-allow="true"
             @click="selectedTopic = topic.id" 
             :class="[
               'flex-1 flex flex-col items-center justify-center p-4 rounded-lg border transition-all',

@@ -5,6 +5,8 @@
       v-if="showTransition"
     />
 
+    <ObserverShield />
+
     <slot />
   </div>
 </template>
@@ -12,6 +14,7 @@
 <script setup lang="ts">
 import TransitionScreen from "~/components/TransitionScreen.vue";
 import { useTransitionScreen } from "~/composables/useTransitionScreen";
+import ObserverShield from "~/components/ObserverShield.vue";
 
 const { show: showTransition } = useTransitionScreen();
 </script>

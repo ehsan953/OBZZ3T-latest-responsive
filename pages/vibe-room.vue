@@ -89,6 +89,7 @@
             <button
               v-for="lane in lanes"
               :key="lane.id"
+              data-observer-allow="true"
               @click="loadRoomForLane(lane.id)"
               :class="[
                 'relative p-4 rounded-lg border transition-all',

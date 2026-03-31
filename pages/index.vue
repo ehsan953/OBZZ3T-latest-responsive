@@ -46,6 +46,7 @@
           <button
             type="button"
             class="w-65 rounded-lg bg-[#C9A24D] px-6 py-[13.5px] text-sm font-roboto font-medium tracking-widest text-black shadow-[0_0_0_1px_rgba(201,162,77,0.25),0_18px_40px_rgba(0,0,0,0.55)] transition hover:brightness-110 active:scale-[0.99]"
+            @click="handleEnterObserver"
           >
             {{ t("nav.enter") }}
           </button>
@@ -101,10 +102,12 @@ import { useI18n } from "#imports";
 import { useTransitionScreen } from "~/composables/useTransitionScreen";
 import AuthModal from "~/components/AuthModal.vue";
 import { useAuthStore } from "~/stores/auth";
+import { useObserverStore } from "~/stores/observer";
 
 const { t } = useI18n();
 const { startTransition } = useTransitionScreen();
 const authStore = useAuthStore();
+const observerStore = useObserverStore();
 
 const cursorGlow = ref<HTMLElement | null>(null);
 const isJoinOpen = ref(false);
@@ -143,6 +146,15 @@ onMounted(() => {
       await navigateTo("/vibe-room", { replace: true });
       return;
     }
+
+    // If observer mode is already running, don't trap user on landing page.
+    if (!observerStore.isInitialized) {
+      observerStore.initFromStorage();
+    }
+    if (observerStore.isActive) {
+      await navigateTo("/lounge", { replace: true });
+      return;
+    }
   };
   initAndRedirect().catch((error) => {
     console.error("Failed to initialize auth on entry page:", error);
@@ -158,6 +170,24 @@ onBeforeUnmount(() => {
 
 const handleEnter = (path: string) => {
   startTransition(path);
+};
+
+const handleEnterObserver = async () => {
+  // If already logged in, keep current behavior.
+  if (authStore.isAuthenticated) {
+    startTransition("/vibe-room");
+    return;
+  }
+
+  const result = await observerStore.startObserver();
+  if (!result.ok) {
+    // Observer mode not allowed (e.g. same IP already used) => require login
+    isAuthModalOpen.value = true;
+    return;
+  }
+
+  // Dramatic entry into view-only app experience
+  startTransition("/lounge");
 };
 
 const handleAuthSuccess = () => {
