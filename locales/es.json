@@ -281,5 +281,72 @@
   "city": "Ciudad",
   "enterCity": "Ingresa tu ciudad",
   "state": "Estado",
-  "enterState": "Ingresa tu estado"
+  "enterState": "Ingresa tu estado",
+  "payouts": {
+    "title": "Ganancias de Embajadores",
+    "subtitle": "Sigue tus comisiones de referidos y gestiona los pagos automáticos",
+    "downloadStatement": "Descargar Extracto",
+    "kpis": {
+      "totalReferralRevenue": {
+        "label": "Ingresos Totales por Referidos",
+        "sub": "este mes"
+      },
+      "estimatedCommission30": {
+        "label": "Comisión Estimada (30%)",
+        "sub": "ganancias acumuladas"
+      },
+      "pendingPayout": {
+        "label": "Pago Pendiente",
+        "sub": "Próximo: {date}"
+      },
+      "totalPaid": {
+        "label": "Total Pagado",
+        "sub": "pagos de por vida"
+      }
+    },
+    "automaticPayoutSettings": {
+      "title": "Configuración de Pagos Automáticos",
+      "description": "Tus ganancias se transfieren automáticamente el día 1 de cada mes",
+      "viewHistory": "Ver Historial",
+      "nextPayoutDateTitle": "Fecha del Próximo Pago",
+      "nextPayoutDateLine": "Fecha del próximo pago · {date}",
+      "paymentMethodTitle": "Método de Pago",
+      "primaryMethodTitle": "Método Principal",
+      "stripeConnectSubtitle": "Stripe Connect",
+      "updateMethod": "Actualizar Método",
+      "quickActionsTitle": "Acciones Rápidas",
+      "stripeDashboard": "Panel de Stripe"
+    },
+    "referralActivity": {
+      "title": "Actividad de Referidos",
+      "searchPlaceholder": "Buscar referidos...",
+      "filterAriaLabel": "Filtrar"
+    },
+    "payoutHistory": {
+      "title": "Historial de Pagos",
+      "viewAll": "Ver Todo"
+    },
+    "tableHeaders": {
+      "referrals": {
+        "referredUser": "Usuario Referido",
+        "signupDate": "Fecha de Registro",
+        "membership": "Membresía",
+        "referralSpend": "Gasto del Referido",
+        "commission30": "Comisión (30%)",
+        "status": "Estado"
+      },
+      "payoutHistory": {
+        "payoutId": "ID de Pago",
+        "amount": "Monto",
+        "date": "Fecha",
+        "method": "Método",
+        "status": "Estado"
+      }
+    },
+    "referralStatuses": {
+      "active": "Activo",
+      "pending": "Pendiente",
+      "inactive": "Inactivo"
+    }
+  }
 }

@@ -281,5 +281,72 @@
   "city": "City",
   "enterCity": "Enter your city",
   "state": "State",
-  "enterState": "Enter your state"
+  "enterState": "Enter your state",
+  "payouts": {
+    "title": "Ambassador Earnings",
+    "subtitle": "Track your referral commissions and manage automatic payouts",
+    "downloadStatement": "Download Statement",
+    "kpis": {
+      "totalReferralRevenue": {
+        "label": "Total Referral Revenue",
+        "sub": "this month"
+      },
+      "estimatedCommission30": {
+        "label": "Estimated Commission (30%)",
+        "sub": "lifetime earnings"
+      },
+      "pendingPayout": {
+        "label": "Pending Payout",
+        "sub": "Next: {date}"
+      },
+      "totalPaid": {
+        "label": "Total Paid",
+        "sub": "all-time payouts"
+      }
+    },
+    "automaticPayoutSettings": {
+      "title": "Automatic Payout Settings",
+      "description": "Your earnings are automatically transferred on the 1st of each month",
+      "viewHistory": "View History",
+      "nextPayoutDateTitle": "Next Payout Date",
+      "nextPayoutDateLine": "Next payout date · {date}",
+      "paymentMethodTitle": "Payment Method",
+      "primaryMethodTitle": "Primary Method",
+      "stripeConnectSubtitle": "Stripe Connect",
+      "updateMethod": "Update Method",
+      "quickActionsTitle": "Quick Actions",
+      "stripeDashboard": "Stripe Dashboard"
+    },
+    "referralActivity": {
+      "title": "Referral Activity",
+      "searchPlaceholder": "Search referrals...",
+      "filterAriaLabel": "Filter"
+    },
+    "payoutHistory": {
+      "title": "Payout History",
+      "viewAll": "View All"
+    },
+    "tableHeaders": {
+      "referrals": {
+        "referredUser": "Referred User",
+        "signupDate": "Signup Date",
+        "membership": "Membership",
+        "referralSpend": "Referral Spend",
+        "commission30": "Commission (30%)",
+        "status": "Status"
+      },
+      "payoutHistory": {
+        "payoutId": "Payout ID",
+        "amount": "Amount",
+        "date": "Date",
+        "method": "Method",
+        "status": "Status"
+      }
+    },
+    "referralStatuses": {
+      "active": "Active",
+      "pending": "Pending",
+      "inactive": "Inactive"
+    }
+  }
 }
