@@ -398,5 +398,63 @@
         "m4": { "author": "Alex K.", "time": "8:48 PM", "text": "Best watch party ever!" }
       }
     }
+  },
+  "games": {
+    "title": "Game Lounge",
+    "subtitle": "Join social games with friends and community members. Choose your game and start playing!",
+    "chooseGame": "Choose Your Game",
+    "gameCards": {
+      "uno": {
+        "name": "UNO",
+        "description": "Classic card game of colors and numbers",
+        "players": "2–4 players"
+      },
+      "dominoes": {
+        "name": "Dominoes",
+        "description": "Traditional tile-based strategy game",
+        "players": "2–4 players"
+      },
+      "trivia": {
+        "name": "Trivia",
+        "description": "Test your knowledge across various topics",
+        "players": "2–8 players"
+      },
+      "pictionary": {
+        "name": "Pictionary",
+        "description": "Draw and guess in this creative party game",
+        "players": "2–8 players"
+      }
+    },
+    "howToPlay": {
+      "title": "How to Play",
+      "steps": {
+        "s1": { "title": "Select a Game", "text": "Choose from UNO, Dominoes, Trivia, or Pictionary." },
+        "s2": { "title": "Join or Create Table", "text": "Join an active table or start a new one." },
+        "s3": { "title": "Play & Have Fun", "text": "Chat with players and enjoy the game together." }
+      }
+    },
+    "activeTable": {
+      "backToGames": "Back to Games",
+      "waitingForReady": "Waiting for all players to be ready...",
+      "readyCount": "{ready} / {total} Ready",
+      "round": "Round",
+      "turn": "Turn",
+      "turnWaiting": "Waiting",
+      "timer": "Timer",
+      "playersHeader": "Players",
+      "playerReady": "Ready",
+      "invitePlayers": "Invite Players",
+      "markReady": "Mark Ready",
+      "leaveTable": "Leave Table"
+    },
+    "tableChat": {
+      "title": "Live Chat",
+      "messages": {
+        "m1": { "author": "Sarah M.", "time": "2:45 PM", "text": "Ready to play!" },
+        "m2": { "author": "Mike R.", "time": "2:45 PM", "text": "Let's go!" },
+        "m3": { "author": "Alex K.", "time": "2:45 PM", "text": "Give me a sec" }
+      },
+      "inputPlaceholder": "Type a message..."
+    }
   }
 }

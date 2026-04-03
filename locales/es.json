@@ -398,5 +398,63 @@
         "m4": { "author": "Alex K.", "time": "8:48 PM", "text": "¡La mejor fiesta de visualización!" }
       }
     }
+  },
+  "games": {
+    "title": "Sala de Juegos",
+    "subtitle": "Únete a juegos sociales con amigos y miembros de la comunidad. ¡Elige tu juego y comienza a jugar!",
+    "chooseGame": "Elige tu juego",
+    "gameCards": {
+      "uno": {
+        "name": "UNO",
+        "description": "Clásico juego de cartas de colores y números",
+        "players": "2–4 jugadores"
+      },
+      "dominoes": {
+        "name": "Dóminos",
+        "description": "Juego de estrategia tradicional con fichas",
+        "players": "2–4 jugadores"
+      },
+      "trivia": {
+        "name": "Trivia",
+        "description": "Pon a prueba tu conocimiento en varios temas",
+        "players": "2–8 jugadores"
+      },
+      "pictionary": {
+        "name": "Pictionary",
+        "description": "Dibuja y adivina en este juego creativo de fiesta",
+        "players": "2–8 jugadores"
+      }
+    },
+    "howToPlay": {
+      "title": "Cómo jugar",
+      "steps": {
+        "s1": { "title": "Selecciona un juego", "text": "Elige entre UNO, Dóminos, Trivia o Pictionary." },
+        "s2": { "title": "Únete o crea una mesa", "text": "Únete a una mesa activa o crea una nueva." },
+        "s3": { "title": "Juega y diviértete", "text": "Chatea con los jugadores y disfruta del juego juntos." }
+      }
+    },
+    "activeTable": {
+      "backToGames": "Volver a juegos",
+      "waitingForReady": "Esperando a que todos los jugadores estén listos...",
+      "readyCount": "{ready} / {total} listos",
+      "round": "Ronda",
+      "turn": "Turno",
+      "turnWaiting": "Esperando",
+      "timer": "Temporizador",
+      "playersHeader": "Jugadores",
+      "playerReady": "Listo",
+      "invitePlayers": "Invitar jugadores",
+      "markReady": "Marcar listo",
+      "leaveTable": "Salir de la mesa"
+    },
+    "tableChat": {
+      "title": "Chat en vivo",
+      "messages": {
+        "m1": { "author": "Sarah M.", "time": "2:45 PM", "text": "¡Lista para jugar!" },
+        "m2": { "author": "Mike R.", "time": "2:45 PM", "text": "¡Vamos!" },
+        "m3": { "author": "Alex K.", "time": "2:45 PM", "text": "Dame un segundo" }
+      },
+      "inputPlaceholder": "Escribe un mensaje..."
+    }
   }
 }

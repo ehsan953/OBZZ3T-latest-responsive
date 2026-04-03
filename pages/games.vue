@@ -13,15 +13,19 @@
               <path d="M30 16.6665H30.0167" stroke="#C9A24D" stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M28.8667 8.3335H11.1334C9.48384 8.33388 7.89302 8.94579 6.66843 10.0509C5.44384 11.1561 4.67245 12.676 4.50337 14.3168C4.49337 14.4035 4.48671 14.4852 4.47504 14.5702C4.34004 15.6935 3.33337 24.0935 3.33337 26.6668C3.33337 27.9929 3.86016 29.2647 4.79784 30.2024C5.73552 31.14 7.00729 31.6668 8.33337 31.6668C10 31.6668 10.8334 30.8335 11.6667 30.0002L14.0234 27.6435C14.6483 27.0183 15.4961 26.667 16.38 26.6668H23.62C24.504 26.667 25.3517 27.0183 25.9767 27.6435L28.3334 30.0002C29.1667 30.8335 30 31.6668 31.6667 31.6668C32.9928 31.6668 34.2646 31.14 35.2022 30.2024C36.1399 29.2647 36.6667 27.9929 36.6667 26.6668C36.6667 24.0918 35.66 15.6935 35.525 14.5702C35.5134 14.4868 35.5067 14.4035 35.4967 14.3185C35.328 12.6773 34.5568 11.157 33.3322 10.0516C32.1075 8.94606 30.5165 8.33392 28.8667 8.3335Z" stroke="#C9A24D" stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <h1 class="text-4xl text-[#C9A24D] font-light">Game Lounge</h1>
+            <h1 class="text-4xl text-[#C9A24D] font-light">
+              {{ t("games.title") }}
+            </h1>
           </div>
           <p class="text-[16px] text-[#F4F2ED99]/60 max-w-78.25 md:max-w-3xl">
-            Join social games with friends and community members. Choose your game and start playing!
+            {{ t("games.subtitle") }}
           </p>
         </div>
     
         <div class="border border-[#C9A24D26] rounded-xl p-4 md:p-6 md:mb-6">
-          <h2 class="text-[#F4F2ED] font-light text-lg mb-4">Choose Your Game</h2>
+          <h2 class="text-[#F4F2ED] font-light text-lg mb-4">
+            {{ t("games.chooseGame") }}
+          </h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             <div
               v-for="game in games"
@@ -111,7 +115,9 @@
         </div>
 
         <div class="border border-[rgba(201,162,77,0.2)] rounded-xl p-4 md:p-6 flex flex-col gap-4">
-          <h2 class="text-[#C9A24D] font-light text-lg">How to Play</h2>
+          <h2 class="text-[#C9A24D] font-light text-lg">
+            {{ t("games.howToPlay.title") }}
+          </h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             <div v-for="step in steps" :key="step.title">
               <div class="w-10 h-10 rounded-full bg-[rgba(201,162,77,0.2)] text-[#C9A24D] flex items-center justify-center text-lg mb-2">
@@ -135,7 +141,7 @@
                     <path d="M9.99999 15.8332L4.16666 9.99984L9.99999 4.1665" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M15.8333 10H4.16666" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <span>Back to Games</span>
+                <span>{{ t("games.activeTable.backToGames") }}</span>
             </button>
             <div style="width:18px; height:10px; border-radius:4px" class="bg-[#C9A24D1A]/10 border border-[#C9A24D4D]/30"></div>
         </div>
@@ -176,7 +182,9 @@
             <div>
                 <div class="min-w-0 border border-[rgba(201,162,77,0.2)] rounded-xl p-4 md:p-6 flex flex-col gap-4">
                     <div class="flex justify-between items-center">
-                        <h3 class="text-[#F4F2ED] mb-3 text-lg">Players</h3>
+                        <h3 class="text-[#F4F2ED] mb-3 text-lg">
+                          {{ t("games.activeTable.playersHeader") }}
+                        </h3>
                         <div style="width:18px; height:10px; border-radius:4px" class="bg-[#C9A24D1A]/10 border border-[#C9A24D4D]/30"></div>
                     </div>
                     <div class="flex flex-col gap-3">
@@ -192,7 +200,7 @@
                                         <path d="M3.33331 14H12.6666" stroke="#C9A24D" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </div>
-                                <p class="text-xs text-[#5B3FD6]">{{ p.ready ? "Ready" : "" }}</p>
+                                <p class="text-xs text-[#5B3FD6]">{{ p.ready ? t("games.activeTable.playerReady") : "" }}</p>
                             </div>
                         </div>
                     </div>
@@ -220,21 +228,25 @@
                             <path d="M60 33.3335H60.0333" stroke="#C9A24D" stroke-opacity="0.4" stroke-width="6.66667" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M57.7333 16.6665H22.2666C18.9676 16.6673 15.7859 17.8911 13.3367 20.1014C10.8876 22.3117 9.34478 25.3515 9.00663 28.6332C8.98663 28.8065 8.97329 28.9698 8.94996 29.1398C8.67996 31.3865 6.66663 48.1865 6.66663 53.3332C6.66663 55.9853 7.72019 58.5289 9.59556 60.4042C11.4709 62.2796 14.0145 63.3332 16.6666 63.3332C20 63.3332 21.6666 61.6665 23.3333 59.9998L28.0466 55.2865C29.2966 54.0362 30.992 53.3335 32.76 53.3332H47.24C49.0079 53.3335 50.7033 54.0362 51.9533 55.2865L56.6666 59.9998C58.3333 61.6665 60 63.3332 63.3333 63.3332C65.9855 63.3332 68.529 62.2796 70.4044 60.4042C72.2797 58.5289 73.3333 55.9853 73.3333 53.3332C73.3333 48.1832 71.32 31.3865 71.05 29.1398C71.0266 28.9732 71.0133 28.8065 70.9933 28.6365C70.6559 25.3542 69.1135 22.3136 66.6642 20.1026C64.215 17.8916 61.0329 16.6674 57.7333 16.6665Z" stroke="#C9A24D" stroke-opacity="0.4" stroke-width="6.66667" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <p class="text-[#F4F2ED99]/80 mb-2 text-[16px]">Waiting for all players to be ready...</p>
-                        <p class="text-[#F4F2ED] text-[16px]">2 / 4 Ready</p>
+                        <p class="text-[#F4F2ED99]/80 mb-2 text-[16px]">
+                          {{ t("games.activeTable.waitingForReady") }}
+                        </p>
+                        <p class="text-[#F4F2ED] text-[16px]">
+                          {{ t("games.activeTable.readyCount", { ready: 2, total: 4 }) }}
+                        </p>
                     </div>
                 </div>
                 <div class="grid grid-cols-3 gap-2 mt-3">
                     <div class="text-center rounded-md p-2">
-                        <p class="text-xs text-[#F4F2ED99]/60">Round</p>
+                        <p class="text-xs text-[#F4F2ED99]/60">{{ t("games.activeTable.round") }}</p>
                         <p class="text-[16px] text-[#C9A24D]">-</p>
                     </div>
                     <div class="text-center rounded-md p-2">
-                        <p class="text-xs text-[#F4F2ED99]/60">Turn</p>
-                        <p class="text-[16px] text-[#C9A24D]">Waiting</p>
+                        <p class="text-xs text-[#F4F2ED99]/60">{{ t("games.activeTable.turn") }}</p>
+                        <p class="text-[16px] text-[#C9A24D]">{{ t("games.activeTable.turnWaiting") }}</p>
                     </div>
                     <div class="text-center rounded-md p-2">
-                        <p class="text-xs text-[#F4F2ED99]/60">Timer</p>
+                        <p class="text-xs text-[#F4F2ED99]/60">{{ t("games.activeTable.timer") }}</p>
                         <p class="text-[16px] text-[#C9A24D]">--:--</p>
                     </div>
                 </div>
@@ -245,31 +257,31 @@
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M6.58329 16.6669C8.17377 17.4827 10.0034 17.7037 11.7424 17.29C13.4814 16.8763 15.0154 15.8551 16.0681 14.4104C17.1208 12.9656 17.6228 11.1925 17.4838 9.41034C17.3447 7.62821 16.5738 5.95434 15.3098 4.69036C14.0458 3.42638 12.3719 2.65541 10.5898 2.51638C8.8077 2.37735 7.03452 2.87941 5.58981 3.93207C4.1451 4.98474 3.12387 6.51879 2.71014 8.2578C2.29642 9.9968 2.51741 11.8264 3.33329 13.4169L1.66663 18.3335L6.58329 16.6669Z" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    Live Chat
+                    {{ t("games.tableChat.title") }}
                 </h3>
                 <div class="flex-1" style="min-height:244px">
                     <div class="text-xs text-[#F4F2EDCC]/0 flex flex-col gap-3">
                         <p class="flex flex-col gap-1 text-sm">
                             <span>
-                                <span class="text-[#C9A24D]">Sarah M:</span><span class="text-xs text-[#F4F2ED66]/40 ml-1">2:45 PM</span>
+                                <span class="text-[#C9A24D]">{{ t("games.tableChat.messages.m1.author") }}</span><span class="text-xs text-[#F4F2ED66]/40 ml-1">{{ t("games.tableChat.messages.m1.time") }}</span>
                             </span>
-                            <span class="text-[#F4F2EDCC]/80">Ready to play!</span>
+                            <span class="text-[#F4F2EDCC]/80">{{ t("games.tableChat.messages.m1.text") }}</span>
                         </p>
                         <p class="flex flex-col gap-1 text-sm">
                             <span>
-                                <span class="text-[#C9A24D]">Mike R:</span><span class="text-xs text-[#F4F2ED66]/40 ml-1">2:45 PM</span>
+                                <span class="text-[#C9A24D]">{{ t("games.tableChat.messages.m2.author") }}</span><span class="text-xs text-[#F4F2ED66]/40 ml-1">{{ t("games.tableChat.messages.m2.time") }}</span>
                             </span>
-                            <span class="text-[#F4F2EDCC]/80">Let's go!</span>
+                            <span class="text-[#F4F2EDCC]/80">{{ t("games.tableChat.messages.m2.text") }}</span>
                         </p>
                         <p class="flex flex-col gap-1 text-sm">
                             <span>
-                                <span class="text-[#C9A24D]">Alex K:</span><span class="text-xs text-[#F4F2ED66]/40 ml-1">2:45 PM</span>
+                                <span class="text-[#C9A24D]">{{ t("games.tableChat.messages.m3.author") }}</span><span class="text-xs text-[#F4F2ED66]/40 ml-1">{{ t("games.tableChat.messages.m3.time") }}</span>
                             </span>
-                            <span class="text-[#F4F2EDCC]/80">Give me a sec</span>
+                            <span class="text-[#F4F2EDCC]/80">{{ t("games.tableChat.messages.m3.text") }}</span>
                         </p>
                     </div>
                 </div>
-                <OB33ZInput v-model="chatMessage" placeholder="Type a message..." />
+                <OB33ZInput v-model="chatMessage" :placeholder="t('games.tableChat.inputPlaceholder')" />
                 <div class="flex gap-3 pt-4 text-[#C9A24D]">
                     <button type="button" class="hover:text-[#F4F2ED] transition-colors py-2 px-4">👍</button>
                     <button type="button" class="hover:text-[#F4F2ED] transition-colors py-2 px-4">⚡</button>
@@ -286,10 +298,10 @@
                     <path d="M8.33333 8.75016V5.00016C8.33333 4.55814 8.15774 4.13421 7.84518 3.82165C7.53262 3.50909 7.10869 3.3335 6.66667 3.3335C6.22464 3.3335 5.80072 3.50909 5.48816 3.82165C5.17559 4.13421 5 4.55814 5 5.00016V11.6668" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M15 6.66667C15 6.22464 15.1756 5.80072 15.4881 5.48816C15.8007 5.17559 16.2246 5 16.6667 5C17.1087 5 17.5326 5.17559 17.8452 5.48816C18.1577 5.80072 18.3333 6.22464 18.3333 6.66667V11.6667C18.3333 13.4348 17.6309 15.1305 16.3807 16.3807C15.1305 17.631 13.4348 18.3333 11.6667 18.3333H9.99998C7.66665 18.3333 6.24998 17.6167 5.00832 16.3833L2.00832 13.3833C1.7216 13.0658 1.56797 12.6501 1.57925 12.2225C1.59054 11.7948 1.76586 11.3878 2.06892 11.0858C2.37198 10.7838 2.77957 10.6099 3.20729 10.6002C3.63502 10.5904 4.05012 10.7455 4.36665 11.0333L5.83332 12.5" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                Mark Ready
+                {{ t("games.activeTable.markReady") }}
             </OB33ZButton>
           <button type="button" class="text-[#F4F2ED] hover:text-red-400 text-[16px] transition-colors px-6 py-3" @click="leaveTable">
-            Leave Table
+            {{ t("games.activeTable.leaveTable") }}
           </button>
         </div>
       </div>
@@ -298,7 +310,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed, ref } from "vue";
+import { useI18n } from "#imports";
 
 type Game = {
   name: string;
@@ -307,27 +320,49 @@ type Game = {
   icon: string;
 };
 
-const games: Game[] = [
-  { name: "UNO", description: "Classic card game of colors and numbers", players: "2-4 players", icon: "uno" },
-  { name: "Dominoes", description: "Traditional tile-based strategy game", players: "2-4 players", icon: "dominoes" },
-  { name: "Trivia", description: "Test your knowledge across various topics", players: "2-8 players", icon: "trivia" },
-  { name: "Pictionary", description: "Draw and guess in this creative party game", players: "2-8 players", icon: "pictionary" },
-];
+const { t } = useI18n();
 
-const steps = [
-  { id: 1, title: "Select a Game", text: "Choose from UNO, Dominoes, Trivia, or Pictionary." },
-  { id: 2, title: "Join or Create Table", text: "Join an active table or start a new one." },
-  { id: 3, title: "Play & Have Fun", text: "Chat with players and enjoy the game together." },
-];
+const games = computed<Game[]>(() => [
+  {
+    name: t("games.gameCards.uno.name"),
+    description: t("games.gameCards.uno.description"),
+    players: t("games.gameCards.uno.players"),
+    icon: "uno",
+  },
+  {
+    name: t("games.gameCards.dominoes.name"),
+    description: t("games.gameCards.dominoes.description"),
+    players: t("games.gameCards.dominoes.players"),
+    icon: "dominoes",
+  },
+  {
+    name: t("games.gameCards.trivia.name"),
+    description: t("games.gameCards.trivia.description"),
+    players: t("games.gameCards.trivia.players"),
+    icon: "trivia",
+  },
+  {
+    name: t("games.gameCards.pictionary.name"),
+    description: t("games.gameCards.pictionary.description"),
+    players: t("games.gameCards.pictionary.players"),
+    icon: "pictionary",
+  },
+]);
+
+const steps = computed(() => [
+  { id: 1, title: t("games.howToPlay.steps.s1.title"), text: t("games.howToPlay.steps.s1.text") },
+  { id: 2, title: t("games.howToPlay.steps.s2.title"), text: t("games.howToPlay.steps.s2.text") },
+  { id: 3, title: t("games.howToPlay.steps.s3.title"), text: t("games.howToPlay.steps.s3.text") },
+]);
 
 const activeTable = ref<Game | null>(null);
 const chatMessage = ref("");
-const tablePlayers = [
+const tablePlayers = computed(() => [
   { name: "Sarah M.", initials: "SM", ready: true, owner: true },
   { name: "Mike R.", initials: "MR", ready: true, owner: false },
   { name: "Alex K.", initials: "AK", ready: false, owner: false },
   { name: "You", initials: "YO", ready: false, owner: false },
-];
+]);
 
 const joinTable = (game: Game) => {
   activeTable.value = game;
