@@ -456,5 +456,39 @@
       },
       "inputPlaceholder": "Type a message..."
     }
+  },
+  "timeout": {
+    "title": "Time Out Room",
+    "description": "You have been temporarily placed in Time Out due to a moderation action.",
+    "timeRemaining": "Time Remaining",
+    "warning": {
+      "line1": "You cannot access other rooms until the timer expires.",
+      "line2": "Chat and interactions are disabled."
+    },
+    "communityGuidelines": {
+      "title": "Community Guidelines",
+      "items": {
+        "g1": {
+          "title": "Respectful Communication",
+          "description": "Treat all members with respect and courtesy. No offensive language or personal attacks."
+        },
+        "g2": {
+          "title": "No Harassment or Bullying",
+          "description": "Any form of harassment, intimidation, or bullying is strictly prohibited."
+        },
+        "g3": {
+          "title": "No Spam or Self-Promotion",
+          "description": "Keep conversations meaningful. Excessive promotional content or spam is not allowed."
+        },
+        "g4": {
+          "title": "Respect Privacy",
+          "description": "Do not share personal information of others without their consent."
+        },
+        "g5": {
+          "title": "Appropriate Content Only",
+          "description": "All content must be appropriate for a diverse community. No explicit or harmful material."
+        }
+      }
+    }
   }
 }

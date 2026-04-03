@@ -24,14 +24,14 @@
             </svg>
         </div>
         <h1 class="text-center text-3xl font-light tracking-tight text-[#F4F2ED]">
-          Time Out Room
+          {{ t("timeout.title") }}
         </h1>
       </header>
 
       <section class="rounded-2xl border border-[rgba(201,162,77,0.14)] bg-[rgba(8,9,13,0.72)] p-5 shadow-[0_0_40px_rgba(0,0,0,0.45)] md:p-8">
         <div class="flex flex-col gap-8">
             <p class="text-center text-[16px] text-[#F4F2EDCC]">
-              You have been temporarily placed in Time Out due to a moderation action.
+              {{ t("timeout.description") }}
             </p>
     
             <div class="flex flex-col items-center gap-6">
@@ -41,7 +41,7 @@
                             <path d="M7.99998 14.6663C11.6819 14.6663 14.6666 11.6816 14.6666 7.99967C14.6666 4.31778 11.6819 1.33301 7.99998 1.33301C4.31808 1.33301 1.33331 4.31778 1.33331 7.99967C1.33331 11.6816 4.31808 14.6663 7.99998 14.6663Z" stroke="#F4F2ED" stroke-opacity="0.6" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M8 4V8L10.6667 9.33333" stroke="#F4F2ED" stroke-opacity="0.6" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        Time Remaining
+                        {{ t("timeout.timeRemaining") }}
                     </span>
                     <p class="font-medium tracking-[2.4px] text-[#C9A24D] text-5xl md:text-8xl">
                       {{ formattedTime }}
@@ -58,9 +58,9 @@
                 </svg>
                 <div class="flex flex-col gap-1">
                     <p class="text-sm text-[#F4F2EDCC]">
-                        You cannot access other rooms until the timer expires.
+                        {{ t("timeout.warning.line1") }}
                     </p>
-                    <p class="text-sm text-[#F4F2ED99]">Chat and interactions are disabled.</p>
+                    <p class="text-sm text-[#F4F2ED99]">{{ t("timeout.warning.line2") }}</p>
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
                     <path d="M20 16.667V20.0003" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M20 23.333H20.0083" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <h2 class="text-[16px] font-light text-[#F4F2ED]">Community Guidelines</h2>
+                <h2 class="text-[16px] font-light text-[#F4F2ED]">{{ t("timeout.communityGuidelines.title") }}</h2>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M15 12.5L10 7.5L5 12.5" stroke="#F4F2ED" stroke-opacity="0.6" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -97,38 +97,41 @@
 
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
+import { useI18n } from "#imports";
 
 const initialSeconds = 15 * 60 + 20;
 const remainingSeconds = ref(initialSeconds);
 let timerId: ReturnType<typeof setInterval> | null = null;
 
-const guidelines = [
+const { t } = useI18n();
+
+const guidelines = computed(() => [
   {
     id: 1,
-    title: "Respectful Communication",
-    description: "Treat all members with respect and courtesy. No offensive language or personal attacks.",
+    title: t("timeout.communityGuidelines.items.g1.title"),
+    description: t("timeout.communityGuidelines.items.g1.description"),
   },
   {
     id: 2,
-    title: "No Harassment or Bullying",
-    description: "Any form of harassment, intimidation, or bullying is strictly prohibited.",
+    title: t("timeout.communityGuidelines.items.g2.title"),
+    description: t("timeout.communityGuidelines.items.g2.description"),
   },
   {
     id: 3,
-    title: "No Spam or Self-Promotion",
-    description: "Keep conversations meaningful. Excessive promotional content or spam is not allowed.",
+    title: t("timeout.communityGuidelines.items.g3.title"),
+    description: t("timeout.communityGuidelines.items.g3.description"),
   },
   {
     id: 4,
-    title: "Respect Privacy",
-    description: "Do not share personal information of others without their consent.",
+    title: t("timeout.communityGuidelines.items.g4.title"),
+    description: t("timeout.communityGuidelines.items.g4.description"),
   },
   {
     id: 5,
-    title: "Appropriate Content Only",
-    description: "All content must be appropriate for a diverse community. No explicit or harmful material.",
+    title: t("timeout.communityGuidelines.items.g5.title"),
+    description: t("timeout.communityGuidelines.items.g5.description"),
   },
-];
+]);
 
 const formattedTime = computed(() => {
   const mins = Math.floor(remainingSeconds.value / 60)

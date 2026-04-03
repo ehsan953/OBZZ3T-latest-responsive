@@ -456,5 +456,39 @@
       },
       "inputPlaceholder": "Escribe un mensaje..."
     }
+  },
+  "timeout": {
+    "title": "Sala de Tiempo Fuera",
+    "description": "Has sido colocado temporalmente en tiempo fuera debido a una acción de moderación.",
+    "timeRemaining": "Tiempo restante",
+    "warning": {
+      "line1": "No puedes acceder a otras salas hasta que expire el temporizador.",
+      "line2": "El chat y las interacciones están deshabilitados."
+    },
+    "communityGuidelines": {
+      "title": "Normas de la comunidad",
+      "items": {
+        "g1": {
+          "title": "Comunicación respetuosa",
+          "description": "Trata a todos los miembros con respeto y cortesía. Nada de lenguaje ofensivo o ataques personales."
+        },
+        "g2": {
+          "title": "Sin acoso ni intimidación",
+          "description": "Cualquier forma de acoso, intimidación o bullying está estrictamente prohibida."
+        },
+        "g3": {
+          "title": "Sin spam ni autopromoción",
+          "description": "Mantén conversaciones significativas. No se permite contenido promocional excesivo o spam."
+        },
+        "g4": {
+          "title": "Respeta la privacidad",
+          "description": "No compartas información personal de otros sin su consentimiento."
+        },
+        "g5": {
+          "title": "Contenido apropiado únicamente",
+          "description": "Todo el contenido debe ser apropiado para una comunidad diversa. Nada explícito o dañino."
+        }
+      }
+    }
   }
 }
