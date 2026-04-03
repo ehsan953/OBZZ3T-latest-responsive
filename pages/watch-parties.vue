@@ -23,11 +23,11 @@
             <path d="M18.6666 8H5.33329C3.86053 8 2.66663 9.19391 2.66663 10.6667V21.3333C2.66663 22.8061 3.86053 24 5.33329 24H18.6666C20.1394 24 21.3333 22.8061 21.3333 21.3333V10.6667C21.3333 9.19391 20.1394 8 18.6666 8Z" stroke="#C9A24D" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           <h1 class="text-4xl text-[#C9A24D] font-light">
-            Watch Party
+            {{ t("watchParties.title") }}
           </h1>
         </div>
         <p class="text-[16px] text-[#F4F2ED99]/60 max-w-78.25 md:max-w-3xl">
-          Watch together, chat live, and share the experience
+          {{ t("watchParties.subtitle") }}
         </p>
       </div>
 
@@ -57,12 +57,12 @@
                 >
                   ▶
                 </button>
-                <span>10:34</span>
+                <span>{{ t("watchParties.videoControls.currentTime") }}</span>
                 <div class="flex-1 h-1 rounded-full bg-[rgba(244,242,237,0.10)] overflow-hidden">
                   <div class="h-full w-[38%] bg-[rgba(201,162,77,0.55)]" />
                 </div>
-                <span>70%</span>
-                <span class="text-[#F4F2ED]/45">12:34 / 36:00</span>
+                <span>{{ t("watchParties.videoControls.progressPercent") }}</span>
+                <span class="text-[#F4F2ED]/45">{{ t("watchParties.videoControls.durationLine") }}</span>
                 <div class="flex items-center gap-3 ml-auto text-[#F4F2ED]/50">
                   <span>⤢</span>
                   <span>⛶</span>
@@ -78,9 +78,15 @@
             <div class="p-6 flex flex-col gap-4">
               <div class="flex items-start justify-between gap-4">
                 <div class="flex flex-col gap-2">
-                  <h2 class="text-2xl font-light text-[#F4F2ED] tracking-wide">OB33Z Community Highlights</h2>
+                  <h2 class="text-2xl font-light text-[#F4F2ED] tracking-wide">
+                    {{ t("watchParties.partyHighlights.title") }}
+                  </h2>
                   <p class="text-sm text-[#F4F2ED99]/60 mt-1 flex flex-col sm:flex-row sm:items-center gap-3">
-                    <span>Hosted by Emma R.</span> <span class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-[#F4F2ED99]/60 rounded-full"></span> Started 12 minutes ago</span>
+                    <span>{{ t("watchParties.partyHighlights.hostedBy") }}</span>
+                    <span class="flex items-center gap-3">
+                      <span class="w-1.5 h-1.5 bg-[#F4F2ED99]/60 rounded-full"></span>
+                      {{ t("watchParties.partyHighlights.startedAgo") }}
+                    </span>
                   </p>
                 </div>
               </div>
@@ -94,7 +100,7 @@
                         <path d="M8.33333 8.75016V5.00016C8.33333 4.55814 8.15774 4.13421 7.84518 3.82165C7.53262 3.50909 7.10869 3.3335 6.66667 3.3335C6.22464 3.3335 5.80072 3.50909 5.48816 3.82165C5.17559 4.13421 5 4.55814 5 5.00016V11.6668" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M15 6.66667C15 6.22464 15.1756 5.80072 15.4881 5.48816C15.8007 5.17559 16.2246 5 16.6667 5C17.1087 5 17.5326 5.17559 17.8452 5.48816C18.1577 5.80072 18.3333 6.22464 18.3333 6.66667V11.6667C18.3333 13.4348 17.6309 15.1305 16.3807 16.3807C15.1305 17.631 13.4348 18.3333 11.6667 18.3333H9.99998C7.66665 18.3333 6.24998 17.6167 5.00832 16.3833L2.00832 13.3833C1.7216 13.0658 1.56797 12.6501 1.57925 12.2225C1.59054 11.7948 1.76586 11.3878 2.06892 11.0858C2.37198 10.7838 2.77957 10.6099 3.20729 10.6002C3.63502 10.5904 4.05012 10.7455 4.36665 11.0333L5.83332 12.5" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    Raise Hand
+                    {{ t("watchParties.actions.raiseHand") }}
                   </OB33ZButton>
                   
                   <OB33ZButton
@@ -104,19 +110,21 @@
                       <path d="M21.3334 17.3335L28.2974 21.9762C28.3978 22.043 28.5144 22.0813 28.6349 22.0871C28.7553 22.0928 28.8751 22.0658 28.9814 22.0089C29.0877 21.952 29.1766 21.8673 29.2386 21.7639C29.3005 21.6604 29.3333 21.5421 29.3334 21.4215V10.4935C29.3334 10.3762 29.3025 10.261 29.2437 10.1595C29.185 10.0579 29.1005 9.97369 28.9988 9.91526C28.8971 9.85682 28.7817 9.82627 28.6644 9.82666C28.5471 9.82706 28.432 9.8584 28.3307 9.91752L21.3334 14.0002" stroke="#C9A24D" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M18.6666 8H5.33329C3.86053 8 2.66663 9.19391 2.66663 10.6667V21.3333C2.66663 22.8061 3.86053 24 5.33329 24H18.6666C20.1394 24 21.3333 22.8061 21.3333 21.3333V10.6667C21.3333 9.19391 20.1394 8 18.6666 8Z" stroke="#C9A24D" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    Join Video
+                    {{ t("watchParties.actions.joinVideo") }}
                   </OB33ZButton>
                 </div>
                 <button
                   type="button"
                   class="rounded-lg bg-transparent px-4 py-2 text-[16px] text-[#F4F2ED] font-medium tracking-widest transition hover:bg-[#C9A24D]/10"
                 >
-                  Leave Party
+                  {{ t("watchParties.actions.leaveParty") }}
                 </button>
               </div>
 
               <div class="pt-4 border-t border-[rgba(201,162,77,0.10)] flex flex-col md:flex-row md:items-center gap-4">
-                <p class="text-sm uppercase tracking-[0.16em] text-[#F4F2ED]/45">Quick reactions</p>
+                <p class="text-sm uppercase tracking-[0.16em] text-[#F4F2ED]/45">
+                  {{ t("watchParties.reactions.label") }}
+                </p>
                 <div class="flex items-center gap-4 text-sm text-[#F4F2ED]/70">
                   <button type="button" class="hover:text-[#F4F2ED]">👍</button>
                   <button type="button" class="hover:text-[#F4F2ED]">❤️</button>
@@ -143,17 +151,25 @@
                   <path d="M6.66663 5H17.5" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
 
-                <h3 class="text-lg text-[#F4F2ED] font-light tracking-wide">Up Next</h3>
+                <h3 class="text-lg text-[#F4F2ED] font-light tracking-wide">
+                  {{ t("watchParties.upNext.title") }}
+                </h3>
               </div>
               <div class="flex flex-col gap-3">
                 <div class="flex items-center gap-4">
                   <div class="w-32 aspect-16/10 rounded-xl relative">
                     <img src="/images/up-next1.jpg" class="object-cover" alt="">
-                    <span class="absolute bottom-2 right-2 text-sm text-[#F4F2ED] py-0.5 px-2 bg-[#0A0A0AE5]/90 rounded-lg">45 min</span>
+                    <span class="absolute bottom-2 right-2 text-sm text-[#F4F2ED] py-0.5 px-2 bg-[#0A0A0AE5]/90 rounded-lg">
+                      {{ t("watchParties.upNext.items.item1.duration") }}
+                    </span>
                   </div>
                   <div class="flex-1 min-w-0">
-                    <p class="text-[16px] text-[#F4F2ED] font-light truncate">Tech Talk: Future of AI</p>
-                    <p class="text-sm text-[#F4F2ED99]/60 mt-0.5">by Emma R.</p>
+                    <p class="text-[16px] text-[#F4F2ED] font-light truncate">
+                      {{ t("watchParties.upNext.items.item1.title") }}
+                    </p>
+                    <p class="text-sm text-[#F4F2ED99]/60 mt-0.5">
+                      {{ t("watchParties.upNext.items.item1.by") }}
+                    </p>
                   </div>
                   
                 </div>
@@ -161,22 +177,34 @@
                 <div class="flex items-center gap-4">
                   <div class="w-32 aspect-16/10 rounded-xl relative">
                     <img src="/images/up-next2.jpg" class="object-cover" alt="">
-                    <span class="absolute bottom-2 right-2 text-sm text-[#F4F2ED] py-0.5 px-2 bg-[#0A0A0AE5]/90 rounded-lg">30 min</span>
+                    <span class="absolute bottom-2 right-2 text-sm text-[#F4F2ED] py-0.5 px-2 bg-[#0A0A0AE5]/90 rounded-lg">
+                      {{ t("watchParties.upNext.items.item2.duration") }}
+                    </span>
                   </div>
                   <div class="flex-1 min-w-0">
-                    <p class="text-[16px] text-[#F4F2ED] font-light truncate">Creative Showcase</p>
-                    <p class="text-sm text-[#F4F2ED99]/60 mt-0.5">by James L.</p>
+                    <p class="text-[16px] text-[#F4F2ED] font-light truncate">
+                      {{ t("watchParties.upNext.items.item2.title") }}
+                    </p>
+                    <p class="text-sm text-[#F4F2ED99]/60 mt-0.5">
+                      {{ t("watchParties.upNext.items.item2.by") }}
+                    </p>
                   </div>
                 </div>
 
                 <div class="flex items-center gap-4">
                   <div class="w-32 aspect-16/10 rounded-xl relative">
                     <img src="/images/up-next3.jpg" class="object-cover" alt="">
-                    <span class="absolute bottom-2 right-2 text-sm text-[#F4F2ED] py-0.5 px-2 bg-[#0A0A0AE5]/90 rounded-lg">30 min</span>
+                    <span class="absolute bottom-2 right-2 text-sm text-[#F4F2ED] py-0.5 px-2 bg-[#0A0A0AE5]/90 rounded-lg">
+                      {{ t("watchParties.upNext.items.item3.duration") }}
+                    </span>
                   </div>
                   <div class="flex-1 min-w-0">
-                    <p class="text-[16px] text-[#F4F2ED] font-light truncate">Music Performance</p>
-                    <p class="text-sm text-[#F4F2ED99]/60 mt-0.5">by Sofia M.</p>
+                    <p class="text-[16px] text-[#F4F2ED] font-light truncate">
+                      {{ t("watchParties.upNext.items.item3.title") }}
+                    </p>
+                    <p class="text-sm text-[#F4F2ED99]/60 mt-0.5">
+                      {{ t("watchParties.upNext.items.item3.by") }}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -192,7 +220,9 @@
           >
             <div class="p-6 flex flex-col gap-4">
               <div class="flex items-center justify-between">
-                <h3 class="text-lg font-light tracking-wide text-[#F4F2ED]/85">Participants</h3>
+                <h3 class="text-lg font-light tracking-wide text-[#F4F2ED]/85">
+                  {{ t("watchParties.participants.title") }}
+                </h3>
                 <span class="text-xs text-[#F4F2ED]/45">{{ participants.length }}</span>
               </div>
 
@@ -228,25 +258,39 @@
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path d="M6.58335 16.6664C8.17384 17.4823 10.0034 17.7033 11.7424 17.2895C13.4814 16.8758 15.0155 15.8546 16.0681 14.4099C17.1208 12.9652 17.6229 11.192 17.4838 9.40985C17.3448 7.62772 16.5738 5.95385 15.3099 4.68987C14.0459 3.42589 12.372 2.65492 10.5899 2.51589C8.80776 2.37686 7.03458 2.87892 5.58987 3.93159C4.14516 4.98425 3.12393 6.51831 2.71021 8.25731C2.29648 9.99631 2.51747 11.8259 3.33335 13.4164L1.66669 18.333L6.58335 16.6664Z" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <h3 class="text-lg tracking-wide text-[#F4F2ED] font-light">Live Chat</h3>
+                <h3 class="text-lg tracking-wide text-[#F4F2ED] font-light">
+                  {{ t("watchParties.chat.title") }}
+                </h3>
               </div>
               
               <div class="flex flex-col gap-3 text-xs text-[#F4F2ED]/70 max-h-53 overflow-y-auto pr-2 no-scrollbar">
                 <div class="flex flex-col gap-1">
-                  <p class="text-[#C9A24D]/85 text-sm flex items-center gap-1">Emma R. <span class="text-[#F4F2ED]/40 text-xs">8:45 PM</span></p>
-                  <p class="text-sm text-[#F4F2EDCC]/80">This is amazing!</p>
+                  <p class="text-[#C9A24D]/85 text-sm flex items-center gap-1">
+                    {{ t("watchParties.chat.messages.m1.author") }}
+                    <span class="text-[#F4F2ED]/40 text-xs">{{ t("watchParties.chat.messages.m1.time") }}</span>
+                  </p>
+                  <p class="text-sm text-[#F4F2EDCC]/80">{{ t("watchParties.chat.messages.m1.text") }}</p>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <p class="text-[#C9A24D]/85 text-sm flex items-center gap-1">James L. <span class="text-[#F4F2ED]/40 text-xs">8:46 PM</span></p>
-                  <p class="text-sm text-[#F4F2EDCC]/80">Love this part!</p>
+                  <p class="text-[#C9A24D]/85 text-sm flex items-center gap-1">
+                    {{ t("watchParties.chat.messages.m2.author") }}
+                    <span class="text-[#F4F2ED]/40 text-xs">{{ t("watchParties.chat.messages.m2.time") }}</span>
+                  </p>
+                  <p class="text-sm text-[#F4F2EDCC]/80">{{ t("watchParties.chat.messages.m2.text") }}</p>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <p class="text-[#C9A24D]/85 text-sm flex items-center gap-1">Sofia M. <span class="text-[#F4F2ED]/40 text-xs">8:47 PM</span></p>
-                  <p class="text-sm text-[#F4F2EDCC]/80">Can’t wait to see what happens next</p>
+                  <p class="text-[#C9A24D]/85 text-sm flex items-center gap-1">
+                    {{ t("watchParties.chat.messages.m3.author") }}
+                    <span class="text-[#F4F2ED]/40 text-xs">{{ t("watchParties.chat.messages.m3.time") }}</span>
+                  </p>
+                  <p class="text-sm text-[#F4F2EDCC]/80">{{ t("watchParties.chat.messages.m3.text") }}</p>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <p class="text-[#C9A24D]/85 text-sm flex items-center gap-1">Alex K. <span class="text-[#F4F2ED]/40 text-xs">8:48 PM</span></p>
-                  <p class="text-sm text-[#F4F2EDCC]/80">Best watch party ever!</p>
+                  <p class="text-[#C9A24D]/85 text-sm flex items-center gap-1">
+                    {{ t("watchParties.chat.messages.m4.author") }}
+                    <span class="text-[#F4F2ED]/40 text-xs">{{ t("watchParties.chat.messages.m4.time") }}</span>
+                  </p>
+                  <p class="text-sm text-[#F4F2EDCC]/80">{{ t("watchParties.chat.messages.m4.text") }}</p>
                 </div>
               </div>
 
@@ -254,10 +298,12 @@
                 <div class="flex items-center gap-2 rounded-xl border border-[rgba(201,162,77,0.16)] bg-[rgba(6,6,8,0.55)] px-3 py-2">
                   <input
                     class="flex-1 bg-transparent outline-none text-xs text-[#F4F2ED] placeholder:text-[#F4F2ED]/35"
-                    placeholder="Type a message..."
+                    :placeholder="t('watchParties.chat.inputPlaceholder')"
                     type="text"
                   />
-                  <button type="button" class="text-xs text-[#C9A24D] hover:text-[#F4F2ED]">Send</button>
+                  <button type="button" class="text-xs text-[#C9A24D] hover:text-[#F4F2ED]">
+                    {{ t("watchParties.chat.send") }}
+                  </button>
                 </div>
                 <div class="flex items-center justify-center gap-6 mt-3 text-sm text-[#F4F2ED]/55">
                   <button type="button" class="hover:text-[#F4F2ED]">👍</button>
@@ -274,6 +320,11 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
+import { useI18n } from "#imports";
+
+const { t } = useI18n();
+
 type Participant = {
   id: string;
   name: string;
@@ -281,14 +332,14 @@ type Participant = {
   isOnline: boolean;
 };
 
-const participants: Participant[] = [
-  { id: "emma-r", name: "Emma R", initials: "ER", isOnline: true },
-  { id: "james-l", name: "James L", initials: "JL", isOnline: true },
-  { id: "sofia-m", name: "Sofia M", initials: "SM", isOnline: true },
-  { id: "alex-k", name: "Alex K", initials: "AK", isOnline: false },
-  { id: "mike-k", name: "Mike K", initials: "MK", isOnline: false },
-  { id: "chris-d", name: "Chris D", initials: "CD", isOnline: false },
-];
+const participants = computed<Participant[]>(() => [
+  { id: "emma-r", name: t("watchParties.participants.emmaR.name"), initials: "ER", isOnline: true },
+  { id: "james-l", name: t("watchParties.participants.jamesL.name"), initials: "JL", isOnline: true },
+  { id: "sofia-m", name: t("watchParties.participants.sofiaM.name"), initials: "SM", isOnline: true },
+  { id: "alex-k", name: t("watchParties.participants.alexK.name"), initials: "AK", isOnline: false },
+  { id: "mike-k", name: t("watchParties.participants.mikeK.name"), initials: "MK", isOnline: false },
+  { id: "chris-d", name: t("watchParties.participants.chrisD.name"), initials: "CD", isOnline: false },
+]);
 </script>
 
 <style scoped>

@@ -348,5 +348,55 @@
       "pending": "Pending",
       "inactive": "Inactive"
     }
+  },
+  "watchParties": {
+    "title": "Watch Party",
+    "subtitle": "Watch together, chat live, and share the experience",
+    "videoControls": {
+      "currentTime": "10:34",
+      "progressPercent": "70%",
+      "durationLine": "12:34 / 36:00"
+    },
+    "partyHighlights": {
+      "title": "OB33Z Community Highlights",
+      "hostedBy": "Hosted by Emma R.",
+      "startedAgo": "Started 12 minutes ago"
+    },
+    "actions": {
+      "raiseHand": "Raise Hand",
+      "joinVideo": "Join Video",
+      "leaveParty": "Leave Party"
+    },
+    "reactions": {
+      "label": "Quick reactions"
+    },
+    "upNext": {
+      "title": "Up Next",
+      "items": {
+        "item1": { "duration": "45 min", "title": "Tech Talk: Future of AI", "by": "by Emma R." },
+        "item2": { "duration": "30 min", "title": "Creative Showcase", "by": "by James L." },
+        "item3": { "duration": "30 min", "title": "Music Performance", "by": "by Sofia M." }
+      }
+    },
+    "participants": {
+      "title": "Participants",
+      "emmaR": { "name": "Emma R" },
+      "jamesL": { "name": "James L" },
+      "sofiaM": { "name": "Sofia M" },
+      "alexK": { "name": "Alex K" },
+      "mikeK": { "name": "Mike K" },
+      "chrisD": { "name": "Chris D" }
+    },
+    "chat": {
+      "title": "Live Chat",
+      "inputPlaceholder": "Type a message...",
+      "send": "Send",
+      "messages": {
+        "m1": { "author": "Emma R.", "time": "8:45 PM", "text": "This is amazing!" },
+        "m2": { "author": "James L.", "time": "8:46 PM", "text": "Love this part!" },
+        "m3": { "author": "Sofia M.", "time": "8:47 PM", "text": "Can't wait to see what happens next" },
+        "m4": { "author": "Alex K.", "time": "8:48 PM", "text": "Best watch party ever!" }
+      }
+    }
   }
 }

@@ -348,5 +348,55 @@
       "pending": "Pendiente",
       "inactive": "Inactivo"
     }
+  },
+  "watchParties": {
+    "title": "Fiesta de Visualización",
+    "subtitle": "Mira juntos, chatea en vivo y comparte la experiencia",
+    "videoControls": {
+      "currentTime": "10:34",
+      "progressPercent": "70%",
+      "durationLine": "12:34 / 36:00"
+    },
+    "partyHighlights": {
+      "title": "Momentos destacados de la comunidad OB33Z",
+      "hostedBy": "Organizado por Emma R.",
+      "startedAgo": "Comenzó hace 12 minutos"
+    },
+    "actions": {
+      "raiseHand": "Levantar la mano",
+      "joinVideo": "Unirse al video",
+      "leaveParty": "Salir de la fiesta"
+    },
+    "reactions": {
+      "label": "Reacciones rápidas"
+    },
+    "upNext": {
+      "title": "Próximo",
+      "items": {
+        "item1": { "duration": "45 min", "title": "Tech Talk: El futuro de la IA", "by": "por Emma R." },
+        "item2": { "duration": "30 min", "title": "Muestra creativa", "by": "por James L." },
+        "item3": { "duration": "30 min", "title": "Actuación musical", "by": "por Sofia M." }
+      }
+    },
+    "participants": {
+      "title": "Participantes",
+      "emmaR": { "name": "Emma R" },
+      "jamesL": { "name": "James L" },
+      "sofiaM": { "name": "Sofia M" },
+      "alexK": { "name": "Alex K" },
+      "mikeK": { "name": "Mike K" },
+      "chrisD": { "name": "Chris D" }
+    },
+    "chat": {
+      "title": "Chat en vivo",
+      "inputPlaceholder": "Escribe un mensaje...",
+      "send": "Enviar",
+      "messages": {
+        "m1": { "author": "Emma R.", "time": "8:45 PM", "text": "¡Esto es increíble!" },
+        "m2": { "author": "James L.", "time": "8:46 PM", "text": "¡Me encanta esta parte!" },
+        "m3": { "author": "Sofia M.", "time": "8:47 PM", "text": "No puedo esperar a ver qué pasa después" },
+        "m4": { "author": "Alex K.", "time": "8:48 PM", "text": "¡La mejor fiesta de visualización!" }
+      }
+    }
   }
 }
