@@ -75,11 +75,11 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import { useI18n } from "#imports";
-import TimeoutRoomBadgeIcon from "~/components/icons/TimeoutRoomBadgeIcon.vue";
-import TimeoutClockIcon from "~/components/icons/TimeoutClockIcon.vue";
-import TimeoutWarningIcon from "~/components/icons/TimeoutWarningIcon.vue";
-import TimeoutGuidelinesIcon from "~/components/icons/TimeoutGuidelinesIcon.vue";
-import TimeoutChevronUpIcon from "~/components/icons/TimeoutChevronUpIcon.vue";
+import TimeoutRoomBadgeIcon from "~/components/icons/timeout-page-icons/TimeoutRoomBadgeIcon.vue";
+import TimeoutClockIcon from "~/components/icons/timeout-page-icons/TimeoutClockIcon.vue";
+import TimeoutWarningIcon from "~/components/icons/timeout-page-icons/TimeoutWarningIcon.vue";
+import TimeoutGuidelinesIcon from "~/components/icons/timeout-page-icons/TimeoutGuidelinesIcon.vue";
+import TimeoutChevronUpIcon from "~/components/icons/timeout-page-icons/TimeoutChevronUpIcon.vue";
 
 const initialSeconds = 15 * 60 + 20;
 const remainingSeconds = ref(initialSeconds);

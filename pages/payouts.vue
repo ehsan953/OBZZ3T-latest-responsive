@@ -85,7 +85,6 @@
               type="button"
               class="rounded-lg w-4.5 h-2.5 text-xs bg-[#5B3FD633] border border-[#5B3FD6]"
             >
-              {{ t("payouts.automaticPayoutSettings.viewHistory") }}
             </button>
           </div>
 
@@ -261,17 +260,17 @@ import { computed, ref } from "vue";
 import type { Component } from "vue";
 import { useI18n } from "#imports";
 import type { ColumnDef } from "@tanstack/vue-table";
-import PayoutsHeaderIcon from "~/components/icons/PayoutsHeaderIcon.vue";
-import PayoutsDownloadIcon from "~/components/icons/PayoutsDownloadIcon.vue";
-import PayoutsCalendarIcon from "~/components/icons/PayoutsCalendarIcon.vue";
-import PayoutsCardIcon from "~/components/icons/PayoutsCardIcon.vue";
-import PayoutsExternalLinkIcon from "~/components/icons/PayoutsExternalLinkIcon.vue";
-import PayoutsSearchIcon from "~/components/icons/PayoutsSearchIcon.vue";
-import PayoutsFilterIcon from "~/components/icons/PayoutsFilterIcon.vue";
-import PayoutsKpiTrendIcon from "~/components/icons/PayoutsKpiTrendIcon.vue";
-import PayoutsKpiDollarIcon from "~/components/icons/PayoutsKpiDollarIcon.vue";
-import PayoutsKpiClockIcon from "~/components/icons/PayoutsKpiClockIcon.vue";
-import PayoutsKpiCheckIcon from "~/components/icons/PayoutsKpiCheckIcon.vue";
+import PayoutsHeaderIcon from "~/components/icons/payouts-page-icons/PayoutsHeaderIcon.vue";
+import PayoutsDownloadIcon from "~/components/icons/payouts-page-icons/PayoutsDownloadIcon.vue";
+import PayoutsCalendarIcon from "~/components/icons/payouts-page-icons/PayoutsCalendarIcon.vue";
+import PayoutsCardIcon from "~/components/icons/payouts-page-icons/PayoutsCardIcon.vue";
+import PayoutsExternalLinkIcon from "~/components/icons/payouts-page-icons/PayoutsExternalLinkIcon.vue";
+import PayoutsSearchIcon from "~/components/icons/payouts-page-icons/PayoutsSearchIcon.vue";
+import PayoutsFilterIcon from "~/components/icons/payouts-page-icons/PayoutsFilterIcon.vue";
+import PayoutsKpiTrendIcon from "~/components/icons/payouts-page-icons/PayoutsKpiTrendIcon.vue";
+import PayoutsKpiDollarIcon from "~/components/icons/payouts-page-icons/PayoutsKpiDollarIcon.vue";
+import PayoutsKpiClockIcon from "~/components/icons/payouts-page-icons/PayoutsKpiClockIcon.vue";
+import PayoutsKpiCheckIcon from "~/components/icons/payouts-page-icons/PayoutsKpiCheckIcon.vue";
 
 type KpiCard = {
   id: string;
