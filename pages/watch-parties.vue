@@ -18,10 +18,7 @@
         class="opacity-0 animate-delay-md text-center flex flex-col items-center gap-3"
       >
         <div class="flex items-center gap-3">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21.3334 17.3335L28.2974 21.9762C28.3978 22.043 28.5144 22.0813 28.6349 22.0871C28.7553 22.0928 28.8751 22.0658 28.9814 22.0089C29.0877 21.952 29.1766 21.8673 29.2386 21.7639C29.3005 21.6604 29.3333 21.5421 29.3334 21.4215V10.4935C29.3334 10.3762 29.3025 10.261 29.2437 10.1595C29.185 10.0579 29.1005 9.97369 28.9988 9.91526C28.8971 9.85682 28.7817 9.82627 28.6644 9.82666C28.5471 9.82706 28.432 9.8584 28.3307 9.91752L21.3334 14.0002" stroke="#C9A24D" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M18.6666 8H5.33329C3.86053 8 2.66663 9.19391 2.66663 10.6667V21.3333C2.66663 22.8061 3.86053 24 5.33329 24H18.6666C20.1394 24 21.3333 22.8061 21.3333 21.3333V10.6667C21.3333 9.19391 20.1394 8 18.6666 8Z" stroke="#C9A24D" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <WatchVideoIcon class="h-8 w-8"/>
           <h1 class="text-4xl text-[#C9A24D] font-light">
             {{ t("watchParties.title") }}
           </h1>
@@ -94,22 +91,14 @@
               <div class="flex flex-wrap items-center justify-between gap-3">
                 <div class="flex flex-wrap items-center gap-3 mt-5">
                   <OB33ZButton variant="ghost" class="normal-case tracking-normal px-4 py-2">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M15 9.16683V5.00016C15 4.55814 14.8244 4.13421 14.5119 3.82165C14.1993 3.50909 13.7754 3.3335 13.3334 3.3335C12.8913 3.3335 12.4674 3.50909 12.1548 3.82165C11.8423 4.13421 11.6667 4.55814 11.6667 5.00016" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M11.6666 8.33317V3.33317C11.6666 2.89114 11.4911 2.46722 11.1785 2.15466C10.8659 1.8421 10.442 1.6665 9.99998 1.6665C9.55795 1.6665 9.13403 1.8421 8.82147 2.15466C8.50891 2.46722 8.33331 2.89114 8.33331 3.33317V4.99984" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M8.33333 8.75016V5.00016C8.33333 4.55814 8.15774 4.13421 7.84518 3.82165C7.53262 3.50909 7.10869 3.3335 6.66667 3.3335C6.22464 3.3335 5.80072 3.50909 5.48816 3.82165C5.17559 4.13421 5 4.55814 5 5.00016V11.6668" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M15 6.66667C15 6.22464 15.1756 5.80072 15.4881 5.48816C15.8007 5.17559 16.2246 5 16.6667 5C17.1087 5 17.5326 5.17559 17.8452 5.48816C18.1577 5.80072 18.3333 6.22464 18.3333 6.66667V11.6667C18.3333 13.4348 17.6309 15.1305 16.3807 16.3807C15.1305 17.631 13.4348 18.3333 11.6667 18.3333H9.99998C7.66665 18.3333 6.24998 17.6167 5.00832 16.3833L2.00832 13.3833C1.7216 13.0658 1.56797 12.6501 1.57925 12.2225C1.59054 11.7948 1.76586 11.3878 2.06892 11.0858C2.37198 10.7838 2.77957 10.6099 3.20729 10.6002C3.63502 10.5904 4.05012 10.7455 4.36665 11.0333L5.83332 12.5" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <WatchRaiseHandIcon />
                     {{ t("watchParties.actions.raiseHand") }}
                   </OB33ZButton>
                   
                   <OB33ZButton
                     variant="ghost" class="normal-case tracking-normal px-4 py-2"
                   >
-                    <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M21.3334 17.3335L28.2974 21.9762C28.3978 22.043 28.5144 22.0813 28.6349 22.0871C28.7553 22.0928 28.8751 22.0658 28.9814 22.0089C29.0877 21.952 29.1766 21.8673 29.2386 21.7639C29.3005 21.6604 29.3333 21.5421 29.3334 21.4215V10.4935C29.3334 10.3762 29.3025 10.261 29.2437 10.1595C29.185 10.0579 29.1005 9.97369 28.9988 9.91526C28.8971 9.85682 28.7817 9.82627 28.6644 9.82666C28.5471 9.82706 28.432 9.8584 28.3307 9.91752L21.3334 14.0002" stroke="#C9A24D" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M18.6666 8H5.33329C3.86053 8 2.66663 9.19391 2.66663 10.6667V21.3333C2.66663 22.8061 3.86053 24 5.33329 24H18.6666C20.1394 24 21.3333 22.8061 21.3333 21.3333V10.6667C21.3333 9.19391 20.1394 8 18.6666 8Z" stroke="#C9A24D" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <WatchVideoIcon class="h-5 w-5"/>
                     {{ t("watchParties.actions.joinVideo") }}
                   </OB33ZButton>
                 </div>
@@ -142,14 +131,7 @@
           >
             <div class="p-6 flex flex-col gap-4">
               <div class="flex items-center gap-2">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2.5 10H2.50833" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M2.5 15H2.50833" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M2.5 5H2.50833" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M6.66663 10H17.5" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M6.66663 15H17.5" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M6.66663 5H17.5" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <WatchUpNextIcon class="h-5 w-5"/>
 
                 <h3 class="text-lg text-[#F4F2ED] font-light tracking-wide">
                   {{ t("watchParties.upNext.title") }}
@@ -238,12 +220,7 @@
                     </div>
                     <p class="text-sm text-[#F4F2ED]/85">{{ p.name }}</p>
                   </div>
-                  
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.03101 6.17369C0.989338 6.06143 0.989338 5.93795 1.03101 5.82569C1.43686 4.84162 2.12577 4.00021 3.01039 3.40814C3.89502 2.81607 4.93553 2.5 6.00001 2.5C7.06449 2.5 8.105 2.81607 8.98962 3.40814C9.87425 4.00021 10.5632 4.84162 10.969 5.82569C11.0107 5.93795 11.0107 6.06143 10.969 6.17369C10.5632 7.15776 9.87425 7.99917 8.98962 8.59124C8.105 9.18331 7.06449 9.49938 6.00001 9.49938C4.93553 9.49938 3.89502 9.18331 3.01039 8.59124C2.12577 7.99917 1.43686 7.15776 1.03101 6.17369Z" stroke="#5B3FD6" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 7.5C6.82843 7.5 7.5 6.82843 7.5 6C7.5 5.17157 6.82843 4.5 6 4.5C5.17157 4.5 4.5 5.17157 4.5 6C4.5 6.82843 5.17157 7.5 6 7.5Z" stroke="#5B3FD6" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-
+                  <WatchEyeIcon />
                 </div>
               </div>
             </div>
@@ -255,9 +232,7 @@
           >
             <div class="p-6 flex flex-col gap-4">
               <div class="flex items-center gap-2">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M6.58335 16.6664C8.17384 17.4823 10.0034 17.7033 11.7424 17.2895C13.4814 16.8758 15.0155 15.8546 16.0681 14.4099C17.1208 12.9652 17.6229 11.192 17.4838 9.40985C17.3448 7.62772 16.5738 5.95385 15.3099 4.68987C14.0459 3.42589 12.372 2.65492 10.5899 2.51589C8.80776 2.37686 7.03458 2.87892 5.58987 3.93159C4.14516 4.98425 3.12393 6.51831 2.71021 8.25731C2.29648 9.99631 2.51747 11.8259 3.33335 13.4164L1.66669 18.333L6.58335 16.6664Z" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <WatchChatIcon />
                 <h3 class="text-lg tracking-wide text-[#F4F2ED] font-light">
                   {{ t("watchParties.chat.title") }}
                 </h3>
@@ -322,7 +297,11 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useI18n } from "#imports";
-
+import WatchChatIcon from "~/components/icons/watch-parties-page-icons/WatchChatIcon.vue";
+import WatchVideoIcon from "~/components/icons/watch-parties-page-icons/WatchVideoIcon.vue";
+import WatchEyeIcon from "~/components/icons/watch-parties-page-icons/WatchEyeIcon.vue";
+import WatchRaiseHandIcon from "~/components/icons/watch-parties-page-icons/WatchRaiseHandIcon.vue";
+import WatchUpNextIcon from "~/components/icons/watch-parties-page-icons/WatchUpNextIcon.vue";
 const { t } = useI18n();
 
 type Participant = {
