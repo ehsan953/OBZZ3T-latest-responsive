@@ -490,5 +490,48 @@
         }
       }
     }
+  },
+  "ambassador": {
+    "title": "Ambassador Program",
+    "subtitle": "Share OB33Z with your network and earn 30% commission on all referral spending.",
+    "totalScans": "Total Scans",
+    "totalSignups": "Total Signups",
+    "activeReferrals": "Active Referrals",
+    "conversionRate": "Conversion Rate",
+    "ambassadorWallet": "Ambassador Wallet",
+    "totalEarned": "Total Earned",
+    "available": "Available",
+    "pending": "Pending",
+    "thisMonth": "This Month",
+    "requestPayout": "Request Payout",
+    "downloadReport": "Download Report",
+    "yourQRCode": "Your QR Code",
+    "scanToJoin": "Scan to join with your referral",
+    "downloadQR": "Download QR",
+    "yourReferralLink": "Your Referral Link",
+    "copy": "Copy",
+    "share": "Share",
+    "recentActivity": "Recent Activity",
+    "topReferrals": "Top Referrals",
+    "howItWorks": "How It Works",
+    "shareYourLink": "Share Your Link",
+    "shareYourLinkDesc": "Share your unique referral link or QR code with friends.",
+    "friendsJoin": "Friends Join",
+    "friendsJoinDesc": "When they sign up and spend, you earn commission.",
+    "earnCommission": "Earn 30% Commission",
+    "earnCommissionDesc": "Get paid automatically for all referral spending.",
+    "shareSheetTitle": "Join OB33Z",
+    "shareSheetText": "Join OB33Z with my ambassador link.",
+    "activity": {
+      "a1Time": "2 hours ago",
+      "a2Time": "5 hours ago",
+      "a3Time": "1 day ago",
+      "a4Time": "2 days ago"
+    },
+    "topReferralDates": {
+      "d1": "Jan 15, 2024",
+      "d2": "Jan 20, 2024",
+      "d3": "Feb 1, 2024"
+    }
   }
 }

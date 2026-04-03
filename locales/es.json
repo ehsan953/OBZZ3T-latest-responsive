@@ -490,5 +490,48 @@
         }
       }
     }
+  },
+  "ambassador": {
+    "title": "Programa de Embajadores",
+    "subtitle": "Comparte OB33Z con tu red y gana 30% de comisión en todo el gasto de tus referidos.",
+    "totalScans": "Escaneos Totales",
+    "totalSignups": "Registros Totales",
+    "activeReferrals": "Referidos Activos",
+    "conversionRate": "Tasa de Conversión",
+    "ambassadorWallet": "Billetera de Embajador",
+    "totalEarned": "Total Ganado",
+    "available": "Disponible",
+    "pending": "Pendiente",
+    "thisMonth": "Este Mes",
+    "requestPayout": "Solicitar Pago",
+    "downloadReport": "Descargar Reporte",
+    "yourQRCode": "Tu Código QR",
+    "scanToJoin": "Escanea para unirte con tu referido",
+    "downloadQR": "Descargar QR",
+    "yourReferralLink": "Tu Enlace de Referido",
+    "copy": "Copiar",
+    "share": "Compartir",
+    "recentActivity": "Actividad Reciente",
+    "topReferrals": "Mejores Referidos",
+    "howItWorks": "Cómo Funciona",
+    "shareYourLink": "Comparte tu Enlace",
+    "shareYourLinkDesc": "Comparte tu enlace único de referido o código QR con amigos.",
+    "friendsJoin": "Tus Amigos se Unen",
+    "friendsJoinDesc": "Cuando se registran y gastan, tú ganas comisión.",
+    "earnCommission": "Gana 30% de Comisión",
+    "earnCommissionDesc": "Recibe pagos automáticos por todo el gasto de referidos.",
+    "shareSheetTitle": "Únete a OB33Z",
+    "shareSheetText": "Únete a OB33Z con mi enlace de embajador.",
+    "activity": {
+      "a1Time": "hace 2 horas",
+      "a2Time": "hace 5 horas",
+      "a3Time": "hace 1 día",
+      "a4Time": "hace 2 días"
+    },
+    "topReferralDates": {
+      "d1": "15 ene 2024",
+      "d2": "20 ene 2024",
+      "d3": "1 feb 2024"
+    }
   }
 }
