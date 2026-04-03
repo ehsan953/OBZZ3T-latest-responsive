@@ -1,0 +1,9 @@
+<template>
+  <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+    <path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="#C9A24D" fill-opacity="0.2" />
+    <path d="M16.6666 11.667V15.0003" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M23.3334 11.667V15.0003" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M25.8333 13.333H14.1667C13.2462 13.333 12.5 14.0792 12.5 14.9997V26.6663C12.5 27.5868 13.2462 28.333 14.1667 28.333H25.8333C26.7538 28.333 27.5 27.5868 27.5 26.6663V14.9997C27.5 14.0792 26.7538 13.333 25.8333 13.333Z" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M12.5 18.333H27.5" stroke="#C9A24D" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+</template>
