@@ -18,12 +18,12 @@
                 <div class="flex items-start justify-between">
                     <div class="space-y-2">
                         <div class="flex items-center gap-2 text-[#F4F2ED]/60 text-sm">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye w-4 h-4"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            <AmbassadarScanEyeIcon class="lucide lucide-eye w-4 h-4"/>
                             <span>{{ t('ambassador.totalScans') }}</span>
                         </div>
                         <div class="text-3xl font-light text-[#F4F2ED]">1,247</div>
                         <div class="flex items-center gap-1 text-[#5B3FD6] text-sm">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up w-3 h-3"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                            <AmbassadarWaveArrowIcon class="lucide lucide-trending-up w-3 h-3" />
                             <span>+12%</span>
                         </div>
                     </div>
@@ -33,12 +33,12 @@
                 <div class="flex items-start justify-between">
                     <div class="space-y-2">
                         <div class="flex items-center gap-2 text-[#F4F2ED]/60 text-sm">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-plus w-4 h-4"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" x2="19" y1="8" y2="14"></line><line x1="22" x2="16" y1="11" y2="11"></line></svg>
+                            <AmbassadarSignupsIcon class="lucide lucide-user-plus w-4 h-4" />
                             <span>{{ t('ambassador.totalSignups') }}</span>
                         </div>
                         <div class="text-3xl font-light text-[#F4F2ED]">342</div>
                         <div class="flex items-center gap-1 text-[#5B3FD6] text-sm">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up w-3 h-3"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                            <AmbassadarWaveArrowIcon class="lucide lucide-trending-up w-3 h-3" />
                             <span>+8%</span>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                 <div class="flex items-start justify-between">
                     <div class="space-y-2">
                         <div class="flex items-center gap-2 text-[#F4F2ED]/60 text-sm">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-4 h-4"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            <AmbassadarActiveReferralIcon class="lucide lucide-users w-4 h-4" />
                             <span>{{ t('ambassador.activeReferrals') }}</span>
                         </div>
                         <div class="text-3xl font-light text-[#F4F2ED]">298</div>
@@ -59,7 +59,7 @@
                 <div class="flex items-start justify-between">
                     <div class="space-y-2">
                         <div class="flex items-center gap-2 text-[#F4F2ED]/60 text-sm">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up w-4 h-4"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                            <AmbassadorConversionRateIcon class="lucide lucide-trending-up w-4 h-4" />
                             <span>{{ t('ambassador.conversionRate') }}</span>
                         </div>
                         <div class="text-3xl font-light text-[#F4F2ED]">27.4%</div>
@@ -73,7 +73,7 @@
             <div class="lg:col-span-2 opacity-0 translate-y-4 animate-fade-left">
                 <div class="bg-[rgba(11,11,13,0.6)] backdrop-blur-sm border border-[rgba(201,162,77,0.15)] rounded-lg p-8" style="opacity: 1; transform: none;">
                     <div class="flex items-center gap-3 mb-6">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wallet w-6 h-6 text-[#C9A24D]"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path></svg>
+                        <AmbassadorWalletIcon class="lucide lucide-wallet w-6 h-6 text-[#C9A24D]" />
                         <h2 class="text-2xl font-light text-[#F4F2ED]">{{ t('ambassador.ambassadorWallet') }}</h2>
                     </div>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
@@ -95,12 +95,12 @@
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-3">
-                        <button class="px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-[#C9A24D] text-[#0B0B0D] hover:bg-[#D4AD59] shadow-[0_0_20px_rgba(201,162,77,0.3)]" tabindex="0">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign w-4 h-4"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        <button class="flex items-center gap-2 px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-[#C9A24D] text-[#0B0B0D] hover:bg-[#D4AD59] shadow-[0_0_20px_rgba(201,162,77,0.3)]" tabindex="0">
+                            <AmbassadorRequestPayoutIcon class="lucide lucide-dollar-sign w-4 h-4"/>
                             {{ t('ambassador.requestPayout') }}
                         </button>
-                        <button class="px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent border border-[#C9A24D] text-[#C9A24D] hover:bg-[rgba(201,162,77,0.1)]" tabindex="0">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download w-4 h-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+                        <button class="flex items-center gap-2 px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent border border-[#C9A24D] text-[#C9A24D] hover:bg-[rgba(201,162,77,0.1)]" tabindex="0">
+                            <AmbassadorDownloadReportIcon class="lucide lucide-download w-4 h-4"/>
                             {{ t('ambassador.downloadReport') }}
                         </button>
                     </div>
@@ -111,7 +111,7 @@
                     <h3 class="text-lg font-light text-[#F4F2ED] mb-4">{{ t('ambassador.yourQRCode') }}</h3>
                     <div class="bg-white p-4 rounded-lg mb-4">
                         <div class="aspect-square bg-linear-to-br from-[#0A0A0A] to-[#1A1A1A] rounded flex items-center justify-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-qr-code w-32 h-32 text-[#C9A24D]"><rect width="5" height="5" x="3" y="3" rx="1"></rect><rect width="5" height="5" x="16" y="3" rx="1"></rect><rect width="5" height="5" x="3" y="16" rx="1"></rect><path d="M21 16h-3a2 2 0 0 0-2 2v3"></path><path d="M21 21v.01"></path><path d="M12 7v3a2 2 0 0 1-2 2H7"></path><path d="M3 12h.01"></path><path d="M12 3h.01"></path><path d="M12 16v.01"></path><path d="M16 12h1"></path><path d="M21 12v.01"></path><path d="M12 21v-1"></path></svg>
+                            <AmbassadorQRCodeIcon class="lucide lucide-qr-code w-32 h-32 text-[#C9A24D]" />
                         </div>
                     </div>
                     <div class="space-y-2 text-center text-sm">
@@ -119,7 +119,7 @@
                         <div class="font-mono text-[#C9A24D]">OB33Z-AMB-2024</div>
                     </div>
                     <button class="px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent text-[#F4F2ED] hover:bg-[rgba(244,242,237,0.1)] w-full mt-4" tabindex="0" style="transform: none;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download w-4 h-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+                        <AmbassadorDownloadQRCodeIcon class="lucide lucide-download w-4 h-4" />
                         {{ t('ambassador.downloadQR') }}
                     </button>
                 </div>
@@ -130,18 +130,18 @@
         <div class="md:mb-8 opacity-0 -translate-y-4 animate-delay-lg">
             <div class="bg-[rgba(11,11,13,0.6)] backdrop-blur-sm border border-[rgba(201,162,77,0.15)] rounded-lg p-6" style="opacity: 1; transform: none;">
                 <div class="flex items-center gap-3 mb-4">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link w-5 h-5 text-[#C9A24D]"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                    <AmbassadarReferralLinkIcon class="lucide lucide-link w-5 h-5 text-[#C9A24D]" />
                     <h3 class="text-lg font-light text-[#F4F2ED]">{{ t('ambassador.yourReferralLink') }}</h3>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-3">
                     <div class="flex-1 bg-[#0A0A0A]/50 border border-[#C9A24D]/20 rounded-lg px-4 py-3 font-mono text-sm text-[#F4F2ED]/80">https://ob33z.com/ref/AMB2024</div>
                     <div class="flex gap-2">
                         <button class="px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent border border-[#C9A24D] text-[#C9A24D] hover:bg-[rgba(201,162,77,0.1)]" tabindex="0">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                            <AmbassadorCopyLinkIcon class="lucide lucide-copy w-4 h-4" />
                             {{ t('ambassador.copy') }}
                         </button>
                         <button class="px-8 py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent border border-[#C9A24D] text-[#C9A24D] hover:bg-[rgba(201,162,77,0.1)]" tabindex="0">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share2 lucide-share-2 w-4 h-4"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg>
+                            <AmbassadorShareLinkIcon class="lucide lucide-share2 lucide-share-2 w-4 h-4" />
                             {{ t('ambassador.share') }}
                         </button>
                     </div>
@@ -153,7 +153,7 @@
             <div class="opacity-0 translate-y-4 animate-fade-left mb-4 md:mb-8">
                 <div class="bg-[rgba(11,11,13,0.6)] backdrop-blur-sm border border-[rgba(201,162,77,0.15)] rounded-lg p-6" style="opacity: 1; transform: none;">
                     <div class="flex items-center gap-3 mb-6">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-5 h-5 text-[#C9A24D]"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                        <AmbassadorActivityIcon class="lucide lucide-calendar w-5 h-5 text-[#C9A24D]" />
                         <h3 class="text-lg font-light text-[#F4F2ED]">{{ t('ambassador.recentActivity') }}</h3>
                     </div>
                     <div class="space-y-4">
@@ -203,7 +203,7 @@
             <div class="opacity-0 translate-y-4 animate-fade-right mb-4 md:mb-8">
                 <div class="bg-[rgba(11,11,13,0.6)] backdrop-blur-sm border border-[rgba(201,162,77,0.15)] rounded-lg p-6" style="opacity: 1; transform: none;">
                     <div class="flex items-center gap-3 mb-6">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up w-5 h-5 text-[#C9A24D]"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                        <AmbassadarWaveArrowIcon class="lucide lucide-trending-up w-5 h-5 text-[#C9A24D]" />
                         <h3 class="text-lg font-light text-[#F4F2ED]">{{ t('ambassador.topReferrals') }}</h3>
                     </div>
                     <div class="space-y-4">
@@ -248,21 +248,21 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="space-y-3">
                         <div class="w-12 h-12 rounded-full bg-[#5B3FD6]/20 flex items-center justify-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share2 lucide-share-2 w-6 h-6 text-[#5B3FD6]"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg>
+                            <AmbassadorShareLinkIcon class="lucide lucide-share2 lucide-share-2 w-6 h-6 text-[#5B3FD6]" />
                         </div>
                         <h4 class="text-lg text-[#F4F2ED]">{{ t('ambassador.shareYourLink') }}</h4>
                         <p class="text-[#F4F2ED]/60 text-sm">{{ t('ambassador.shareYourLinkDesc') }}</p>
                     </div>
                     <div class="space-y-3">
                         <div class="w-12 h-12 rounded-full bg-[#C9A24D]/20 flex items-center justify-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6 text-[#C9A24D]"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            <AmbassadarActiveReferralIcon class="lucide lucide-users w-6 h-6 text-[#C9A24D]" />
                         </div>
                         <h4 class="text-lg text-[#F4F2ED]">{{ t('ambassador.friendsJoin') }}</h4>
                         <p class="text-[#F4F2ED]/60 text-sm">{{ t('ambassador.friendsJoinDesc') }}</p>
                     </div>
                     <div class="space-y-3">
                         <div class="w-12 h-12 rounded-full bg-[#C9A24D]/20 flex items-center justify-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign w-6 h-6 text-[#C9A24D]"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                            <AmbassadorRequestPayoutIcon class="lucide lucide-dollar-sign w-6 h-6 text-[#C9A24D]" />
                         </div>
                         <h4 class="text-lg text-[#F4F2ED]">{{ t('ambassador.earnCommission') }}</h4>
                         <p class="text-[#F4F2ED]/60 text-sm">{{ t('ambassador.earnCommissionDesc') }}</p>
@@ -277,6 +277,20 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useI18n } from "#imports";
+import AmbassadarScanEyeIcon from "~/components/icons/ambassador-page-icons/AmbassadarScanEyeIcon.vue";
+import AmbassadarSignupsIcon from "~/components/icons/ambassador-page-icons/AmbassadarSignupsIcon.vue";
+import AmbassadarWaveArrowIcon from "~/components/icons/ambassador-page-icons/AmbassadarWaveArrowIcon.vue";
+import AmbassadarActiveReferralIcon from "~/components/icons/ambassador-page-icons/AmbassadarActiveReferralIcon.vue";
+import AmbassadorConversionRateIcon from "~/components/icons/ambassador-page-icons/AmbassadorConversionRateIcon.vue";
+import AmbassadorWalletIcon from "~/components/icons/ambassador-page-icons/AmbassadorWalletIcon.vue";
+import AmbassadorRequestPayoutIcon from "~/components/icons/ambassador-page-icons/AmbassadorRequestPayoutIcon.vue";
+import AmbassadorDownloadReportIcon from "~/components/icons/ambassador-page-icons/AmbassadorDownloadReportIcon.vue";
+import AmbassadorQRCodeIcon from "~/components/icons/ambassador-page-icons/AmbassadorQRCodeIcon.vue";
+import AmbassadorDownloadQRCodeIcon from "~/components/icons/ambassador-page-icons/AmbassadorDownloadQRCodeIcon.vue";
+import AmbassadarReferralLinkIcon from "~/components/icons/ambassador-page-icons/AmbassadarReferralLinkIcon.vue";
+import AmbassadorCopyLinkIcon from "~/components/icons/ambassador-page-icons/AmbassadorCopyLinkIcon.vue";
+import AmbassadorShareLinkIcon from "~/components/icons/ambassador-page-icons/AmbassadorShareLinkIcon.vue";
+import AmbassadorActivityIcon from "~/components/icons/ambassador-page-icons/AmbassadorActivityIcon.vue";
 
 const { t } = useI18n();
 
