@@ -60,33 +60,31 @@
                         <!-- Location, Join Date, Website -->
                         <div class="flex flex-wrap gap-4 text-sm text-[#F4F2ED]/60">
                           <div class="flex items-center gap-2">
-                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-4 h-4"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                              <span>{{ location || 'Los Angeles, CA' }}</span>
+                            <ProfileLocationIcon class="lucide lucide-map-pin w-4 h-4" />
+                            <span>{{ location || 'Los Angeles, CA' }}</span>
                           </div>
                           <div class="flex items-center gap-2" v-if="displayPhone">
-                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-4 h-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.1 3.18 2 2 0 0 1 5.11 1h3a2 2 0 0 1 2 1.72c.12.86.31 1.7.57 2.5a2 2 0 0 1-.45 2.11L9 8a16 16 0 0 0 7 7l.67-.23a2 2 0 0 1 2.11.45c.8.26 1.64.45 2.5.57A2 2 0 0 1 22 16.92z"></path></svg>
-                              <span>{{ displayPhone }}</span>
-                              <OB33ZButton v-if="!isEditMode" variant="ghost" class="px-2! py-1! text-xs" @click="isEditMode = true">Edit</OB33ZButton>
+                            <ProfilePhoneIcon class="lucide lucide-phone w-4 h-4" />
+                            <span>{{ displayPhone }}</span>
+                            <OB33ZButton v-if="!isEditMode" variant="ghost" class="px-2! py-1! text-xs" @click="isEditMode = true">Edit</OB33ZButton>
                           </div>
                           <div class="flex items-center gap-2">
-                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-4 h-4"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
-                              <span>{{ t('profile.joined', { date: joinDate || 'January 2024' }) }}</span>
+                            <ProfileCalendarIcon class="lucide lucide-calendar w-4 h-4" />
+                            <span>{{ t('profile.joined', { date: joinDate || 'January 2024' }) }}</span>
                           </div>
                           <div class="flex items-center gap-2">
-                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
-                              <a :href="website" class="text-[#5B3FD6] hover:underline">{{ website }}</a>
+                            <ProfileGlobeIcon class="lucide lucide-globe w-4 h-4" />
+                            <a :href="website" class="text-[#5B3FD6] hover:underline">{{ website }}</a>
                           </div>
                         </div>
                     </div>
                     <div>
                         <button
-                            v-if="!isEditMode"
-                            @click="isEditMode = true"
-                            class="border border-[#C9A24D] rounded-xl flex items-start md:items-center text-left text-[#C9A24D] gap-2 px-4 py-2 md:px-6 md:py-3"
+                          v-if="!isEditMode"
+                          @click="isEditMode = true"
+                          class="border border-[#C9A24D] rounded-xl flex items-start md:items-center text-left text-[#C9A24D] gap-2 px-4 py-2 md:px-6 md:py-3"
                         >
-                          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 20 20">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                          </svg>
+                          <ProfileEditIcon class="w-5 h-5" />
                           {{ t('editProfile') }}
                         </button>
                     </div>
@@ -131,31 +129,31 @@
       <!-- Badges Section -->
       <OB33ZCard class="mb-8 opacity-0 -translate-y-4 animate-delay-md">
         <div class="flex items-center gap-2 mb-4">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award w-5 h-5 text-[#C9A24D]"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+          <ProfileBadgeIcon class="lucide lucide-award w-5 h-5 text-[#C9A24D]" />
           <h3 class="text-lg font-light text-[#F4F2ED]">{{ t('profile.badges') }}</h3>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="p-4 bg-[#0A0A0A]/30 rounded-lg text-center space-y-2">
                 <div class="inline-flex items-center justify-center w-12 h-12 rounded-full" style="background-color: rgba(201, 162, 77, 0.125);">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-6 h-6" style="color: rgb(201, 162, 77);"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <MembershipFreeStarIcon class="lucide lucide-star w-6 h-6 text-[#C9A24D]" />  
                 </div>
                 <div class="text-[#F4F2ED] text-sm">{{ t('profile.earlyAdopter') }}</div>
             </div>
             <div class="p-4 bg-[#0A0A0A]/30 rounded-lg text-center space-y-2">
                 <div class="inline-flex items-center justify-center w-12 h-12 rounded-full" style="background-color: rgba(91, 63, 214, 0.125);">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle w-6 h-6" style="color: rgb(91, 63, 214);"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+                  <MembershipChatIcon class="lucide lucide-message-circle w-6 h-6 text-[#5B3FD6]" />  
                 </div>
                 <div class="text-[#F4F2ED] text-sm">{{ t('profile.socialButterfly') }}</div>
             </div>
             <div class="p-4 bg-[#0A0A0A]/30 rounded-lg text-center space-y-2">
                 <div class="inline-flex items-center justify-center w-12 h-12 rounded-full" style="background-color: rgba(201, 162, 77, 0.125);">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gift w-6 h-6" style="color: rgb(201, 162, 77);"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13"></path><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"></path></svg>
+                  <MembershipGiftIcon class="lucide lucide-gift w-6 h-6 text-[#C9A24D]" />
                 </div>
                 <div class="text-[#F4F2ED] text-sm">{{ t('profile.giftGiver') }}</div>
             </div>
             <div class="p-4 bg-[#0A0A0A]/30 rounded-lg text-center space-y-2">
                 <div class="inline-flex items-center justify-center w-12 h-12 rounded-full" style="background-color: rgba(91, 63, 214, 0.125);">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up w-6 h-6" style="color: rgb(91, 63, 214);"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                  <AmbassadarWaveArrowIcon class="lucide lucide-trending-up w-6 h-6 text-[#5B3FD6]" />
                 </div>
                 <div class="text-[#F4F2ED] text-sm">{{ t('profile.trendsetter') }}</div>
             </div>
@@ -175,12 +173,12 @@
               ? 'bg-[#C9A24D] text-[#0A0A0A]'
               : 'bg-[#0A0A0A]/50 border border-[#C9A24D]/20 text-[#F4F2ED]/60 hover:text-[#F4F2ED]'
           ]"
-          >
-          <svg v-if="tab.id == 'profile'" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user w-4 h-4"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          <svg v-if="tab.id == 'account'" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-4 h-4"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
-          <svg v-if="tab.id == 'privacy'" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock w-4 h-4"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-          <svg v-if="tab.id == 'notifications'" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell w-4 h-4"><path d="M10.268 21a2 2 0 0 0 3.464 0"></path><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path></svg>
-          <svg v-if="tab.id == 'billing'" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-credit-card w-4 h-4"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+        >
+          <ProfileIcon v-if="tab.id == 'profile'" class="lucide lucide-user w-4 h-4" />
+          <ProfileAccountIcon v-if="tab.id == 'account'" class="lucide lucide-shield w-4 h-4" />
+          <ProfilePrivacyIcon v-if="tab.id == 'privacy'" class="lucide lucide-lock w-4 h-4" />
+          <ProfileNotificationsIcon v-if="tab.id == 'notifications'" class="lucide lucide-bell w-4 h-4" />
+          <ProfileBillingIcon v-if="tab.id == 'billing'" class="lucide lucide-credit-card w-4 h-4" />
           {{ tab.name }}
         </button>
       </div>
@@ -605,6 +603,21 @@ import { useForm } from "vee-validate";
 import { usePhoneCountries, buildE164, parsePhoneToCountryAndNational, PHONE_COUNTRIES, type PhoneCountry } from "~/composables/usePhoneCountries";
 import ChangePasswordModal from "~/components/ChangePasswordModal.vue";
 import DeleteAccountModal from "~/components/DeleteAccountModal.vue";
+import ProfileLocationIcon from "~/components/icons/profile-page-icons/ProfileLocationIcon.vue";
+import ProfileEditIcon from "~/components/icons/profile-page-icons/ProfileEditIcon.vue";
+import ProfileCalendarIcon from "~/components/icons/profile-page-icons/ProfileCalendarIcon.vue";
+import ProfileGlobeIcon from "~/components/icons/profile-page-icons/ProfileGlobeIcon.vue";
+import ProfilePhoneIcon from "~/components/icons/profile-page-icons/ProfilePhoneIcon.vue";
+import ProfileBadgeIcon from "~/components/icons/profile-page-icons/ProfileBadgeIcon.vue";
+import MembershipFreeStarIcon from "~/components/icons/membership-page-icons/MembershipFreeStarIcon.vue";
+import MembershipChatIcon from "~/components/icons/membership-page-icons/MembershipChatIcon.vue";
+import MembershipGiftIcon from "~/components/icons/membership-page-icons/MembershipGiftIcon.vue";
+import AmbassadarWaveArrowIcon from "~/components/icons/ambassador-page-icons/AmbassadarWaveArrowIcon.vue";
+import ProfileIcon from "~/components/icons/profile-page-icons/ProfileIcon.vue";
+import ProfileAccountIcon from "~/components/icons/profile-page-icons/ProfileAccountIcon.vue";
+import ProfilePrivacyIcon from "~/components/icons/profile-page-icons/ProfilePrivacyIcon.vue";
+import ProfileNotificationsIcon from "~/components/icons/profile-page-icons/ProfileNotificationsIcon.vue";
+import ProfileBillingIcon from "~/components/icons/profile-page-icons/ProfileBillingIcon.vue";
 
 const { t } = useI18n();
 
