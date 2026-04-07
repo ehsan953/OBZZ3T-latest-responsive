@@ -84,10 +84,10 @@
                     <div class="text-center opacity-0 translate-y-4 animate-delay-sm">
                       <div class="relative inline-block mb-2 ring-2 ring-[#C9A24D] ring-offset-2 ring-offset-[#0A0A0A] rounded-full">
                         <div class="w-16 h-16 rounded-full bg-linear-to-br flex items-center justify-center text-[#F4F2ED] from-[#C9A24D] to-[#5B3FD6]">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                          <FiresideUsersIcon class="lucide lucide-users w-6 h-6"/>
                         </div>
                         <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center" style="transform: scale(1.01483);">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mic w-3 h-3 text-white"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" x2="12" y1="19" y2="22"></line></svg>
+                          <FiresideMicOnIcon class="lucide lucide-mic w-3 h-3 text-white"/>
                         </div>
                       </div>
                       <div class="space-y-1">
@@ -100,7 +100,7 @@
                     <div class="text-center opacity-0 translate-y-4 animate-delay-md">
                       <div class="relative inline-block mb-2 ">
                         <div class="w-16 h-16 rounded-full bg-linear-to-br flex items-center justify-center text-[#F4F2ED] from-[#5B3FD6] to-[#C9A24D]">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                          <FiresideUsersIcon class="lucide lucide-users w-6 h-6"/>
                         </div>
                       </div>
                       <div class="space-y-1">
@@ -113,7 +113,7 @@
                     <div class="text-center opacity-0 translate-y-4 animate-delay-lg">
                       <div class="relative inline-block mb-2">
                         <div class="w-16 h-16 rounded-full bg-linear-to-br flex items-center justify-center text-[#F4F2ED] from-[#5B3FD6] to-[#C9A24D]">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                          <FiresideUsersIcon class="lucide lucide-users w-6 h-6"/>
                         </div>
                     </div>
                     <div class="space-y-1">
@@ -126,7 +126,7 @@
                   <div class="text-center opacity-0 translate-y-4 animate-delay-xl">
                     <div class="relative inline-block mb-2">
                       <div class="w-16 h-16 rounded-full bg-linear-to-br flex items-center justify-center text-[#F4F2ED] from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <FiresideUsersIcon class="lucide lucide-users w-6 h-6"/>
                       </div>
                     </div>
                     <div class="space-y-1">
@@ -139,7 +139,7 @@
                   <div class="text-center opacity-0 translate-y-4 animate-delay-2xl">
                     <div class="relative inline-block mb-2">
                       <div class="w-16 h-16 rounded-full bg-linear-to-br flex items-center justify-center text-[#F4F2ED] from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <FiresideUsersIcon class="lucide lucide-users w-6 h-6"/>
                       </div>
                     </div>
                     <div class="space-y-1">
@@ -152,7 +152,7 @@
                   <div class="text-center opacity-0 translate-y-4 animate-delay-3xl">
                     <div class="relative inline-block mb-2">
                       <div class="w-16 h-16 rounded-full bg-linear-to-br flex items-center justify-center text-[#F4F2ED] from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20">
-                        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <FiresideUsersIcon class="lucide lucide-users w-6 h-6"/>
                       </div>
                     </div>
                     <div class="space-y-1">
@@ -165,13 +165,13 @@
                 </div>
                 <div class="flex items-center justify-center gap-2 md:gap-4 pt-6 border-t border-[#C9A24D]/10">
                   <button class="p-4 rounded-full transition-all bg-[#C9A24D]/20 text-[#C9A24D] hover:bg-[#C9A24D]/30" >
-                    <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mic w-5 h-5" ><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" x2="12" y1="19" y2="22"></line></svg>
+                    <FiresideMicIcon class="lucide lucide-mic w-5 h-5"/>
                   </button>
                   <button class="p-4 rounded-full transition-all bg-red-500/20 text-red-500">
-                    <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video-off w-5 h-5"><path d="M10.66 6H14a2 2 0 0 1 2 2v2.5l5.248-3.062A.5.5 0 0 1 22 7.87v8.196"></path><path d="M16 16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2"></path><path d="m2 2 20 20"></path></svg>
+                    <FiresideVideoOffIcon class="lucide lucide-video-off w-5 h-5" />
                   </button>
                   <button class="p-4 rounded-full transition-all bg-[#C9A24D]/20 text-[#C9A24D] hover:bg-[#C9A24D]/30">
-                    <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand w-5 h-5"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"></path><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"></path><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"></path><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path></svg>
+                    <WatchRaiseHandIcon class="lucide lucide-hand w-5 h-5" />
                   </button>
                   <button class="px-5 md:px-8 py-2 md:py-3 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-transparent border border-[#C9A24D] text-[#C9A24D] hover:bg-[rgba(201,162,77,0.1)]" tabindex="0">Leave Quietly</button>
                 </div>
@@ -213,21 +213,24 @@
               <div class="space-y-2">
                 <div class="flex items-center gap-3 p-2 bg-[#0A0A0A]/30 rounded-lg">
                   <div class="w-8 h-8 rounded-full bg-linear-to-br from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20 flex items-center justify-center">
-                    <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-4 h-4 text-[#F4F2ED]"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div><div class="flex-1"  >
-                      <div class="text-[#F4F2ED] text-sm">Alex K.</div>
-                    </div>
+                    <FiresideUsersIcon class="lucide lucide-users w-4 h-4 text-[#F4F2ED]"/>
                   </div>
-                  <div class="flex items-center gap-3 p-2 bg-[#0A0A0A]/30 rounded-lg">
-                    <div class="w-8 h-8 rounded-full bg-linear-to-br from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20 flex items-center justify-center">
-                      <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-4 h-4 text-[#F4F2ED]"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                    </div>
-                    <div class="flex-1"  ><div class="text-[#F4F2ED] text-sm"  >Chris D.</div>
+                  <div class="flex-1">
+                    <div class="text-[#F4F2ED] text-sm">Alex K.</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 p-2 bg-[#0A0A0A]/30 rounded-lg">
+                  <div class="w-8 h-8 rounded-full bg-linear-to-br from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20 flex items-center justify-center">
+                    <FiresideUsersIcon class="lucide lucide-users w-4 h-4 text-[#F4F2ED]"/>
+                  </div>
+                  <div class="flex-1">
+                    <div class="text-[#F4F2ED] text-sm">Chris D.</div>
                   </div>
                   <div class="px-2 py-1 rounded bg-[rgba(201,162,77,0.1)] text-[#C9A24D] border border-[rgba(201,162,77,0.3)] text-xs"></div>
                 </div>
                 <div class="flex items-center gap-3 p-2 bg-[#0A0A0A]/30 rounded-lg" >
                   <div class="w-8 h-8 rounded-full bg-linear-to-br from-[#0A0A0A] to-[#1A1A1A] border border-[#C9A24D]/20 flex items-center justify-center">
-                    <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-4 h-4 text-[#F4F2ED]" ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <FiresideUsersIcon class="lucide lucide-users w-4 h-4 text-[#F4F2ED]"/>
                   </div>
                   <div class="flex-1">
                     <div class="text-[#F4F2ED] text-sm">Taylor W.</div>
@@ -243,7 +246,7 @@
                 <div class="p-4 bg-[#0A0A0A]/30 rounded-lg space-y-2">
                   <h4 class="text-[#F4F2ED] font-light">{{ t("firesides.con1") }}</h4>
                   <div class="flex items-center gap-2 text-[#F4F2ED]/60 text-xs">
-                    <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-3 h-3"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <FiresideUsersIcon class="lucide lucide-users w-3 h-3"/>
                     <span >Dr. Sarah Chen</span>
                   </div>
                   <div class="flex items-center justify-between">
@@ -255,7 +258,7 @@
                 <div class="p-4 bg-[#0A0A0A]/30 rounded-lg space-y-2">
                   <h4 class="text-[#F4F2ED] font-light"  >{{ t("firesides.con2") }}</h4>
                   <div class="flex items-center gap-2 text-[#F4F2ED]/60 text-xs">
-                    <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-3 h-3"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <FiresideUsersIcon class="lucide lucide-users w-3 h-3"/>
                     <span>Marcus V.</span>
                   </div>
                   <div class="flex items-center justify-between">
@@ -267,7 +270,7 @@
                 <div class="p-4 bg-[#0A0A0A]/30 rounded-lg space-y-2">
                   <h4 class="text-[#F4F2ED] font-light">{{ t("firesides.con3") }}</h4>
                   <div class="flex items-center gap-2 text-[#F4F2ED]/60 text-xs">
-                    <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-3 h-3"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <FiresideUsersIcon class="lucide lucide-users w-3 h-3"/>
                     <span>Alex T.</span>
                   </div>
                   <div class="flex items-center justify-between">
@@ -295,6 +298,11 @@ import FiresideArtsIcon from "~/components/icons/fireside-page-icons/FiresideArt
 import FiresideTechnologyIcon from "~/components/icons/fireside-page-icons/FiresideTechnologyIcon.vue";
 import FiresideLifeStoriesIcon from "~/components/icons/fireside-page-icons/FiresideLifeStoriesIcon.vue";
 import FiresideWellnessIcon from "~/components/icons/fireside-page-icons/FiresideWellnessIcon.vue";
+import FiresideUsersIcon from "~/components/icons/fireside-page-icons/FiresideUsersIcon.vue";
+import FiresideMicIcon from "~/components/icons/fireside-page-icons/FiresideMicIcon.vue";
+import FiresideVideoOffIcon from "~/components/icons/fireside-page-icons/FiresideVideoOffIcon.vue";
+import FiresideMicOnIcon from "~/components/icons/fireside-page-icons/FiresideMicOnIcon.vue";
+import WatchRaiseHandIcon from "~/components/icons/watch-parties-page-icons/WatchRaiseHandIcon.vue";
 
 const { t } = useI18n();
 
