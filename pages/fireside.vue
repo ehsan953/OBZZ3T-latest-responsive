@@ -20,7 +20,7 @@
         class="opacity-0 translate-y-6 animate-delay-md text-center mb-8 flex flex-col items-center gap-3"
       >
         <div class="flex items-center gap-3">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame w-10 h-10 text-[#C9A24D]"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+          <FiresideIcon class="lucide lucide-flame w-10 h-10 text-[#C9A24D]" />
           <h1 class="text-4xl text-[#C9A24D] font-light">
             {{ t("firesides.fireside") }}
           </h1>
@@ -47,12 +47,12 @@
             ]"
           >
             <div class="mb-2">
-              <svg v-if="topic.id == 'open'" class="mx-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: rgb(201, 162, 77);"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>
-              <svg v-if="topic.id == 'philosophy'" class="mx-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: rgb(91, 63, 214);"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg>
-              <svg v-if="topic.id == 'arts'" class="mx-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: rgb(201, 162, 77);"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
-              <svg v-if="topic.id == 'technology'" class="mx-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: rgb(91, 63, 214);"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
-              <svg v-if="topic.id == 'lifeStories'" class="mx-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: rgb(201, 162, 77);"><path d="M10 2v2"></path><path d="M14 2v2"></path><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"></path><path d="M6 2v2"></path></svg>
-              <svg v-if="topic.id == 'wellness'" class="mx-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: rgb(91, 63, 214);"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+              <FiresideSparkleIcon v-if="topic.id == 'open'" class="mx-auto" style="color: rgb(201, 162, 77);" />
+              <FiresidePhilosophyIcon v-if="topic.id == 'philosophy'" class="mx-auto" style="color: rgb(91, 63, 214);" />
+              <FiresideArtsIcon v-if="topic.id == 'arts'" class="mx-auto" style="color: rgb(201, 162, 77);" />
+              <FiresideTechnologyIcon v-if="topic.id == 'technology'" class="mx-auto" style="color: rgb(91, 63, 214);" />
+              <FiresideLifeStoriesIcon v-if="topic.id == 'lifeStories'" class="mx-auto" style="color: rgb(201, 162, 77);" />
+              <FiresideWellnessIcon v-if="topic.id == 'wellness'" class="mx-auto" style="color: rgb(91, 63, 214);" />
             </div>
             <div class="text-[#F4F2ED] text-sm font-medium text-center">{{ topic.label }}</div>
           </button>
@@ -70,12 +70,12 @@
                     <div class="relative space-y-6">
                   <div class="text-center space-y-3">
                     <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#C9A24D]/20 mb-2">
-                      <svg v-if="currentTopic.id == 'open'" class="mx-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: rgb(201, 162, 77);"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>
-                      <svg v-if="currentTopic.id == 'philosophy'" class="mx-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: rgb(91, 63, 214);"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg>
-                      <svg v-if="currentTopic.id == 'arts'" class="mx-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: rgb(201, 162, 77);"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
-                      <svg v-if="currentTopic.id == 'technology'" class="mx-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: rgb(91, 63, 214);"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
-                      <svg v-if="currentTopic.id == 'lifeStories'" class="mx-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: rgb(201, 162, 77);"><path d="M10 2v2"></path><path d="M14 2v2"></path><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"></path><path d="M6 2v2"></path></svg>
-                      <svg v-if="currentTopic.id == 'wellness'" class="mx-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: rgb(91, 63, 214);"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+                      <FiresideSparkleIcon v-if="currentTopic.id == 'open'" class="mx-auto" style="color: rgb(201, 162, 77);" />
+                      <FiresidePhilosophyIcon v-if="currentTopic.id == 'philosophy'" class="mx-auto" style="color: rgb(91, 63, 214);" />
+                      <FiresideArtsIcon v-if="currentTopic.id == 'arts'" class="mx-auto" style="color: rgb(201, 162, 77);" />
+                      <FiresideTechnologyIcon v-if="currentTopic.id == 'technology'" class="mx-auto" style="color: rgb(91, 63, 214);" />
+                      <FiresideLifeStoriesIcon v-if="currentTopic.id == 'lifeStories'" class="mx-auto" style="color: rgb(201, 162, 77);" />
+                      <FiresideWellnessIcon v-if="currentTopic.id == 'wellness'" class="mx-auto" style="color: rgb(91, 63, 214);" />
                     </div>
                     <h2 class="text-2xl font-light text-[#F4F2ED]">{{ currentTopic.label }}</h2>
                     <p class="text-[#F4F2ED]/60 text-sm">{{ currentTopic.description }}</p>
@@ -288,6 +288,13 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useI18n } from "#imports";
+import FiresideIcon from "~/components/icons/fireside-page-icons/FiresideIcon.vue";
+import FiresideSparkleIcon from "~/components/icons/fireside-page-icons/FiresideSparkleIcon.vue";
+import FiresidePhilosophyIcon from "~/components/icons/fireside-page-icons/FiresidePhilosophyIcon.vue";
+import FiresideArtsIcon from "~/components/icons/fireside-page-icons/FiresideArtsIcon.vue";
+import FiresideTechnologyIcon from "~/components/icons/fireside-page-icons/FiresideTechnologyIcon.vue";
+import FiresideLifeStoriesIcon from "~/components/icons/fireside-page-icons/FiresideLifeStoriesIcon.vue";
+import FiresideWellnessIcon from "~/components/icons/fireside-page-icons/FiresideWellnessIcon.vue";
 
 const { t } = useI18n();
 
